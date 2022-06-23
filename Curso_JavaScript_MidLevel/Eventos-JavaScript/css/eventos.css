@@ -1,0 +1,23 @@
+ul li{
+    margin: 15px;
+}
+div{
+    margin: 25px 0;
+}
+#eventos-teclado{
+    height: 50px;
+    background-color: #000;
+    font-size: 1.2em;
+}
+#teclados{
+    outline: none;
+    width: 550px;
+}
+
+#scrolls{
+    height: 150px;
+}
+
+footer{
+    height: 150px;
+}

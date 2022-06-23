@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mapas de Imagen en HTML</title>
+</head>
+<body>
+	<h1>Mapas de Imagen</h1>
+	<p>
+		 Los mapas de imagen se utilizan para incorporar a las imagenes botones de acciones dentro de las mismas para poder crear imagenes interactivas. (como cuando en las paginas de aerolineas permite pinchar encima de un pais para desplegar las opciones de destion o salidas desde ese pais).
+	</p>
+	<p>
+		Para crear los mapas dentro de las imagenes. Primero hay que insertar una imagen con la etiqueta &#60;img&#62; con todos sus respectivos atributos, despues, dentro de las etiquetas img se inserta la etiqueta &#60;map&#62; para definir las zonas o regiones que va a tener dicha imagen.
+	</p>
+	<p>
+		La etiqueta &#60;map&#62; tiene un atributo propio llamado &#34;texto&#34;. Este atributo sirve para identificar de manera unica dicho elemento. Por ende este atributo debe tener un identificador unico siempre.
+	</p>
+	<p>
+		Existe otra etiqueta llamada &#60;area&#62;, en la cual vamos a indicar indicar la forma del area mediante coordenadas. La etiqueta &#60;area&#62; cuenta con los siguientes atributos: 
+	</p>
+	<h4>Atributos de la etiqueta &#60;area&#62;</h4>
+	<ul>
+		<li>
+			<p>
+				href = "url" - Indica la Url a la cual se accedera al pinchar sobre dicha area.
+			</p>
+		</li>
+		<li>
+			<p>
+				nohref = "nohref" - Sem emplea para las areas que no son seleccionables.
+			</p>
+		</li>
+		<li>
+			<p>
+				shape = "default | rect | circle | poly" - Indica el tipo de area que se define (toda la imagen | rectangular | circular | poligonal).
+			</p>
+		</li>
+		<li>
+			<p>
+				coords = "lista de numeros" - aqui se declaran las coordenadas para las formas del area. Se declaran con numeros enteros separados por comas. Las areas se declaran de la siguiente forma.
+			</p>
+			<ul>
+				<li>
+					<strong>Default</strong> = toda la imagen.
+				</li>
+				<li>
+					<strong>Rectangular</strong> = X1,Y1,X2,Y2 (coordenadas X e Y del vértice superior izquierdo y coordenadas X e Y del vértice inferior derecho).
+				</li>
+				<li>
+					<strong>Circular</strong> = X1,Y1,R (coordenadas X e Y del centro y radio del círculo).
+				</li>
+				<li>
+					<strong>Poligonal</strong> = X1,Y1,X2,Y2,...,XnYn (coordenadas de los vértices del polígono. Si las últimas coordenadas no son iguales que las primeras, se cierra automáticamente el polígono uniendo ambos vértices)
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<p>
+		Para aplicar un mapa a una imagen debemos introducir el atributo &#34;usemap = "nombre_mapa"&#34;. usando el nombre que usamos en la variable &#34;name = "nombre_mapa"&#34; de la etiqueta &#62;map&#62;.
+	</p>
+	<h3>Ejemplo de uso de un mapa en HTML</h3>
+	<ul>
+		<li>
+			<h5>Mapa default</h5>
+			<img src="images/boton_youtube.jpg" usemap="#default" height="100px">
+			<map name="default">
+				<area shape="default" href="https://www.youtube.com/"/>
+			</map>
+		</li>
+		<li>
+			<h5>Mapa rectangular</h5>
+			<img src="images/marcas.png" usemap="#rectangular">
+			<map name="rectangular">
+				<!-- El valor rect del atributo shape funciona de la misma manera que el sistema de coordenadas de JFrame del objeto setBounds de java -->
+				<area shape="rect" coords="10,10,60,80" href="https://www.mcdonalds.es/" target="BLANK">
+				<area shape="rect" coords="140,10,85,80" href="https://www.apple.com/es/?afid=p238%7CsqBqp3TiI-dc_mtid_187079nc38483_pcrid_454591996215_pgrid_16626051515_&cid=aos-es-kwgo-brand--slid--bran-product-" target="BLANK">
+				<area shape="rect" coords="100,10,60,500" href="https://www.cocacola.es/es/productos-coca-cola/?utm_medium=SEM&utm_source=DAN_ES_GOOGLE_NA&utm_campaign=DAN_ES_CC_CC19_CC19&utm_content=DAN_ES_CC_CC19_CC19_IPROSPECT_DAN_ES_GOOGLE_NA_NA_NA&utm_term=coca-cola_e&&gclid=CjwKCAjw1ej5BRBhEiwAfHyh1Np2wc10k070-y-1bpELoJUceaekYIUc3QKqMZS4-y1ypzrGpVPVHhoCo70QAvD_BwE&gclsrc=aw.ds" target="BLANK">
+			</map>
+		</li>
+	</ul>
+	<p>
+		Estudiar como funcionan las coordenadas en HTML.<br>
+		En la siguiente clase veremos como funcionan los objetos en HTML y como podemos utilizarlos de forma correcta.
+	</p>
+	<p>
+		Ir a clase de <a href="objetos.html">Objetos</a>
+	</p>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Enlaces 2 en HTML</title>
+</head>
+<body>
+	<h1>Enlaces 2 en HTML</h1>
+	<p>
+		Los enlaces cuentan con los siguientes Atributos&#58;<br><br>
+		<strong>name</strong>&#58; &#34;texto&#34; &#45; Permite nombrar al enlace para que puedan usarlo otros enlaces.<br><br>
+		<strong>href</strong>&#58; &#34;url&#34; &#45; Indica la URL del recurso enlazado.<br><br>
+		<strong>hreflang</strong>&#58; &#34;codigo_idioma&#34; &#45; Idioma del recurso enlazado.<br><br>
+		<strong>type</strong>&#58; &#34;tipo_de_contenido&#34; &#45; permite &#34;avisar&#34; al navegador sobre le tipo de contenido que se enlaza  &#40;imagenes, archivos, etc...&#41; para que pueda prepararse en caso de que no entienda ese contenido.<br><br>
+		<strong>rel</strong>&#58; &#34;tipo_de_relacion&#34; &#45; Describe la relacion del documento actual con el recurso enlazado.<br><br>
+		<strong>rev</strong>&#58; &#34;tipo_de_relacion&#34; &#45; Describe la relacion del recurso enlazado con el documento actual.<br><br>
+		<strong>charset</strong>&#58; &#34;Tipo_de_charset&#34; &#45; Describe la codificacion del recurso enlazado.<br><br>
+	</p>
+		<a href="https://uniwebsidad.com/libros/xhtml/capitulo-4/enlaces-avanzados" rel="Mas detalles de los atributos 
+		de la etiqueta a" type="text/html">Mas Detalles sobre Atributos</a>
+	<h2>Otros tipos de enlaces</h2>
+	<h3>script</h3>
+	<p>
+		Etiqueta <strong>script:</strong><br><br>
+		<strong>src</strong>&#58; &#34;url&#34; &#45;Indica la direccion del archivo que contiene el codigo. <ins>Funciona de igual manera que el atributo &#34;href&#34; de la etiqueta &#34;a&#34; </ins><br><br>
+		<strong>type</strong>&#58; &#34;tipo_de_archivo&#34; &#45; Permite avisar al navegadpr el tipo de codigo que se incluye (Normalmente JavaScript)<br><br>
+		<strong>defer</strong>&#58; &#34;defer&#34; &#45; El codigo no va a modificar el contenido de la pagina web <br><br>
+		<strong>charset</strong>&#58; &#34;tipo_de_charset&#34; &#45; describe la codificacion del codigo enlazado<br><br>
+
+		<i><strong>La etiqueta script se utiliza principalmente para introducir aplicaciones de tipo JavaScript pero tambien permite que dentro de la misma podamos introducir directamente codigo de tipo JavaScript</i></strong>
+	</p>
+	<p>
+		<h3>Link</h3>
+		Etiqueta <strong>link</strong><br><br>
+		Comparte los mismos atributos que la etiqueta &#34;a&#34;:charset, href, hreflag,type,rel,rev <br><br>
+		<strong>media</strong>&#58; &#34;tipo_de_medio&#34; &#45; Indica el medio para el que debe aplicarse la relacion.<br><br>
+		<i><strong>Al contrario de java script la etiqueta Link solo puede realizarse dentro de la etiqueta &#34;head.&#34; </strong></i>
+	</p>
+	<p>
+		<h2>Links comunes</h2>
+		<h3>1 - Enlace al inicio del sitio web</h3>
+		Al indicar en el href "/" se lleva mediante ese link a la pagina principal de el sitio web. En este caso el link manda a la raiz del disco duro que seria C:/. Al usar servidores este link manda directamente al index siendo este la pagina principal.
+		<a href="/">Prueba Inicio</a>
+
+		<h3>2 - Enlace a un mail</h3>
+		<a href="mailto:nombre@direccion.com" title="Direccion de email para solicitar mas informacion">
+		Solicita mas informacion
+		</a><br>
+		Al pinchar sobre el link anterior llama al programa de correo electronico del ordenador del usuario para que envie un mail con el correo que hemos indicado en el enlace.<br>
+		Tambien se puede crear un enlace para correo electronico para que haya mas de un remitente.
+		<i><strong> Aunque no se recomienda del todo porque hay programas que se usan para llenar de Spam usando ese atributo.</strong></i>
+		Tambien se pueden crear enlaces para que haga un mensaje predeterminado desde el link. 
+		Para mas informacion acerca de los correos y sus usos ir a <a href="https://uniwebsidad.com/libros/xhtml/capitulo-4/ejemplos-de-enlaces-habituales#enlace-a-un-email" target="_BLANK">Este link</a>
+	</p>
+	
+
+	<a href="listas.html">Ir a Listas</a>
+	
+
+</body>
+</html>

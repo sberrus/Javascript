@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Imagenes y Objetos en HTML</title>
+</head>
+<body>
+	<h1>Imagenes y Objetos en HTML.</h1>
+	<h3>En este apartado entraremos en la parte mas dinamica y visual dentro de html.</h3>
+	<p>
+		Veremos en esta clase los puntos relacionados con la implementacion de imagenes y objetos dentro de html. Para su uso estetico dentro de nuestras paginas webs.<br>
+		para incluir imagenes dentro de html utilizaremos la etiqueta <strong>&#60;img&#62;</strong> para introducir las imagenes dentro de nuestro codigo de html.<br><br>
+		La etiqueta &#60;img&#62; permite introducir imagenes a nuestras paginas webs mediante enlaces parecidos a como funciona la etiqueta &#60;a&#62;.<br>
+		La etiqueta &#60;img&#62; tiene ciertos atributos como pueden ser: <br>
+		<dl>
+			<dt><strong>src=""</strong></dt>
+			<dd>
+				Con este atributo introducimos la URL absoluta o relativa del archivo al cual deseamos implantar dentro de nuestra pagina web. Esta puede utilizar enlaces a archivos locales o a archivos externos que se encuentren en otro servidor.<br>
+				<h3>Ejemplo de imagen con enlace local</h3>
+				<img src="images/html.png" width="150px" alt="Ejemplo de imagen con enlace local" longdesc="URL de la descripcion de la imagen">
+				<h3>Ejemplo de imagen con enlace externo</h3>
+				<img src="https://i.ytimg.com/vi/gEOz2N2msjg/maxresdefault.jpg" width="150px" alt="Ejemplo de imagen con enlace externo" longdesc="URL de la descripcion de la imagen"> <br>
+				La diferencia mas significativa entre estas maneras de implantar la imagen seria que en la que utilizamos enlaces externos si en el servidor donde esta alojada la imagen deciden por cualquier razon eliminar la imagen o la foto nosotros tampoco podremos hacer uso de la misma para nuestra pagina web. En cambio si alojamos nosotros mismos la imagen en nuestro servidor, este no se movera a menos que nosotros indiquemos lo contrario.
+			</dd>
+			<dt><strong>alt=&#34;url&#34;</strong></dt>
+			<dd>
+				Este atributo nos permite asignarle una corta descripcion a la imagen que estamos utilizando. Sirve para mejorar el SEO de la pagina web.
+			</dd>
+			<dt><strong>longdesc=&#34;url&#34;</strong></dt>
+			<dd>
+				Con este atributo podemos introducir a la imagen una URL que muestre una descripcion mas detallada de la imagen.
+			</dd>
+			<dt><strong>name=&#34;texto&#34;</strong></dt>
+			<dd>
+				Indica el nombre del elemento imagen.
+			</dd>
+			<dt><strong>height= &#34;unidad_de_medida&#34;</strong></dt>
+			<dd>
+				Indica la altura del elemento dentro de la pagina.
+			</dd>
+			<dt><strong>width= &#34;unidad_de_medida&#34;</strong></dt>
+			<dd>
+				Indica el ancho de este elemento dentro de la pagina.
+			</dd>
+		</dl>
+		<br>
+		En html los atributos mas utilizados para las imagenes son <i>src</i> que funciona parecido al atributo href de la etiqueta &#60;a&#62; y <i>alt</i> para indicar la descripcion breve de la imagen con una capacidad maxima de 1024 caracteres y es de utilidad para los usuarios con discapacidad visual. <br>
+		En html podemos introducir imagenes utilizando los medios que tenemos en nuestra propia carpeta de recursos. (Suele llamarse "images" o "imagenes").<br>
+		Al momento de modificar el tamaño de las imagenes dentro de hmtl con los atributos <i>heigth</i> y <i>width</i> hay que tomar en cuenta que las imagenes deben contener uno solo de los atributos anteriormente mencionados, sino, estos pueden alterara su aspecto y alterar la estetica original de la imagen. Aunque al ser html un lenguaje de marcado de texto, este solo debe asignar la imagen dentro de la pagina web mas no el tamaño de la misma ya que de este proceso ya se encarga CSS que es el encargado total de los aspectos esteticos de las paginas webs.<br>
+		La etiqueta &#60;img&#62; puede intruducir cualquier elemento grafico dentro del documento html. Pero, se recomienda siempre utilizar los formatos JPG, GIF y PNG. En los navegadores obsoletos pueden haber dificultades a la hora de mostrar archivos de tipo PNG.
+	</p>
+	<p>
+		En la siguiente clase veremos el mapeo de las imagenes y como podemos implantar enlaces multiples dentro de una misma imagen.<br><br>
+		Ir a la clase de <a href="mapasdeimagen.html">Mapas de imagen</a>
+	</p>
+
+
+</body>
+</html>

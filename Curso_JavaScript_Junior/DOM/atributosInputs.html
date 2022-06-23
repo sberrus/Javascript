@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos para inputs</title>
+    <script src="js/atributosInputs.js"></script>
+    <link rel="stylesheet" href="css/atributosInputs.css">
+</head>
+
+<body>
+    <h1>Metodos para atributos en JavaScript</h1>
+    <p>
+        Ahora veremos los atributos y como utilizarlos con JavaScript.
+    </p>
+    <h2>Uso del metodo .classname</h2>
+    <p>
+        Con el atributo .classname podemos decirle al programa que extraiga el nombre de la clase del elemento al que le
+        aplicamos dicho atributo.
+    </p>
+
+    <input type="button" value="Extraer Nombre de clase del boton" class="boton-principal" onclick="extraerAtributo()">
+
+    <h2>Uso del metodo .value</h2>
+    Mover el rango para ver el uso del atributo
+    <label for="">Texto a Enviar</label><br>
+    <input type="range" id="rango" onmousemove="obtenerValue()"><br>
+    <label for="">Texto Recibido</label><br>
+    <input type="text" id="textoRango" value="50" readonly>
+
+    <h2>Uso del metodo .type</h2>
+
+    <input type="button" value="Cambiar a boton" id="cambiar-a-texto" onclick="cambiarARange()">
+    <input type="text" value="Este texto cambiara a ser un boton" id="texto-boton">
+
+    <h2>Uso del metodo .accept</h2>
+    <p>
+        Para cambiar el formato preestablecido de el buscador de archivos aplicar la función cambiarFormatoDeEntrada() en la consola.
+    </p>
+    <label>Seleccionador de archivos</label>
+    <input type="file" id="formatoEntrada">
+
+    <h2>Uso del atributo form</h2>
+    <p>
+        Para observar el comportamiento de dicho atributo tienes que rellenar los campos anteriores y darles algun
+        valor, luego, tienes que darle primero al "botón dentro del form" para que puedas ver que el contenido se va y
+        la página realiza una carga.
+    </p>
+    <p>
+        Si realizas el mismo procedimiento pero dandole al segundo botón verás que el texto se mantiene y no se realiza
+        ningún proceso de carga porque en sí, la página no está enviando nada.
+    </p>
+    <input type="button" value="Activar Secundario ( Fuera del form )" onclick="activarBotonSecundario()"><br><br>
+    <form action="" id="formulario" style="border: 1px solid red; text-align: center;">
+            <label>Nombre</label><br>
+            <input type="text"><br>
+            <label for="">Apellido</label><br>
+            <input type="text"><br>
+            <input type="submit" value="Boton dentro del form">
+    </form><br><br>
+    <input type="submit" value="Boton fuera del form" id="botonFormulario">
+
+    <h2>Uso de atributo minlength</h2>
+    <form action="">
+        <label for="">Indicar cantidad mínima de caracteres para el formulario</label>
+        <input type="number" onchange="indicarCantidadCaracteres()" value="Indicar Cantidad Máxima de caracteres del input" id="contador" value="5"><br><br>
+        <label for="">Nombre</label><br>
+        <input type="text" id="texto-length" minlength="15"><br><br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <h2>Uso del atributo placeholder</h2>
+    <input type="button" value="modificar placeholder" onclick="modificarPlaceHolder()"><br><br>
+    <input type="text" placeholder="[placeholder a modificar]" id="placeholder">
+
+    <h2>Atributo required</h2>
+    <p>
+        Para hacer uso de este atributo aplicar función hacerRequerido(valorId), para hacer el id en cuestión requerido.
+    </p>
+    <form action="">
+        <label for="">Nombre</label><br>
+        <input type="text" id="nombreRequerido"><br><br>
+        <label for="">Apellido</label><br>
+        <input type="text" id="apellidoRequerido"><br><br>
+        <input type="submit">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+/*
+	Diferentes tipos de selectores.
+*/
+
+/* 
+	Selector universal. "*"
+	Este sirve para modificar los valores de todos los elementos de la pagina.
+*/
+
+body {
+	font-family: arial;
+	color: rgb(64, 122, 214);
+}
+a:hover {
+	color: rgb(212, 74, 61);
+}
+a {
+	text-decoration: none;
+}
+h1 {
+	color: red;
+}

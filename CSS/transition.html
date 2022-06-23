@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Transition en CSS</title>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<link rel="stylesheet" type="text/css" href="css/transition.css">
+	</head>
+	<body>
+		<h1>Transition en CSS</h1>
+		<h2>Conceptos Básicos</h2>
+		<p>
+			Transition es una propiedad que nos permite darle transiciones a los aspectos de los elementos dentro de HTML. Es modificar como y en cuanto tiempo los frames de cambio de aspecto se representan en el documento.
+		</p>
+		<h3>Propiedad transition-property: property/ies -all -none</h3>
+		<p>
+			Esta propiedad señala a que elemento o elementos se le va a aplicar la transición se puede indicar directamente el valor "all" para indicar que se le aplica a todos los elementos al que se le aplica dicha transicion.
+		</p>
+		<h3>Propiedad transition-duration: duration/s</h3>
+		<p>
+			Esta propiedad indica el tiempo que va a tardar dicho contenido en cambiar del estado 1 al estado 2.
+		</p>
+		<p>
+			<b>Estas dos propiedades (property y duration) son obligatorias para poder utilizar dichas propiedades en un elemento. De lo contrario el efecto no se producira.</b>
+		</p>
+		<span class="destacado-verde">Haga click en la caja inferior</span>
+		<div class="contenedor">
+			<div class="caja-ejemplo">caja ejemplo</div>
+		</div>
+		<p>
+			<small>En el ejemplo anterior podemos observar como al darle click a la caja esta cambia de aspecto en un tiempo determinado</small>
+		</p>
+		<h3>Propiedad transition-delay</h3>
+		<p>
+			Con esta propiedad podemos indicarle al programa que tenga un retraso para que haga la modificación de los aspectos.
+		</p>
+		<span class="destacado-verde">Haga click en la caja inferior(espere medio segundo para que se aplique el efecto)</span>
+		<div class="contenedor">
+			<div class="caja-ejemplo" id="delay">caja ejemplo</div>
+		</div>
+		<p>
+			<small>En el ejemplo anterior podemos observar como la caja cambia de aspecto al darle click, pero con un retraso de medio segundo antes de aplicar la transición.</small>
+		</p>
+		<h3>Propiedad transition-timing-function:</h3>
+		<p>
+			Esta propiedad indica como va a cambiar la función y la finalización del aspecto de la caja en función del tiempo.
+		</p>
+		<span class="destacado-verde">Posicione el ratón por encima del contenedor inferior</span>
+		<div class="contenedor" id="timing-function">
+			<div class="caja-ejemplo" id="linear">linear</div>
+			<div class="caja-ejemplo" id="ease">ease</div>
+			<div class="caja-ejemplo" id="ease-in">ease-in</div>
+			<div class="caja-ejemplo" id="ease-out">ease-out</div>
+			<div class="caja-ejemplo" id="ease-in-out">ease-in-out</div>
+		</div>
+		<p>
+			<small>Como podemos observar en el ejemplo anterior, cada uno de las cajas tiene un comportamiento distinto. Linear hace un recorrido suave desde el inicio hasta el final de el recorrido. Ease hace una salida y una entrada suave pero el recorrido central lo hace rápido. Al ease seguido de in, out, in-out, indica el estado de flujo suave que tendra este, en el caso de in saldra de la posición inicial más suave que al destino final. Y así con el resto de valores.</small>
+		</p>
+		<p>
+			<small>En el ejemplo anterior pusimos uno al lado de otro para que se pueda apreciar bien el comportamiento de unos elementos respecto a otros.</small>
+		</p>
+		<h3>Combinación de valores y propiedades</h3>
+		<p>
+			Con las propiedades transition-property y transition-duration podemos controlar a que propiedad o propiedades se les aplica la transición y con que tiempo se le aplica a cada una. Pero también podemos indicar que una propiedad se altere a una velocidad distinta a otra. Por ejemplo: Podemos hacer que la propiedad left, sea más rápida que la propiedad background.
+		</p>
+		<span class="destacado-verde">Posicione el ratón por encima del contenedor inferior</span>
+		<div class="contenedor" id="timing-function">
+			<div class="caja-ejemplo" id="linear2">linear</div>
+			<div class="caja-ejemplo" id="ease2">ease</div>
+			<div class="caja-ejemplo" id="ease-in2">ease-in</div>
+			<div class="caja-ejemplo" id="ease-out2">ease-out</div>
+			<div class="caja-ejemplo" id="ease-in-out2">ease-in-out</div>
+		</div>
+		<p>
+			<small>En la caja anterior podemos observar como las cajas a pesar de teenr el mismo comportamiento que las caajs en el ejemplo anteiror se puede observar que el cambio de color es diferente al comportamiento que se observa en la otra caja.</small>
+		</p>
+		<p>
+			<small>Esto lo logramos dandole transition diferente al movimiento y al cambio de color de las cajas.</small>
+		</p>
+		<h4>Otros valores steps(in,start|end) | initial | inherit</h4>
+		<p>
+			Existen otras transiciones con las que podemos trabajar en CSS pero las anteriores son las más destacadas. (De no continuar con el reste de animaciones del curso de dalto continuar investigando en internet acerca de estas)
+		</p>
+		<p>
+			Ya visto lo correspondiente a los transition y sus usos más comunes dentro de CSS ahora veremos la clase de las animaciones en CSS. <a href="animaciones.html">Ir a clase de animaciones en CSS</a>
+		</p>
+	</body>
+</html>

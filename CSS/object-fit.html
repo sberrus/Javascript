@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Object-Fit en CSS</title>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<link rel="stylesheet" type="text/css" href="css/object-fit.css">
+	</head>
+	<body>
+		<h1>Object-fit y el tratamiento estético de las imágenes con CSS.</h1>
+		<p>
+			Como se sabe desde el curso de HTML, al momento de introducir una imagen dentro del documento HTML, este viene con sus propias dimensiones de origen; luego con el uso de las propiedades width y heigth podemos modificar su altura y su anchura. La imágen se vera de manera correcta siempre y cuando que establezcamos una sola de estas propiedades, porque al momento de introducir ambas propiedades y las dimensiones de las propiedades no coincidan con las de la imagen, está se vera distorcionada y su aspecto no sera deseable.
+		</p>
+		<p>	
+			Este tipo de situaciones tambien pueden suelen suceder al momento de cambiar algunas propiedades de la caja que lo contiene y para evitar este tipo de alteraciones utilizamos la propiedad object-fit.
+		</p>
+		<div class="contenedor">
+			<img src="images/grafeno.jpg">
+		</div>
+		<p>
+			<small>En el Ejemplo anterior se muestra como la imagen distorciona su relación para encajar y abarcar todo el espacio de la caja y distorcionandose en el proceso </small>
+		</p>
+		<h2>Valor contain</h2>
+		<p>
+			El valor contain de la propiedad object-fit lo que hace es que indiferentemente de los tamaños que tenga la caja y la intruccion que esta tenga modifica sus dimensiones para que se vea igual que el elemento de origen.
+		</p>
+		<div class="contenedor">
+			<img src="images/grafeno.jpg" id="contain">
+		</div>
+		<p>
+			<small>Es esta caja con las mismas instrucciones que la anterior ha modificado sus dimensiones para que se ajuste a la caja que la contiene y se muestre de manera correcta.</small>
+		</p>
+		<h2>Valor cover</h2>
+		<p>
+			Con este valor lo que hace es que adapta la imágen sin distorcionarla de manera que esta se vea de manera correcta y ocupando todo el espacio de la caja contenedora.
+		</p>
+		<div class="contenedor">
+			<img src="images/grafeno.jpg" id="cover">
+		</div>
+		<p>
+			<small>En el ejemplo antarior, podemos observar como la imagen se adapta a las dimensiones del contenedor abarcando todo el espacio</small>
+		</p>
+		<h2>Valor none</h2>
+		<p>
+			Este valor es el definido por defecto e inserta la imágen como esta es por defecto. Dandole las dimensiones de como está es por defecto.
+		</p>
+		<div class="contenedor-none">
+			<img src="images/400x400.jpg" id="none">
+		</div>
+		<p>
+			<small>En el ejemplo anterior se observa la imagen con sus dimensiones reales en una caja que es mas grande que la que la contiene</small>
+		</p>
+		<h2>Valor scale-down</h2>
+		<p>
+			Scale-down lo que hace es comparar entre las dimensiones entre los valores none y contain y se queda con el que tenga el valor más bajo.
+		</p>
+		<div class="contenedor">
+			<img src="images/grafeno.jpg" id="scale-down">
+		</div>
+		<p>
+			<small>En el ejemplo anterior, al ser tener content las dimensiones más pequeñas pues el valor scale-down tomo este como el valor que utilizara.</small>
+		</p>
+		<h2>Propiedad object-position.</h2>
+		<p>
+			Como se ve en las imagenes estan se muestran mayormente centradas (excepto aquellas que se distrocionan) y el resto del contenido de dicha imágen desaparece de la vista del usuario. Si es cierto que no podemos apreciar el resto de la imágen si podemos indicarle al programa que fragmentos de esta queremos mostrar. Esto lo logramos con la propiedad object-position.
+		</p>
+		<div class="contenedor-reducido">
+			<img src="images/brujula.jpg" id="object-position-left">
+		</div>
+		<p>
+			<small>Imagen con object-position: left</small>
+		</p>
+		<div class="contenedor-reducido">
+			<img src="images/brujula.jpg" id="object-position-right">
+		</div>
+		<p>
+			<small>Imagen con object-position: right</small>
+		</p>
+		<p>
+			Esta es la forma la cual podemos modificar e interactuar con las imagenes dentro de CSS. Más adelante veremos otras propiedades para trabajar con imágenes y crear diseños más complejos con estas.
+		</p>
+		<p>
+			Vista esta clase, ahora veremos a continuación como modificar el cursor y su estética. <a href="cursor.html">Ir a clase de Cursor</a>
+		</p>
+	</body>
+</html>

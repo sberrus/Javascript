@@ -1,0 +1,134 @@
+
+
+/* Elementos estandar de la clase*/
+/*********************************/
+
+
+.flex-container{
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	align-items: center;
+	background: rgb(165, 232, 167);
+	height: 220px;
+}
+
+.flex-item{
+	text-align: center;
+	padding: 20px;
+	margin: 5px;
+	height: 85px;
+	width: 85px;
+	background: #248;
+	color: white;
+	border: 2px solid darkred;
+}
+
+
+/* align-self */
+/**************/
+
+
+.flex-start{
+	align-self: flex-start;
+}
+.flex-end{
+	align-self: flex-end;
+}
+.center{
+	align-self: center;
+}
+.stretch{
+	align-self: stretch;
+}
+.baseline{
+	align-self: baseline;
+}
+
+
+/* flex-grow */
+/*************/
+
+
+.flex-grow{
+	flex-grow: 1;
+	min-width: 150px;
+}
+.flex-grow-3{
+	flex-grow: 3;
+	min-width: 150px;
+}
+
+
+/* flex-basis*/
+/*************/
+
+
+.flex-basis{
+	flex-basis: 220px;
+}
+
+
+/* flex-shrink */
+/***************/
+
+
+.flex-shrink{
+	flex-shrink: 1;
+}
+.flex-shrink2{
+	flex-shrink: 2;
+}
+.flex-shrink3{
+	flex-shrink: 3;
+}
+
+
+/* Elementos para modificaciones específicas*/
+/********************************************/
+
+.row-reverse{
+	flex-direction: row-reverse;
+}
+.column{
+	flex-direction: column;
+}
+.column-reverse{
+	flex-direction: column-reverse;
+}
+.wrap{
+	flex-wrap: wrap;
+}
+.caja-red{
+	background: red;
+}
+.caja-green{
+	background: green;
+}
+.width-500{
+	width: 500px;
+}
+.width-300{
+	width: 300px;
+}
+.width-150{
+	width: 150px;
+}
+.width-80{
+	width: 80px;
+}
+.height-auto{
+	height: auto;
+}
+.texto-rojo{
+	color: red;
+}
+.order1{
+	order: 1
+}
+.order2{
+	order: 2
+}
+.order3{
+	order: 3
+}

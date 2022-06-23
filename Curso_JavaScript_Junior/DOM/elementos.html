@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos en JavaScript</title>
+    <script src="js/elementos.js"></script>
+</head>
+<body>
+    <h1>Elementos en JavaScript</h1>
+    <p>
+        En esta clase veremos como crear, obtener y modificar elementos XHTML con JavaScript. Para ver el contenido de esta clase ir al siguiente archivo <a href="js/elementos.js">Elementos en JavaScript</a>
+    </p>
+
+    <h2>Obtención de elementos con JavaScript</h2>
+    <p id="ejemplo-textContent" contenteditable="true">
+        <b>[Puedes escribir lo que quieras aqui]</b>
+    </p>
+    <input type="button" value="Mostrar texto del elemento p superior" onclick="extraerTexto()">
+    <input type="button" value="Mostrar texto del elemento p con innerHTML" onclick="extraerTextoHTML()">
+    <input type="button" value="Mostrar texto del elemento p outerHTML" onclick="extraerTextoHTML2()">
+
+    <h2>Creación de elementos con JavaScript</h2>
+    <p contenteditable="true" id="textoTitulo">
+        [Este texto será el título]
+    </p>
+    <input type="button" value="Cambiar Título" onclick="crearTitulo()">
+    <div class="contenedor">
+
+    </div>
+    <h2>Creación de elementos multiples</h2>
+
+    <label for="">Texto a Multiplicar</label><br>
+    <input type="text" name="" id="texto-multiple"><br><br>
+
+    <label for="">Cantidad de veces que se multiplicará</label><br>
+    <input type="number" value="1" id="contador"><br>
+
+    <input type="button" value="Crear Elementos multiples" onclick="crearVariosElementos()">
+    <div class="contenedor-multiple">
+
+    </div>
+
+    <h2>Obtención y modificación de elementos en JavaScript</h2>
+
+    <p>Aplicación del metodo firstChild/lastChild</p>
+    <input type="button" value="Obtener Titulo" onclick="obtenerTitulo()">
+    <input type="button" value="Obtener Párrafo" onclick="obtenerParrafo()">
+
+    <p>Aplicación del firstElementChild/lastElementChild</p>
+    <input type="button" value="Obtener Titulo" onclick="obtenerTitulo2()">
+    <input type="button" value="Obtener Párrafo" onclick="obtenerParrafo2()">
+
+    <p>Obtención de todos los nodos con element.childNodes</p>
+    <input type="button" value="Obtener todos los nodos" onclick="obtenerTodosLosNodos()">
+
+    <p>Obtención de todos los nodos con element.children</p>
+    <input type="button" value="Obtener todos los nodos" onclick="obtenerTodosLosChildren()">
+
+    <div id="modificador" style="border: 4px solid #000; border-radius: 30px;text-align: center;"><h3>Un titulo normal</h3>
+        <h5>Un subtitulo normal</h5>
+        <p>
+            Un simple párrafo
+        </p></div>
+</body>
+</html>

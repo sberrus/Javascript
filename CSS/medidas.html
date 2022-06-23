@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Medidas en CSS</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/medidas.css">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+	</head>
+	<body>
+		<h1>Medidas en CSS</h1>
+		<p>
+			Antes de ver lo el resto de partes de este curso veremos lo correspondiente a las medidas dentro de CSS para la estetica de los distintos elementos de HTML.
+		</p>
+		<div id="medidas-fijas">
+			<h2>Unidades de medida fija</h2>
+			<p>
+				Las unidades de medida fija son aquellas que permiten modificar los atributos estéticos de un elemento HTML para modificar su tamaño o dimensiones. Hay diferentes tipos de medidas fijas que se utilizan dentro de CSS como los pixeles (px), los centrimetros(cm), los milimetros(mm) y los puntos(pt).<br>
+				Como ejemplo utilizaremos la instrucción "font-size" para modificar el tamaño de las letras de un elemento HTML.<br>
+				La instrucción indica primero el número de unidades que va a utilizar la instrucción seguido de su tipo de unidad. Por ejemplo, la instrucción "font-size:10px;", indica que cada letra debera tener un tamaño de 10px cada una. A continuación realizaremos varios ejemplos para mostrar el uso de las unidades anteriormente mencionadas.
+			</p>
+			<h3>píxeles(px)</h3>
+				<span style="font-size: 10px">10px</span><br>
+				<span style="font-size: 20px">20px</span><br>
+				<span style="font-size: 30px">30px</span><br>
+				<span style="font-size: 40px">40px</span><br>
+			<h3>Centimetros(cm)</h3>
+				<span style="font-size: 1cm">1cm</span><br>
+				<span style="font-size: 2cm">2cm</span><br>
+				<span style="font-size: 3cm">3cm</span><br>
+				<span style="font-size: 4cm">4cm</span><br>
+			<h3>Milimetros(mm)</h3>
+				<span style="font-size: 10mm">10mm</span><br>
+				<span style="font-size: 20mm">20mm</span><br>
+				<span style="font-size: 30mm">30mm</span><br>
+				<span style="font-size: 40mm">40mm</span><br>
+			<h3>Puntos(pt)</h3>
+				<span style="font-size: 10pt">10pt</span><br>
+				<span style="font-size: 20pt">20pt</span><br>
+				<span style="font-size: 30pt">30pt</span><br>
+				<span style="font-size: 40pt">40pt</span><br>
+				<p>
+					El principal inconveniente de los elementos de tipo fijo es que son fijos, valga la redundancia. Al usar este tipo de elementos hace complicado que estos elementos se adapten correctamente a los distintos dispositivos ya que no todos tienen el mismo tamaño de pantalla ni la misma resolución. Por ende este tipo de unidades de medida se utilizan principalmente para aquellos elementos que se desea que siempre tengan un aspecto determinado sin importar el tamaño de la pantalla donde estos seran impresos.<br>
+					Para evitar estos problemas se utilizan las unidades de medida relativas.
+				</p>
+		</div>
+		<div id="medidas-relativas">
+			<h2>Unidades Relativas</h2>
+			<p>
+				Las unidades relativas son aquellas que toman en cuenta los elementos que las contienen para mostrar sus contenidos. Estas medidas son las mas utilizadas ya que permiten adaptar las dimensiones de los elementos para que estos se adapten a las pantallas de los distintos dispositivos que existen. <br>
+				Como se ha dicho las unidades relativas toman como referencia propiedades de los elementos que las contienen para mostrar los contenidos en pantalla.<br>
+				Las medidas relativas son: los porcentajes (%), las medidas em, entre otras. 
+				Para calcular las medidas relativas, como ya hemos explicado antes, primero hay que saber las propiedades de los elementos contenedores del elemento que vamos a programar. Para el siguiente ejemplo vamos a crear un contenedor "div" para introducir dentro de este elementos con medidas relativas. Y otro elemento div con la fuente más grande para que se vea la demostración. <br>
+				Hay que tomar en cuenta que por defecto en HTML el tamaño de fuente general para los textos es de 18px. Por lo tanto en los navegadores de ordenadores las letras tendran este tamaño estandar. También hay que saber que vamos a utilizar los mismos valores en ambos contenedores. Ejemplo:<br>
+				<div class="contenedor-standard">
+					<p>
+						<h4>Contenedor Standard</h4>
+						<span style="font-size: 1em">1em</span>
+						<span style="font-size: 2em">2em</span>
+						<span style="font-size: 3em">3em</span>
+						<span style="font-size: 4em">4em</span>
+					</p>
+				</div>
+				<div class="contenedor-20px" style="font-size: 20px">
+					<h4>Contenedor con font-style="20px"</h4>
+					<p>
+						<span style="font-size: 1em">1em</span>
+						<span style="font-size: 2em">2em</span>
+						<span style="font-size: 3em">3em</span>
+						<span style="font-size: 4em">4em</span>
+					</p>
+				</div>
+			</p>
+			<p>
+				La medida em utiliza el espacio que ocupa la letra "m" para declarar el tamaño de los elementos que queremos modificar. Por ende, para calcular el tamaño de los elementos que queremos modificar con este atributo hay que tomar en cuenta primero el tamaño de la fuente del contenedor (Sí esta no esta establecida se utiliza su tamaño estandar "18px"). Después, se multiplica por la medida em en cuestión. Por lo tanto para un elemento que tenga una medida de 3em en un contenedor estándar se haria la siguiente función: 18px*3em=<span style="font-size: 3em">54px.</span>
+			</p>
+			<p>
+				Si se quiere profundizar en el tema respecto a los tamaños de las fuentes se puede ir al siguiente enlace de <a href="https://uniwebsidad.com/libros/css/capitulo-3/unidades-de-medida" target="_BLANK">Uniwebsidad</a> y profundizar en ello.
+			</p>
+		</div>
+		<p>
+			Ya vista las medidas en HTML, veremos lo correspondiente a las <a href="propiedadestexto.html">propiedades de texto</a> en html.
+		</p>
+		
+	</body>
+</html>

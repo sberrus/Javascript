@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Position</title>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<link rel="stylesheet" type="text/css" href="css/position.css">
+	</head>
+	<body>
+		<h1>Position en CSS</h1>
+		<p>
+			En esta clase veremos como se comportan las instrucciones position y display, siendo estas parte fundamental para el desarrollo de páginas web modernas y bien estructuradas.
+		</p>
+		<p>
+			Como ya hemos visto en el curso de <a href="https://uniwebsidad.com/">Uniwebsidad</a>, con el uso de display y position es posible realizar paginas web con diseños modernos. 
+		</p>
+		<h2>Instrucción position</h2>
+		<p>
+			La funcion de la regla position es la de posicionar los elementos y darles propiedades para que estos interactuen de maneras diferentes con las cajas aledañas, afectando el flujo de HTML.
+		</p>
+		<p>
+			Al momento de introducir las propiedades position tenemos la posibilidad de usar 4 propiedades nuevas: top, rigth, botton,left. Estas propiedades nos permiten modificar la posición donde se mostraran las cajas en cuestión.<br>
+			<b><span class="important-text">Hay que tomar en cuenta que al momento de que hayan 2 instrucciones del mismo eje (top-bottom, left-right), los valores que CSS va a utilizar al ser interpretados como mas importantes van a ser top y left. Al momento de que tengamos 2 instrucciones para el mismo eje EJ: "top:20px; bottom:30px;" CSS va a utilizar el valor de mayor relevancia que en este caso seria top. </span></b>
+		</p>
+		<div class="caja">
+			Caja sin modificadores
+		</div>
+		<div class="caja" id="caja-left">
+			Caja con left 50px
+		</div>
+		<div class="caja" id="caja-right">
+			Caja con right 50px
+		</div>
+		<h3>z-index</h3>
+		<p>
+			Con la propiedad z-index podemos darle un orden a los elementos que se encuentran solapados siendo el valor más alto el que se encuentre más cerca de nuestro campo de visibilidad.
+		</p>
+		<div  class="caja" id="index1">
+			z-index: 1;
+			<div class="caja" id="index2">
+				z-index: 2;
+				<div class="caja" id="index3">
+					z-index: 3;
+				</div>
+			</div>
+		</div>
+		<p>
+			En el momento de que no se indique ningun z-index, CSS determina que sera visible jerarquicamente aquellos elementos que se ejecuten de ultimo en el codigo.
+		</p>
+		<div class="caja" id="sin-index">
+			caja 1
+		</div>
+		<div class="caja" id="sin-index">
+				caja 2
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+		<h2>Tipos de position</h2>
+		<p>
+			Existen 4 tipos diferentes de position los cuales veremos a continuación:
+		</p>
+
+		<h3>static</h3>
+		<p>
+			La posicion static es la que viene por defecto en HTML. Esta simplemente posiciona el elemento uno al lado del otro tomando en cuenta si es en linea(al lado) o si es en bloque(debajo).
+		</p>
+		<div class="caja">caja1</div>
+		<div class="caja">caja2</div>
+		<div class="caja">caja3</div>
+
+		<h3>relative</h3>
+		<p>
+			Al tu darle valor relative en la propiedad position, el elemento que contenga este valor va a ocupar el mismo espacio en el flujo de HTML no permitiendo a los demas elementos ocupar ese espacio. Pero si modificamos sus valores de posisición (top,right,bottom,left) este se movera sin permitir que los demas elementos ocupen su lugar. 
+		</p>
+		<div class="caja">caja1</div>
+		<div class="caja">caja2</div>
+		<div class="caja" id="relative">caja3</div>
+		<div class="caja">caja4</div>
+		<p>
+			<small>En el ejemplo anterior podemos observar como la caja 3 sale del flujo normal de HTML. Pero la caja 4 no ocupa su lugar ya que la caja 3 tiene el valor relative. Mueve su contenido pero el espacio que ocupa sigue siendo el mismo.</small>
+		</p>
+
+		<h3>absolute</h3>
+		<p>
+			En el caso del position absolute hace que la caja en cuestion se superponga a las demás cajas con position relative y esta no ocupa espacio dentro de el flujo de HTML. Este elemento desde la izquierda del todo como valor inicial.
+		</p>
+
+		<div class="caja">caja1</div>
+		<div class="caja">caja2</div>
+		<div class="caja" id="absolute">caja3(absolute)</div>
+		<div class="caja">caja4</div>
+		<div class="caja">caja5</div>
+		<div class="caja" id="absolute">caja 6(absolute)</div>
+		<br><br><br><br><br>
+		<p style="display: block;">
+			<small>Como se puede observar en este ejemplo la caja 3 y la 6 se separan del resto del flujo de html, pero respetando el espacio comprendido entre estas y los demás elementos en bloque hermanos.</small>
+		</p>
+		<p>
+			Con position absolute, si no definimos la altura (heigth) y la anchura (width) este se auto ajusta al contenido de la caja.
+		</p>
+		<p>
+			La otra caracteristica intersante es que con el position absolute toma como posicion inicial al la esquina superior izquierda del elemento contenedor siempre y cuando este este posicionado. Si el elemento contenedor no esta posicionado los elementos con la posición absolute toman como posicion inicial las esquinas superior izquierda del view port(de la página en si o de la etiqueta body que es la que contiene a todos los demas elementos)
+		</p>
+		<div class="contenedor" title="Contenedor con cajas posicionadas absolute">
+			<div class="esquina-sup-izq">caja 1</div>
+			<div class="esquina-sup-der">caja 2</div>
+			<div class="esquina-inf-izq">caja 3</div>
+			<div class="esquina-inf-der">caja 4</div>
+			<div class="center">caja central</div>
+		</div>
+		<p>
+			<small>Ejemplo de un contenedor con posición relative y cajas con posición absolute y valores 0.</small>
+		</p>
+		<h3 id="fixed">fixed</h3>
+		<p>
+			Con fixed podemos inplementar cajas que siempre se mantengan en una misma posición en el view port manteniendose estaticamente allí y superponiendose al resto de elementos del documento HTML.
+		</p>
+		<p>
+			Este elemento respeta los z-index, por lo tanto cualquier elemento que contenga un z-index superior al de la caja fixed se superpondra sobra esta.
+		</p>
+		<p>
+			Esta caja es muy util para crear los menús estaticos como los que tienen páginas como facebook, netflix, etc...
+		</p>
+		<div class="caja-fixed">Esta caja es una caja <a href="#fixed">fixed</a>.</div>
+
+		<h3>sticky</h3>
+		<p>
+			El valor sticky funciona parecido al valor fixed con la diferencia de que este no ocupara el lugar establecido por los parametros (top, bottom) hasta que estos no aparezcan en el port view del usuario. Los Titulos de esta pagina se acomodaran utilizando elementos con la position sticky
+		</p>
+		<p>
+			En la siguiente clase veremos la propiedad display y sus diferentes usos en CSS. <a href="display.html">Ir a la clase de display</a>
+		</p>
+	</body>
+</html>

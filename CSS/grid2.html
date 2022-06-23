@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Grid dinámicos CSS</title>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<link rel="stylesheet" type="text/css" href="css/grid2.css">
+	</head>
+	<body>
+		<h1>Grid Dinámicos en CSS</h1>
+		<h2>Conceptos básicos</h2>
+		<p>
+			Para utilizar los grids dinámicos tenemos que tomar en cuenta que estos son valores que le damos a ciertas propiedades para que estan se comporten de una manera o de otra. Así como poder manipular las dimensiones y el comportamiento de estas.
+		</p>
+		<p>
+			Por lo general estos valores se incluyen dentro de la estructura repeat() que esta va como valor de algunas propiedades.
+		</p>
+		<h3>Modificación de tamaños de las celdas del grid</h3>
+		<p>
+			A continuación veremos como modificar dinámicamente el tamaño de las celdas que componen al grid.
+		</p>
+		<h4>Valor min-content</h4>
+		<p>
+			Con el valor min-content declaramos que las celdas puedan reducirse en dimensiones hasta que sean del mismo tamaño que el contenido más pequeño de la misma. 
+		</p>
+		<div class="grid-container grid-template1">
+			<div class="grid-item"></div>
+			<div class="grid-item">2</div>
+			<div class="grid-item">Lorem ipsum dolor sit amet
+			</div>
+			<div class="grid-item">4</div>
+			<div class="grid-item">mmmmmmmmmmm</div>
+			<div class="grid-item">6</div>
+			<div class="grid-item">777</div>
+			<div class="grid-item">8</div>
+			<div class="grid-item">9</div>
+		</div>
+		<p>
+			<small>En este ejemplo podemos ver como la caja adapta su tamaño para que esta no sea más grande que el elemento de contenido más grande. En este caso como la cadena "Lorem" es la más grande en dimensiones la caja de esta sera del tamaño del ancho de esta cadena. Y asi con el resto de cajas que componen el grid.</small>
+		</p>
+		<h4>Valor max-content</h4>
+		<p>
+			Con este valor establecemos que la caja tenga las dimensiones para que este pueda introducir dentro de si el tamaño del elemento como si fuera un bloque.
+		</p>
+		<div class="grid-container grid-template2">
+			<div class="grid-item"></div>
+			<div class="grid-item">2</div>
+			<div class="grid-item">Lorem ipsum dolor sit amet
+			</div>
+			<div class="grid-item">4</div>
+			<div class="grid-item">mmmmm mmmmmm mmmmmm</div>
+			<div class="grid-item">6</div>
+			<div class="grid-item">777</div>
+			<div class="grid-item">8</div>
+			<div class="grid-item">9</div>
+		</div>
+		<h4>Valor minmax</h4>
+		<p>
+			Con este valor podemos definir el mínimo y el máximo de dimensiones que va a tener una celda en el grid. Para poder usar este valor hay de definir dentro de paréntesis dos valores primero el menor valor y separados por una coma "," el segundo valor EJ: minmax(100, 150px) 
+		</p>
+		<span class="destacado-verde">Caja con valor minmax(100px, 150px) (Ampliar tamaño de la ventana para que se pueda observar el comportamiento de este valor)</span>
+		<div class="grid-container grid-template3">
+			<div class="grid-item">1</div>
+			<div class="grid-item">2</div>
+			<div class="grid-item">3</div>
+			<div class="grid-item">4</div>
+			<div class="grid-item">5</div>
+			<div class="grid-item">6</div>
+			<div class="grid-item">7</div>
+			<div class="grid-item">8</div>
+			<div class="grid-item">9</div>
+		</div>
+		<p>
+			<small>Como bien se puede ver en este ejemplo podemos modificar el tamaño de la ventana del navegador y esta modifica el tamaño dandole un mínimo y un máximo a las celdas.</small>
+		</p>
+		<h5>Uso conjunto de minmax con min-content y max-content</h5>
+		<p>
+			Dentro de los parámetros que le asignamos al valor minmax(parámetros), podemos utilizar los valores min-content y max-content para que tome estos valores como limites de width. 
+		</p>
+		<span class="destacado-verde">Caja con valor minmax(min-content,max-content) (Ampliar tamaño de la ventana para que se pueda observar el comportamiento de este valor)</span>
+		<div class="grid-container grid-template4">
+			<div class="grid-item">1</div>
+			<div class="grid-item">ipsum</div>
+			<div class="grid-item">3</div>
+			<div class="grid-item">4</div>
+			<div class="grid-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</div>
+			<div class="grid-item">6</div>
+			<div class="grid-item">7</div>
+			<div class="grid-item">8</div>
+			<div class="grid-item">dorimeee</div>
+		</div>
+		<h3>Modificación de las cantidades por ejes.</h3>
+		<p>
+			Este valor va dentro de la estructura repeat() en el parámetro de las cantidades de la estructura.
+		</p>
+		<h4>Valor auto-fill</h4>
+		<p>
+			Indicando este valor dentro de los parámetros indicamos al grid que vaya incorporando ya sea en los columns o en los rows donde se haya puesto dicho valor, tantas celdas como sea posible tomando en cuenta el tamaño que estas vayan a ocupar.
+		</p>
+		<span class="destacado-verde">Uso del valor auto-fill dentro de la estructura repeat() en el column. (Ampliar tamaño de la ventana para observar el conportamiento de dicho valor.)</span>
+		<div class="grid-container grid-template5">
+			<div class="grid-item">1</div>
+			<div class="grid-item">2</div>
+			<div class="grid-item">3</div>
+			<div class="grid-item">4</div>
+			<div class="grid-item">5</div>
+			<div class="grid-item">6</div>
+			<div class="grid-item">7</div>
+			<div class="grid-item">8</div>
+			<div class="grid-item">9</div>
+			<div class="grid-item">10</div>
+		</div>
+		<p>
+			<small>Al disminuir y al aumentar el viewport de la ventana del navegador podenos observar como las celdas del grid se posicionan al momento de que estas encuentran un "hueco" donde posicionarse en la fila superior. O en caso contrario se posicionan en la fila inferior a la hora de que en la primera fila no haya suficiente espacio.</small>
+		</p>
+		<h2>Alineación y control del flujo</h2>
+		<p>
+			Las alineaciones se aplican directamente a los grid-container
+		</p>
+		<h3>Propiedad justify-items (Alineación horizontal)</h3>
+		<p>
+			Esta propiedad modifica el comportamiento de los elementos que están dentro del grid. Hay varios valores que veremos a continuación.
+		</p>
+		<h4>Valor center</h4>
+		<p>
+			Con este valor se centra todo el contenido que esta dentro del item en si. 
+		</p>
+		<span class="destacado-verde">Uso de valor center en el grid (Ampliar ventana del navegador para ver el comportamiento)</span>
+		<div class="grid-container justify-items-center">
+			<div class="grid-item">Celda 1</div>
+			<div class="grid-item">Celda 2</div>
+			<div class="grid-item">Celda 3</div>
+			<div class="grid-item">Celda 4</div>
+			<div class="grid-item">Celda 5</div>
+			<div class="grid-item">Celda 6</div>
+			<div class="grid-item">Celda 7</div>
+			<div class="grid-item">Celda 8</div>
+			<div class="grid-item">Celda 9</div>
+		</div>
+		<p>
+			<small>En este ejemplo podemos observar que los contenidos se centran además de que ocupan solo el espacio para mostrar los contenidos presentes.</small>
+		</p>
+		<h4>Valor start</h4>
+		<p>
+			Con este valor posiciona el contenido al inicio de la celda que la contiene.
+		</p>
+		<span class="destacado-verde">Uso de valor start en el grid (Ampliar ventana del navegador para ver el comportamiento)</span>
+		<div class="grid-container justify-items-start">
+			<div class="grid-item">Celda 1</div>
+			<div class="grid-item">Celda 2</div>
+			<div class="grid-item">Celda 3</div>
+			<div class="grid-item">Celda 4</div>
+			<div class="grid-item">Celda 5</div>
+			<div class="grid-item">Celda 6</div>
+			<div class="grid-item">Celda 7</div>
+			<div class="grid-item">Celda 8</div>
+			<div class="grid-item">Celda 9</div>
+		</div>
+		<p>
+			<small>En este ejemplo podemos ver como el contenido se posiciona al inicio de la celda y mostrando igual que en el ejemplo anterior solo lo que necesita.</small>
+		</p>
+		<h4>Valor end</h4>
+		<p>
+			Con este valor posiciona el contenido al final de la celda que la contiene.
+		</p>
+		<span class="destacado-verde">Uso de valor end en el grid (Ampliar ventana del navegador para ver el comportamiento)</span>
+		<div class="grid-container justify-items-end">
+			<div class="grid-item">Celda 1</div>
+			<div class="grid-item">Celda 2</div>
+			<div class="grid-item">Celda 3</div>
+			<div class="grid-item">Celda 4</div>
+			<div class="grid-item">Celda 5</div>
+			<div class="grid-item">Celda 6</div>
+			<div class="grid-item">Celda 7</div>
+			<div class="grid-item">Celda 8</div>
+			<div class="grid-item">Celda 9</div>
+		</div>
+		<p>
+			<small>En este ejemplo observamos que el contenido se posiciona la final de la celda y muestra solo el contenido necesario y el relleno necesario para que este se muestre.</small>
+		</p>
+		<h3>Propiedad align-items(Alineación vertical)</h3>
+		<p>
+			Con esta propiedad podemos Posicionar los elementos verticalmente.
+		</p>
+		<h4>Valor center</h4>
+		<p>
+			Con este valor podemos posicionar los contenidos en el centro del eje vertical dentro de la celda del grid.
+		</p>
+		<span class="destacado-verde">Alineación centrada vertical propiedad align-items:center</span>
+		<div class="grid-container justify-items-center align-items-center">
+			<div class="grid-item ">Celda 1</div>
+			<div class="grid-item ">Celda 2</div>
+			<div class="grid-item ">Celda 3</div>
+			<div class="grid-item ">Celda 4</div>
+			<div class="grid-item ">Celda 5</div>
+			<div class="grid-item ">Celda 6</div>
+			<div class="grid-item ">Celda 7</div>
+			<div class="grid-item ">Celda 8</div>
+			<div class="grid-item ">Celda 9</div>
+		</div>
+		<p>
+			<small>Al observar la primera fila del grid podemos observar como esta se encuentra en el centro del grid. Si observas las herramientas de desarrollador del navegador podras observar como el contenido de la celda se encuentra justo en el centro de la misma.</small>
+		</p>
+		<h4>Valor start</h4>
+		<p>
+			Con este valor podemos posicionar los contenidos en el borde superior del eje vertical dentro de la celda del grid.
+		</p>
+		<span class="destacado-verde">Alineación superior vertical propiedad align-items:start</span>
+		<div class="grid-container justify-items-center align-items-start">
+			<div class="grid-item ">Celda 1</div>
+			<div class="grid-item ">Celda 2</div>
+			<div class="grid-item ">Celda 3</div>
+			<div class="grid-item ">Celda 4</div>
+			<div class="grid-item ">Celda 5</div>
+			<div class="grid-item ">Celda 6</div>
+			<div class="grid-item ">Celda 7</div>
+			<div class="grid-item ">Celda 8</div>
+			<div class="grid-item ">Celda 9</div>
+		</div>
+		<p>
+			<small>Al observar la primera file podemos ver como esta se encuentra posicionada en el borde superior del grid.</small>
+		</p>
+		<h4>Valor end</h4>
+		<p>
+			Con este valor podemos posicionar los contenidos en lo más bajo del eje vertical dentro de la celda del grid.
+		</p>
+		<span class="destacado-verde">Alineación inferior vertical propiedad align-items:end</span>
+		<div class="grid-container justify-items-center align-items-end">
+			<div class="grid-item ">Celda 1</div>
+			<div class="grid-item ">Celda 2</div>
+			<div class="grid-item ">Celda 3</div>
+			<div class="grid-item ">Celda 4</div>
+			<div class="grid-item ">Celda 5</div> <div class="grid-item ">Celda 6</div>
+			<div class="grid-item ">Celda 7</div>
+			<div class="grid-item ">Celda 8</div>
+			<div class="grid-item ">Celda 9</div>
+		</div>
+		<p>
+			<small>En este ejemplo podemos ver en la ultima fila como está esta posicionada al final del grid.</small>
+		</p>
+		<h3>Propiedad justify-content(Alineación de las columnas)</h3>
+		<p>
+			Cuando trabajamos con grid de dimensiones estáticas, existen herramientas para poder mover y posicionar los items y las celdas dentro del grid. Para esto veremos la propiedad Justify-content.
+		</p>
+		<h4>Valor center</h4>
+		<p>
+			Con este valor indicamos al grid que todas las celdas las posicione en el centro del grid indiferentemente del tamaño de este y del portview.
+		</p>
+		<span class="destacado-verde">Alineación center</span>
+		<div class="grid-container grid-template6 justify-content-center">
+			<div class="grid-item">Celda 1</div>
+			<div class="grid-item">Celda 2</div>
+			<div class="grid-item">Celda 3</div>
+			<div class="grid-item">Celda 4</div>
+			<div class="grid-item">Celda 5</div> 
+			<div class="grid-item">Celda 6</div>
+			<div class="grid-item">Celda 7</div>
+			<div class="grid-item">Celda 8</div>
+			<div class="grid-item">Celda 9</div>
+		</div>
+		<p>
+			<small>En el ejemplo anterior se puede apreciar como todas las celdas y sus contenidos se muestran al centro el grid estático.</small>
+		</p>
+		<h4>Valor start</h4>
+		<p>
+			Con este valor indicamos al grid que todas las celdas las posicione en el inicio (borde izquierdo) del grid indiferentemente del tamaño de este y del portview.
+		</p>
+		<span class="destacado-verde">Alineación start</span>
+		<div class="grid-container grid-template6 justify-content-start">
+			<div class="grid-item">Celda 1</div>
+			<div class="grid-item">Celda 2</div>
+			<div class="grid-item">Celda 3</div>
+			<div class="grid-item">Celda 4</div>
+			<div class="grid-item">Celda 5</div> 
+			<div class="grid-item">Celda 6</div>
+			<div class="grid-item">Celda 7</div>
+			<div class="grid-item">Celda 8</div>
+			<div class="grid-item">Celda 9</div>
+		</div>
+		<p>
+			<small>En este ejemplo observamos el comportamiento del valor start y como este posiciona las celdas y sus elementos al inicio del grid.</small>
+		</p>
+		<h4>Valor end</h4>
+		<p>
+			Con este valor indicamos al grid que todas las celdas las posicione en el final (borde derecho) del grid indiferentemente del tamaño de este y del portview.
+		</p>
+		<span class="destacado-verde">Alineación end</span>
+		<div class="grid-container grid-template6 justify-content-end">
+			<div class="grid-item">Celda 1</div>
+			<div class="grid-item">Celda 2</div>
+			<div class="grid-item">Celda 3</div>
+			<div class="grid-item">Celda 4</div>
+			<div class="grid-item">Celda 5</div> 
+			<div class="grid-item">Celda 6</div>
+			<div class="grid-item">Celda 7</div>
+			<div class="grid-item">Celda 8</div>
+			<div class="grid-item">Celda 9</div>
+		</div>
+		<p>
+			<small>En este ejemplo podemos ver como las celdas se posicionan a la derecha del grid en cuestión.</small>
+		</p>
+		<h4>Valores space-around, space-between, space-evenly</h4>
+		<p>
+			Al igual que con los flex-box, con el grid podemos usar los valores space-around, space-between y space-evenly para distribuir el espacio entre las celdas del grid.
+		</p>
+		<p>
+			Estos valores tienen el mismo comportamiento que tienen los flex-box por lo tanto no vamos a explicarlos de nuevo. Si deseas saber más acerca de esto, ve al siguiente enlace: <a href="flex-box.html#justify-content" target="_BLANK">Ir a clase Justify-content de flex-box</a>
+		</p>
+		<span class="destacado-verde">Alineación space-around</span>
+		<div class="grid-container grid-template6 heigth-700 justify-content-space-around align-content-center">
+			<div class="grid-item">Celda 1</div>
+			<div class="grid-item">Celda 2</div>
+			<div class="grid-item">Celda 3</div>
+			<div class="grid-item">Celda 4</div>
+			<div class="grid-item">Celda 5</div> 
+			<div class="grid-item">Celda 6</div>
+			<div class="grid-item">Celda 7</div>
+			<div class="grid-item">Celda 8</div>
+			<div class="grid-item">Celda 9</div>
+		</div>
+		<span class="destacado-verde">Alineación space-between</span>
+		<div class="grid-container grid-template6 heigth-700 justify-content-space-between align-content-center">
+			<div class="grid-item">Celda 1</div>
+			<div class="grid-item">Celda 2</div>
+			<div class="grid-item">Celda 3</div>
+			<div class="grid-item">Celda 4</div>
+			<div class="grid-item">Celda 5</div> 
+			<div class="grid-item">Celda 6</div>
+			<div class="grid-item">Celda 7</div>
+			<div class="grid-item">Celda 8</div>
+			<div class="grid-item">Celda 9</div>
+		</div>
+		<span class="destacado-verde">Alineación space-evenly</span>
+		<div class="grid-container grid-template6 heigth-700 justify-content-space-evenly align-content-center">
+			<div class="grid-item">Celda 1</div>
+			<div class="grid-item">Celda 2</div>
+			<div class="grid-item">Celda 3</div>
+			<div class="grid-item">Celda 4</div>
+			<div class="grid-item">Celda 5</div> 
+			<div class="grid-item">Celda 6</div>
+			<div class="grid-item">Celda 7</div>
+			<div class="grid-item">Celda 8</div>
+			<div class="grid-item">Celda 9</div>
+		</div>
+		<h3>Propiedad align-content(Alineación de las filas)</h3>
+		<p>
+			Con esta propiedad podemos alinear todas las celdas del grid del eje vertical y modificar su posicionamiento.
+		</p>
+		<h4>Valor center</h4>
+		<p>
+			Con este valor podemos posicionar las celdas de manera vertical justo en el centro del grid.
+		</p>
+		<span class="destacado-verde">Alineación center vertical</span>
+		<div class="grid-container grid-template6 heigth-700 justify-content-center align-content-center">
+			<div class="grid-item">Celda 1</div>
+			<div class="grid-item">Celda 2</div>
+			<div class="grid-item">Celda 3</div>
+			<div class="grid-item">Celda 4</div>
+			<div class="grid-item">Celda 5</div> 
+			<div class="grid-item">Celda 6</div>
+			<div class="grid-item">Celda 7</div>
+			<div class="grid-item">Celda 8</div>
+			<div class="grid-item">Celda 9</div>
+		</div>
+		<p>
+			<small>En el ejemplo anterior podemos observar como los las celdas del grid estan centradas en el eje vertical. (También se ha centrado en el eje horizontal para que se vea más estético)</small>
+		</p>
+		<h4>Valor start</h4>
+		<p>
+			Con este valor podemos posicionar las celdas de manera vertical en la zona superior del grid.
+		</p>
+		<span class="destacado-verde">Alineación start vertical</span>
+		<div class="grid-container grid-template6 heigth-700 justify-content-center align-content-start">
+			<div class="grid-item">Celda 1</div>
+			<div class="grid-item">Celda 2</div>
+			<div class="grid-item">Celda 3</div>
+			<div class="grid-item">Celda 4</div>
+			<div class="grid-item">Celda 5</div> 
+			<div class="grid-item">Celda 6</div>
+			<div class="grid-item">Celda 7</div>
+			<div class="grid-item">Celda 8</div>
+			<div class="grid-item">Celda 9</div>
+		</div>
+		<p>
+			<small>En el ejemplo anterior podemos observar como los las celdas del grid estan posicionadas en la zona más alta en el eje vertical. (También se ha centrado en el eje horizontal para que se vea más estético)</small>
+		</p>
+		<h4>Valor start</h4>
+		<p>
+			Con este valor podemos posicionar las celdas de manera vertical en la zona superior del grid.
+		</p>
+		<span class="destacado-verde">Alineación end vertical</span>
+		<div class="grid-container grid-template6 heigth-700 justify-content-center align-content-end">
+			<div class="grid-item">Celda 1</div>
+			<div class="grid-item">Celda 2</div>
+			<div class="grid-item">Celda 3</div>
+			<div class="grid-item">Celda 4</div>
+			<div class="grid-item">Celda 5</div> 
+			<div class="grid-item">Celda 6</div>
+			<div class="grid-item">Celda 7</div>
+			<div class="grid-item">Celda 8</div>
+			<div class="grid-item">Celda 9</div>
+		</div>
+		<p>
+			<small>En el ejemplo anterior podemos observar como los las celdas del grid estan posicionadas en la zona más baja del eje vertical. (También se ha centrado en el eje horizontal para que se vea más estético)</small>
+		</p>
+		<p>
+			En la siguiente clase veremos la modificación de los items de manera individual. <a href="grid-item.html">Ir a clase de grid-item</a>
+		</p>
+	</body>
+</html>

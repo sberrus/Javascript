@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Animaciones en CSS</title>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<link rel="stylesheet" type="text/css" href="css/animaciones.css">
+	</head>
+	<body>
+		<h1>Animaciones en CSS</h1>
+		<h2>Conceptos básicos</h2>
+		<p>
+			Las animaciones en CSS funcionan parecidos a las transiciones pero para poder usar estás, tenemos que hacer uso de la regla @KeyFrames para definirlas dentro del documento CSS.
+		</p>
+		<h2>Uso de las @keyframes</h2>
+		<p>
+			Para usar las @keyframes tenemos que introducir dentro del documento CSS la regla @keyframes, seguido del nombre que le vamos a dar a dicha animación y luego abrir los corchetes "{}" donde introduciremos dentro de estos las instrucciones par dicho @keyframes. EJ: @keyframes desplazar { INSTRUCCION... }
+		</p>
+		<h3>Uso de las propiedades from{} y to{}</h3>
+		<p>
+			Al usar estas propiedades dentro de las instrucciones del @keyframes, indicamos las propiedades de inicio y finales del mismo. Siendo from{} las instrucciones del inicio de la animación y to{} las del final de la animación.
+		</p>
+		<h3>Asignar @keyframe a algún elemento dentro del HTML. Propiedad (animation-name y animation-duration)</h3>
+		<p>
+			Para asignarle la animación a algún elemento HTML tenemos que darle a algún selector al cual se le va a aplicar la animación la propiedad animation-name, indicando como valor el nombre del @keyframe y el valor animation-duration indicando como valor el tiempo que va a tardar la animación en realizar toda la instrucción. <b>Estos dos valores son obligatorios a la hora de trabajar con las animaciones en CSS.</b>
+		</p>
+		<span class="destacado-verde">Uso de @keyframes dentro de HTML. Con propiedades from{} y to{} dentro del @keyframe</span>
+		<div class="contenedor">
+			<div class="caja"  id="desplazarse"></div>
+		</div>
+		<p>
+			<small>En esta caja podemos ver un ejemplo de como se ven las animaciones aplicadas a un elemento HTML.</small>
+		</p>
+		<h3>Uso de porcentajes para las @keyframes</h3>
+		<p>
+			Con el uso de los porcentajes dentro de los estados del @keyframe podemos indicar más estados para la animación con la que estemos trabajando. Los estados from{} y to{} equivaldrián a los porcentajes 0% y 100% respectivamente. Pero la principal diferencia entre usar un tipo de valor y otro es que al usar porcentajes podemos dar más de un solo estado dentro de la animación. Podemos usar tantos estados como puntos de porcentajes hay del 0% al 100%. 
+		</p>
+		<span class="destacado-verde">Uso de @keyframes dentro de HTML. Con propiedades en porcentajes dentro del @keyframe</span>
+		<div class="contenedor">
+			<div class="caja" id="desplazarse2"></div>
+		</div>
+		<p>
+			<small>En esta caja podemos ver un ejemplo de como se ven las animaciones aplicadas a un elemento HTML. Pero este modifica el aspecto de la caja que la contiene</small>
+		</p>
+		<p>
+			<small>No se aprecia a simple vista pero esta animación tiene 3 iniciando en color rojo y a la izquierda del todo, el segundo estado lleva la caja al final del contennedor y le da un aspecto de fondo rojo y el tercer y último estado es de nuevo al color rojo.</small>
+		</p>
+		<h3>Propiedad animation-iteration-count</h3>
+		<p>
+			Con esta propiedad podemos indicar la cantidad la cual dicha animación se va a repetir. Este valor tiene que ser númerico. Para agilizar la clase, le hemos aplicado dicho valor a la caja anterior para que se aprecie como se comporta dicha propiedad en las animaciones.
+		</p>
+		<p>
+			Esta propieadad nos permite repetir la animación tantas veces queramos dandole un valor númerico siendo este la cantidad de veces que se va a repetir la animación.
+		</p>
+		<h4>Valor infinite</h4>
+		<p>
+			Si queremos que este valor se repita de manera infinita o indefinida se usa el valor infinite
+		</p>
+		<span class="destacado-verde">Uso de la propiedad animation-iteration-count con valor "infinite"</span>
+		<div class="contenedor">
+			<div class="caja" id="desplazarse-iteration"></div>
+		</div>
+		<p>
+			<small>Esta caja tiene un valor de repeticion infinito de manera que va a repetirse la animación en todo momento.</small>
+		</p>
+		<h3>animation-direction</h3>
+		<p>
+			Con esta propiedad podemos cambiar el flujo de la animación y hacer que corra de manera inversa a como esta programada.
+		</p>
+		<h4>Valor normal</h4>
+		<p>
+			Con la propiedad con valor normal indicamos el flujo normal de la animación, yendo de from{} a to{} o de 0% a 100% respectivamente.
+		</p>
+		<h4>Valor reverse</h4>
+		<p>
+			Tiene un comportamiento inverso al valor "normal"
+		</p>
+		<h4>Valor alternate</h4>
+		<p>
+			Con este valor podemos alternar el comportamiento de la animación empezando con el valor "normal" y luego alternando con "reverse" creando así, una animación que tenga un comportamiento más fluido. 
+		</p>
+		<span class="destacado-verde">Uso de la propiedad animation-direction</span>
+		<div class="contenedor height">
+			<span class="destacado-verde">Caja verde con direction normal</span>
+			<div class="caja" id="desplazarse-direction-normal"></div>
+			<span class="destacado-rojo">Caja de color rojo con direction: reverse</span>
+			<div class="caja" id="desplazarse-direction-reverse"></div>
+			<span class="destacado-rojo" style="color: orange; text-decoration-color: orange;">Caja de color rojo con direction: alternate</span>
+			<div class="caja" id="desplazarse-direction-alternate"></div>
+			<span class="destacado-rojo" style="color: yellow; text-decoration-color: yellow;">Caja de color rojo con direction: alternate-reverse</span>
+			<div class="caja" id="desplazarse-direction-alternate-reverse"></div>
+		</div>
+		<p>
+			<small>En la caja superior, podemos observar el comportamiento de la propiedad animation-direction aplicada a las dos cajas anteriores. Como bien se indica, la caja verde tiene como valor "normal" y la caja roja tiene valor "reverse"</small>
+		</p>
+		<h3>Propiedad animation-fill-mode</h3>
+		<p>
+			Con esta propiedad podemos indicarle a la animación como ésta debe comportarse al momento de terminar dicha animación (Esto solo sirve para las animaciones pensadas a que no se repitan o se repitan pocas veces, sino no se presenciará la animación.)
+		</p>
+		<p>
+			Es útil para cuando deseamos que una animación no vuelva a su estado original o valor:none. Qué se puede observar cuando al terminar la animación, el elemento al que se la aplicamos vuelve a su posición inicial. 
+		</p>
+		<h4>Valor forwards</h4>
+		<p>
+			Con este valor indicamos que al finalizar la animación, el elemento tenga el aspecto y las instrucciones de el estado final de la misma (to{} o 100%) y que se mantenga allí.
+		</p>
+		<span class="destacado-verde">Uso de la propiedad animatioon-fill-mode con valor forward</span>
+		<div class="contenedor">
+			<div class="caja"  id="forward"></div>
+		</div>
+		<h4>Valor both</h4>
+		<p>
+			Este valor da más juego para cuando utilizamos junto a este la propiedad animation-delay. Al utilizar esta propiedad y tenemos un estado que modifica el aspecto del elemento con la primera animación, si no tenemos en la propiedad animation-fill-mode el valor both, Esta empezará con el valor que tiene en principio mientras dure el delay. Al usar la propiedad both, indicamos que el aspecto que tenga la propiedad en el to{} o en el 0%(o al valor que hayamos indicado para empezar la animación) se aplique junto al delay. 
+		</p>
+		<span class="destacado-verde">Uso de la propiedad animatioon-fill-mode con valor forward</span>
+		<div class="contenedor height2">
+			<span class="destacado-rojo" style="color: darkred; text-decoration: darkred;">Caja con both</span>
+			<div class="caja"  id="both"></div>
+			<span class="destacado-rojo" style="color: #0d078a; text-decoration: #0d078a;">Caja sin both</span>
+			<div class="caja delay"  id="forward"></div>
+		</div>
+		<p>
+			<small>Como se puede observar al usar la propiedad both como en la primera caja, El elemento obtiene el aspecto indicado en los estados de la animación mientras se esta ejecutando el delay. Cosa que no pasa con la caja que no tiene la propiedad, que primero ejecuta el delay y luego cambia el aspecto del elemento.</small>
+		</p>
+        <h3>Propiedad animation-timing-funtion</h3>
+        <p>
+        	Con esta propiedad y el valor que veremos a continuación, podemos configurar la velocidad y el como se va a representar la animación utilizando el valor cubic-bezier(). 
+        </p>
+        <h4>Valor cubic-bezier</h4>
+        <p>
+        	Esta es la propiedad que nos permite modificar la interacción de la animación y su velocidad de transición. Este valor se aplica al animation-timing-function seguido de unos parentesis que llevaran dentro de si cuatro parámetros que son los que nos van a permitir modificar la transición. 
+        </p>
+        <p>
+        	Con estos parámetros podemos crear animaciones de rebote y de diversos tipos que pueden resultarnos utiles a la hora de crear páginas web más creativas.
+        </p>
+        <p>
+        	También existe una página web que dejare en el siguiente enlace <a href="https://cubic-bezier.com/#.17,.67,.83,.67" target="_BLANK">Cubic Bazier Generator</a>, que nos permite crear la animación de una manera más fácil.
+        </p>
+        <span class="destacado-verde">Uso de la propiedad aniamtion-timing-function con valor cubic-bazier</span>
+		<div class="contenedor">
+			<div class="caja"  id="cubic-bazier"></div>
+		</div>
+		<p>
+			Ahora veremos la propiedad transform en CSS. <a href="transform.html">Ir a clase de Transform en CSS</a>
+		</p>
+	</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS Uso de los selectores</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+	</head>
+	<body>
+		<h1>Selectores en CSS</h1>
+		<p>
+			En esta clase veremos todo lo relacionado con los selectores a la par que vayamos escuchando las clases del sr Dalto en youtube. Empezemos.
+		</p>
+		<h2>Tipos de selectores</h2>
+		<p>
+			En html contamos con varios tipos de selectores con la cual podemos trabajar. Ejemplo:
+		</p>
+		<ul>
+			<li>
+				<h3>Selector Universal "*"</h3>
+				<p>
+					Este selector se encarga de modificar el aspecto de todos los elementos de la pagina HTML. Ejemplo:<br>
+					* {color:red}
+					<i>Todos los elementos de la pagina tendran color de texto rojo</i>
+				</p>
+			</li>
+			<li>
+				<h3>Selector de etiqueta</h3>
+				<p>
+					Este se encarga de modificar el aspecto de las etiquetas que esten dentro del selector. Ejemplo: <br>
+					h1 {color:blue}
+				</p>
+				<p>
+					<i>Todas las etiquetas h1 estaran de color azul</i> 
+				</p>
+				<p>
+					En los selectores tambien podemos introducir tantas etiquetas como nos sea necesario. Ejemplo: <br>
+					h1, h2, h3, p {color:green}.
+				</p>
+			</li>
+			<li>
+				<h3 class="clase">Selector por clases</h3>
+				<p>
+					En html tambien podemos utilizar selectores que modifiquen el aspecto de los elementos que contengan una clase con un valor especifico. Esto lo logramos utilizando como selector el valor de la clase que deseamos modificar con un punto antes de la misma. Ejemplo:
+				</p>
+				<p>
+					.clase{color:orange}
+				</p>
+			</li>
+			<li>
+				<h3 id="id">Selector por ID</h3>
+				<p>
+					Tambien podemos utilizar el atributo id para cambiar el aspecto de los elementos en hmtl. Funciona similar a los selectores de clase pero utilizando el signo "#" en vez de un punto. Ejemplo:
+					#id {color:grey}
+				</p>
+			</li>
+		</ul>
+		<h2>Selectores Especiales</h2>
+		<p>
+			Con los selectores basicos es posible crear cualquier pagina web que deseemos. Aunque tambien podemos utilizar selectores especiales que nos permiten realizar acciones mas avanzadas dentro de CSS como veremos a continuación.
+		</p>
+		<ul>
+			<li>
+				<h3>Selectores de hijos ">" </h3>
+				<p>
+					Este selectore permite modificar los elementos que sean hijos directos de un padre en html. se utiliza el simbolo ">" para declarar el selector. Ejemplo: <br>
+					p > a {color red} <br>
+					<i>Solo se modificara el aspecto a los elementos con etiqueta &#60;a&#62; que esten dentro de una etiqueta de tipo &#60;p&#62; y que sea hijo directo. Sí antes de la etiqueta &#60;a&#62; hay otra etiqueta a esta no se le modificara el aspecto</i>
+				</p>
+			</li>
+			<li>
+				<h3>Selector adyacente</h3>
+				<p>
+					Con este selector podemos modificar el valor de un elemento que se declare adyacente de otro elemento que declaremos en el selector. Estos se declaran con el signo + para definir la adyacnecia. Ejemplo: <br>
+					p + p{color:red;} <br>
+					<i>En este ejemplo solo se modificara el aspecto de las etiquetas &#60;p&#62; que preceda a otro elemento &#60;p&#62;</i>
+				</p>
+			</li>
+		</ul>
+		<h2>Psuedo selectores</h2>
+		<p>
+			Los pseudo selectores son aquellos que indican que modifique el aspecto de algun elemento despues de haberse realizado alguna accion previa, como por ejemplo, que al pasar el mouse por encima de algun elemento este midifique su aspecto. Estos se le añaden a algun elemento del selector seguido de un ":" y el pseudoselector correspondiente. Por ejemplo:
+			<h3>:hover</h3>
+			<h4 class="hover">Ejemplo</h4>
+		</p>
+		Ir a clase de <a href="especificidad.html">especificidad</a>
+	</body>
+</html>

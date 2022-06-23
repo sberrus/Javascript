@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Grid-item en CSS</title>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<link rel="stylesheet" type="text/css" href="css/grid-area.css">
+	</head>
+	<body>
+		<h1>Grid area</h1>
+		<h2>Conceptos básicos</h2>
+		<p>
+			Un área es un conjunto de celdas (preferiblemente consecutivas) que estan dentro de un grid. Para hacer uso de areas tenemos que usar la propiedad grid-template-area: después, entre comillas, vamos a indicar fila por fila las áreas que ocupara cada una de las filas. En el siguiente ejemplo la distribución de las áreas es la siguiente "header header header" "aside main main" "aside main main" "footer footer footer"
+		</p>
+		<p>
+			Ya asignados las areas en el template luego a cada uno de los contenedores internos del grid-container se les asigna una de las áreas con la propiedad grid-area. Después de asignarle los aspectos deseados tenemos una estructura parecida a la que veremos a continuación.
+		</p>
+		<div class="grid-container">
+			<div class="grid-item grid-header">
+				<ul>
+					<li><a href="#">Enlace</a></li>
+					<li><a href="#">Enlace</a></li>
+					<li><a href="#">Enlace</a></li>
+					<li><a href="#">Enlace</a></li>
+				</ul>
+			</div>
+			<div class="grid-item grid-main">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+			<div class="grid-item grid-aside">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+			<div class="grid-item grid-footer">Footer</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,108 @@
+/* Animación principal de la Main Page */
+
+.main-animation{
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
+
+.image-background{
+    z-index: -3000;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    animation-name: animation-main;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    border-radius: 1%;
+}
+
+@keyframes animation-main{
+    from{
+        filter: opacity(0) blur(3px);
+    }
+    to{
+        filter: opacity(1) blur(0px) brightness(0.8);
+    }
+}
+
+.arrow-container{
+    position: absolute;
+    z-index: -1000;
+    top: 600px;
+    left: 680px;
+    height: 130px;
+    width: 110px;
+    background-color: rgba(0, 0, 0, 0.466);
+    border-radius: 30%;
+    border: 5px solid rgb(0, 162, 255);
+    animation-name: animation-main;
+    animation-duration: 5s;
+}
+
+.arrow-container > img{
+    position: absolute;
+    width: 110px;
+    animation-name: arrow-animation;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+.arrow-animation{top:-15px}
+
+.arrow-animation2{
+    top: 15px;
+    animation-delay: 0.5s;
+}
+
+.arrow-animation3{
+    top: 45px;
+    animation-delay: 1s;
+}
+
+@keyframes arrow-animation{
+    from{
+        filter: opacity(0);
+    }
+    to{
+        filter: opacity(1);
+    }
+}
+
+#capa-enlace{
+    position: absolute;
+    top: 600px;
+    left: 680px;
+    height: 140px;
+    width: 120px;
+    border-radius: 30%;
+}
+
+#capa-enlace:hover{
+    box-shadow: 0px 0px 10px 5px rgb(0, 162, 255);
+}
+
+@media screen and (max-width: 800px){
+    .arrow-container{
+        top:80%;
+        left: 42%;
+    }
+    #capa-enlace{
+        top: 80%;
+        left: 42%;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .arrow-container{
+        top: 500px;
+        left: 50%;
+    }
+    #capa-enlace{
+        top: 500px;
+        left: 50%;
+    }
+}

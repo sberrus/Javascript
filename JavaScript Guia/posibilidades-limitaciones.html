@@ -1,0 +1,137 @@
+<html>
+<head>
+    <title>Repositorio de Atomos en HTML</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/principal.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Inicio del menú principal -->
+    <header>
+        <div class="header__logo">
+            <img src="images/s-roja.png" alt="Logo de repositorio Samuel Berrus">
+        </div>
+        <nav class="header__nav">
+            <a href="index.html" class="header__nav--a">Inicio</a>
+            <a href="#" class="header__nav--a">Contenido</a>
+            <a href="#" class="header__nav--a">Prácticas Propias</a>
+        </nav>
+    </header>
+    <!-- Fin del menú principal-->
+
+    <!-- Contenido principal de la página Web-->
+    <div class="main-container">
+        <section>
+            <h1>Posibilidades y Limitaciones</h1>
+
+            <!-- Bloque de contenido -->
+            <article>
+                <div class="content-box">
+                    <div class="content-row">
+                        <h2>Principales características</h2>
+                        <p>
+                            Las principales limitaciones que tiene JavaScript tienen que ver más con las propias limitaciones de cada navegador, pero principalmente son las siguientes:
+                        </p>
+                        <ul>
+                            <li>
+                                <p>
+                                    Los scripts no pueden comunicarse con otros scripts que no pertenezcan al mismo dominio en donde se ejecutan.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Los scripts no pueden cerrar ventanas, ni hacer que sean muy pequeñas, ni demasiado grandes; tampoco pueden hacer que las ventanas aparecen en una zona no visible para el usuario (Estas condiciones dependen más del propio navegador).
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Los scripts no pueden acceder a archivos del usuario y tampoco pueden leer o modificar las preferencias del navegador.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Si un script dura demasiado tiempo en segundo plano (ya sea por un error de programación o por otra razón) el navegador informa de que hay algún programa consumiendo recursos en el mismo y la posibilidad de detener su ejecución.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    A pesar de todo se pueden saltar algunas de las consideraciones previamente vistas. Pero se requiere hacer una firma digital y solicitar ciertos permisos al usuario para hacer uso de estas.
+                                </p>
+                            </li>
+                        </ul>
+                        <p>
+                            En la actualidad la gran mayoría de navegadores soportan de manera nativa el uso de scripts en JavaScript.
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <!-- Fin bloque de contenido -->
+
+             <!-- Bloque de contenido -->
+             <article>
+                <div class="content-box">
+                    <div class="content-row">
+                        <h2>JavaScript en otros entornos</h2>
+                        <p>
+                            JavaScript permite crear programas para diversos entornos, Adobe Acrobat permite en sus PDF incluir código JavaScript dentro de sus archivos. Photoshop permite introducir pequeños scripts dentro del programa y Java desde la versión 6 introdujo una librería (denominada javax.script) que permite integrar ambos lenguajes.
+                        </p>
+                        <p>
+                            Por último, aplicaciones como Yahoo! widgets y el dashboard de Apple utilizan JavaScript para programar sus widgets.
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <!-- Fin bloque de contenido -->
+
+        </section>
+        
+        <!-- Sección del Aside de la página -->
+
+        <aside>
+            <h2>Menú de navegación</h2>
+            <ul class="menu-lateral">
+                <li class="menu-lateral__items">
+                    <h3><a href="index.html">Bienvenida</a></h3>
+                </li>
+                <li class="menu-lateral__items">
+                    <h3><a href="implementacion.html">Conceptos Básicos</a></h3>
+                </li>
+                <ul class="submenu">
+                    <li class="submenu__items">
+                        <a href="implementacion.html">Implementacion de código</a>
+                    </li>
+                    <li class="submenu__items">
+                        <a href="glosario.html">Glosario y Sintáxis Básica</a>
+                    </li>
+                    <li class="submenu__items">
+                        <a href="posibilidades-limitaciones.html">Posibilidades y Limitaciones</a>
+                    </li>
+                </ul>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Sección del Aside de la página -->
+
+    <!-- Fin de la sección de contenido-->
+
+    <!-- Seccion de los botones de navegación inferiores-->
+    <div class="navegador">
+        <div class="navegador__boton">
+            <a href="glosario.html"><img src="images/flecha-boton.png" alt="Flecha izquierda"></a>
+        </div>
+        <div class="navegador__boton">
+            <a href="capitulo_2/programacion-basica.html"><img src="images/flecha-boton.png" alt="Flecha derecha"></a>
+        </div>
+    </div>
+
+    <!-- Inicio Footer -->
+    <footer>
+
+    </footer>
+    <!-- Fin footer-->
+</body>
+</html>

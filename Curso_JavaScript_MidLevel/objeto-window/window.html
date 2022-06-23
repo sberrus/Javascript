@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Objeto Window -- JavaScript Mid-Level</title>
+</head>
+
+<body>
+    <!-- Plantilla Cabecera -->
+    <div class="cabecera">
+        <h1>Objeto Window</h1>
+        <p class="subtitulo">
+            Uso de JavaScript para eventos del navegador.
+        </p>
+
+    </div>
+
+    <!---->
+    <section>
+        <h2>Introducción</h2>
+        <p>
+            Window es un objeto de JavaScript con la más alta jerarquia del document. Todo depende del Window. Hace
+            referencia a la ventana del navegador y toda la interacción que hagamos con la misma.
+        </p>
+        <p>
+            Window tiene una importancia y un sin fin de metodos y funciones además de miles de propiedades, que no se
+            verán todas debido a que la gran mayoria son para realizar ciertas funciones muy especificas que por los
+            momentos no haremos uso de ellas. De igual manera podemos revisar en internet la <a
+                href="https://www.google.com/search?q=window+object+javascript&oq=window+object+&aqs=chrome.1.69i57j0l2j0i22i30l5.6792j0j7&sourceid=chrome&ie=UTF-8"
+                target="_BLANK"> documentación del objeto Window.</a>
+        </p>
+        <p>
+            Este objeto hereda las propiedades del evento <a href="#">eventTarget</a> que se explicará más adelante
+        </p>
+
+    </section>
+    <section>
+        <h2><a href="js/window.js">Ir a Métodos del objeto Window</a></h2>
+        <ul>
+            <li>
+                <p>
+                    Uso del método window.open("url") y Window.close(): <br>
+                    Métodos para abrir y cerrar ventanas del navegador.
+                </p>
+                <button id="open">Abrir Ventana</button>
+                <button id="close">Cerrar Ventana</button>
+            </li><br>
+            <li>
+                window.closed(): (Presionar botón superior para abrir la ventana y ver el efecto.)<br>
+                <span class="status">Ventana Cerrada</span>
+                <p>
+                    Para ver de mejor manera Ir al <a href="js/window.js">Código js</a> de la página e ir a la función "cerrarVentana" para ver como funciona este método.
+                </p>
+            </li>
+            <li>
+                window.stop: (Presionar botón "Abrir Ventana" y rapidamente presionar el siguiente botón "Parar Carga").<br>
+                <input type="button" value="Parar Carga" id="stop">
+            </li>
+            <li>
+                window.print: Imprime la pantalla del navegador (Igual a usar ctrl+p)<br>
+                <input type="button" id="print" value="Imprimir Pantalla">
+            </li>
+            <li>
+                window.confirm(string): Método para mostrar ventana con respuesta dicotómica.
+            </li>
+        </ul>
+    </section>
+    <script src="js/window.js"></script>
+</body>
+
+</html>

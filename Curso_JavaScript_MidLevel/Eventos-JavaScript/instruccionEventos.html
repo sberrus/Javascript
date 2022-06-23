@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>JavaScript Mid-Level -- Eventos en Js</title>
+</head>
+
+<body>
+    <!-- Plantilla Cabecera -->
+    <div class="cabecera">
+        <h1>Capítulo 3 -- Eventos</h1>
+        <p class="subtitulo">
+            Manejo de Eventos en JavaScript
+        </p>
+    </div>
+    <!---->
+
+    <h2>Eventos en JavaScript</h2>
+    <p>
+        Con los eventos podemos añadirle dinamísmo a la página web siendo una de las características principales del
+        lenguaje. Puede definirse a
+        "evento" como cualquier cambio que haga la web o el usuario en el navegador.
+    </p>
+    <input type="button" value="Cliqueame" id="click">
+    <input type="button" value="Deshabilitar botón" id="remove">
+    <input type="button" value="Habilitar botón" id="set">
+    <input type="button" value="Ver Propiedades en Consola" id="propiedades">
+    <h2>Eventos del mouse.</h2>
+    <ul>
+        <li>
+            click: Evento que se ejecuta al darle click a dicho elemento. <input type="button" value="Tocame!"
+                id="clicks">
+        </li>
+        <li>
+            click: Evento cuando se da doble click. <input type="button" value="Tocame 2 Veces" id="doble-click">
+        </li>
+        <li>
+            mouseover: cuando se pasa el mouse por encima de un elemento o de sus hijos. <input type="text"
+                value="Pasa el mouse por encima" readonly style="padding: 10px; font-weight: bold;" id="mouseover">
+        </li>
+        <li>
+            mouseout: cuando se sale el mouse del elemento o de alguno de los elementos hijos.
+            <br><input type="text" value="Pasa el mouse por encima y luego saca el mouse" readonly
+                style="padding: 10px; font-weight: bold; width: 450px;" id="mouseout">
+        </li>
+        <li>
+            contextmenu: se ejecuta la tocar el click derecho.
+            <input type="text" value="Has click derecho" readonly
+                style="padding: 10px; font-weight: bold; width: 450px;" id="contextmenu">
+        </li>
+        <li>
+            mouseleave: se ejecuta al momento en el que el puntero sale del elemento al que se le ha aplicado
+        </li>
+        <li>
+            mousemove: Se ejecuta al momento de mover el mouse por encima del elemento al que se le aplica.
+            <div id="mousemove"
+                style="width: 100%; height: 100px; background-color: #000; padding: 25px 0; font-size: 1.2em; user-select: none;">
+                Pasa el Mouse por encima de la zona roja para ver el efecto de los eventos "mousemove" y "mouseleave",
+                además de "dblclick"</div>
+        </li>
+        <li>
+            mousedown: este se ejecuta cuando se ejecuta el click izquierdo. La principal diferencia entre "mousedown" y
+            "click", es que con "mousedown" el evento se ejecuta al instante de que el boton izquierdo del mouse realiza
+            el click, a diferencia del evento click que se ejecuta al momento de levantar el dedo del boton izquierdo
+            del mouse. Otra particularidad es que con el evento "click" si levantas el click fuera del elemento que
+            contiene el "listener" este no se ejecuta.
+            <div id="mousedown" style="height: 100px; background-color: #000; user-select: none;">Deja el click
+                presionado encima de este bloque</div>
+        </li>
+        <li>
+            mouseup: es la contra parte de mousedown, este se ejecuta cuando el click se deja de presionar dentro del
+            elemento al que se le aplica indiferentemente de de que el click se haya hecho fuera del elemento al que se
+            le aplica. Este se ejecuta cuando levantas el click dentro del elemento que contiene el listener
+            <div id="mouseup" style="background-color: #000; height: 50px; user-select: none;">Has click fuera de este
+                bloque y suelta el click aqui</div>
+        </li>
+    </ul>
+    <h2>Eventos del teclado</h2>
+    <p>
+        Los eventos de teclado se ejecutan al momento de que se indique ciertos comportamientos para ciertas teclas del
+        teclado.
+    </p>
+    <ul>
+        <li>
+            keydown: este evento se ejecuta cuando cualquier tecla se presiona
+        </li>
+        <li>
+            keypress: Este evento se ejecuta al momento de presionar y luego soltar cualquier tecla.
+        </li>
+        <li>
+            onkeyup: este evento se ejecuta al momento de soltar la tecla y deje de presionarse
+        </li>
+    </ul>
+    <div id="eventos-teclado">
+        <input type="text" name="" id="teclados" placeholder="Escribir con la consola abierta">
+    </div>
+    <h2>Eventos de la interfaz</h2>
+    <p>
+        Estos eventos nos permiten realizar funciones a la hora de que en el navegador o alguno de sus componentes o elementos ocurran algo, como errores, cargas etc...
+    </p>
+    <ul>
+        <li>
+            error: este evento se ejecuta al momento de que si algun elemento genera algun error (como que no cargue una imágen completa.), al generarse el error se ejecute una acción.
+            <div id="imagen-prueba">
+                <input type="button" name="" id="agregar-imagen" value="agregar imagen">
+                <input type="button" name="" id="eliminar-imagen" value="Eliminar imagen">
+            </div>
+            ** la idea es que al momento de cancelar la carga de la imágen ver como esta dispara el evento "error" pero no je puede.
+        </li>
+        <li>
+            load: Este evento se aplica al windowObjet indicando que cuando este se cargue del todo se ejecute el evento.
+            <input type="text" name="" id="load" disabled>
+        </li>
+        <li>
+            beforeunload: este evento también se aplica directamente al objeto window. Ejecuta una acción antes de irse de la página la cual tenga este elemento.
+            <a href="https://google.com">Ir a google</a>
+        </li>
+        <li>
+            unload: esta evento se ejecuta al momento de que ya te has ido del sitio
+        </li>
+        <li>
+            resize: este evento se ejecuta al momento de que cambie el tamaño de vista del documento. [abrir consola y cambiar el tamaño de la ventana para ver la ejecucion de este evento]
+        </li>
+        <li>
+            scroll: este evento se ejecuta cuando cada vez que se haga scroll en la ventana a la que se le aplica el evento.
+            <div id="scrolls">
+                <h4 id="scroll"></h4>
+            </div>
+        </li>
+        <li>
+            selected: este evento se ejecuta al momento de que el usuario haga selec (que subraye algun texto) del elemento al que se le aplica. 
+            <br>
+            <input type="text" id="selected" placeholder="selecciona algun texto dentro de este input" value="Texto de prueba">
+            <br>
+            <p id="start">Posición Indice Inicial:</p>
+            <p id="end">Posicion Indice Final:</p>
+            <p id="seleccionado">El texto que has seleccionado es: </p>
+            <h3>nota**</h3>
+            <p>
+                Haciendo uso de este evento podemos extraer información a partir de la selección del texto. si enviamos como parámetro alguna variable <i> addEventListener("evento"(parametro)=>{...})"</i>, si mostramos lo que nos devuelve ese parámetro en consola podemos extraer información de el texto que hemos seleccionado y usarlo a nuestra conveniencia.
+            </p>
+        </li>
+        <h2>Nota importante****</h2>
+        <p>
+            Estos eventos se despliegan al ejecutarse ciertas acciones. Si nosotros mopstramos en la consola los eventos enviandolos como parámetro, podemos acceder a información con la que luego podemos trabajar y manejar a nuestro antojo y gusto. Siendo una herramienta y una forma eficaz de poder trabajar con las mismas. Si con el scroll queremos acceder al total de pixeles que se ha bajado para que a partir de cierto punto podamos realizar una acción en especifico accedemos a los datos en "parametroDeEvento."
+        </p>
+        <h2>Para conocer todos los eventos que no se han tocado (Que son un monton), hay que ir a la página de <a href="https://www.w3schools.com/jsref/obj_event.asp">W3school</a> que se puede profundizar muchísimo más en el tema</h2>
+    </ul>
+    <footer></footer>
+    <!---->
+    <link rel="stylesheet" href="css/eventos.css">
+    <script src="js/eventos.js"></script>
+</body>
+
+</html>

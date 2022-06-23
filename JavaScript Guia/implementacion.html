@@ -1,0 +1,172 @@
+<html>
+
+<head>
+    <title>Repositorio de Atomos en HTML</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/principal.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="js/ejemplo-codigo.js"></script>
+</head>
+
+<body>
+    <!-- Inicio del menú principal -->
+    <header>
+        <div class="header__logo">
+            <img src="images/s-roja.png" alt="Logo de repositorio Samuel Berrus">
+        </div>
+        <nav class="header__nav">
+            <a href="index.html" class="header__nav--a">Inicio</a>
+            <a href="#" class="header__nav--a">Contenido</a>
+            <a href="#" class="header__nav--a">Prácticas Propias</a>
+        </nav>
+    </header>
+    <!-- Fin del menú principal-->
+
+    <!-- Contenido principal de la página Web-->
+    <div class="main-container">
+        <section>
+            <h1>Implementación de Código JavaScript en documentos XHTML</h1>
+            <p class="subtitulo">Uso de código JavaScript dentro de XHTML</p>
+            <article>
+                <div class="content-box">
+                    <div class="content">
+                        <h2>Implementación</h2>
+                        <p>
+                            En esta clase Veremos como implementar JavaScript dentro de los documentos XHTML. Para introducir código JavaScript disponemos de 2 métodos y 3 maneras distintas. Pero antes de esto tenemos que explicar el uso de la etiqueta &#60;script&#62;. 
+                        </p>
+                        <h3>Uso de la etiqueta script</h3>
+                        <p>
+                            Esta etiqueta se usa principalmente cuando se implementa dentro del documento o cuando se introduce un código JavaScript enlazado de un documento externo. Para usar la etiqueta &#60;script&#62; es necesario indicar mediante el atributo <b>"type"</b> el tipo de script que es. En este caso se implementaria el siguiente script "text/javascript" para indicarle al documento XHTML que este va a hacer uso de un código JavaScript.
+                        </p>
+                        <p>
+                            Visto lo relacionado con la etiqueta &#60;script&#62; Veremos como introducir Código JavaScript dentro de los documentos XHTML.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Bloque de contenido en columnas -->
+            <article id="in-document">
+                <div class="content-box">
+                    <div class="content-row">
+                        <h2>Métodos de implementación dentro del documento XHTML </h2>
+                        <p>
+                            Este se utiliza en menor medida ya que dificulta las labores de mantenimiento del sitio y hace más engorroso el modificar parte del código. Se suele utilizar al momento de agregar código JavaScript para alguna página en especifico.
+                        </p>
+                        <dl>
+                            <dt><b>Dentro del &#60;head&#62; del documento XHTML.</b></dt>
+                            <dd>
+                                <p>
+                                    Introduciendo el bloque de código JavaScript dentro de la etiqueta &#60;script&#62; que a su vez esta sera hija de la etiqueta &#60;head&#62;. 
+                                </p>
+                            </dd>
+                            <dt><b>Dentro del &#60;body&#62; del documento XHTML.</b></dt>
+                            <dd>
+                                <p>
+                                    Se introduce de la misma manera que cuando introducimos en el head del documento XHTML. Pero esta vez, siendo hija del elemento &#60;body&#62;
+                                </p>
+                            </dd>
+                            <dt><b>Implementación mediante acciones</b></dt>
+                            <dd>
+                                <p>
+                                    Mediante el uso de inputs también podemos accionar codigo JavaScript mediante el uso de acciones ya sea hacer click o cualquier otro para que el elemento ejecute un código JavaScript. A continuación haremos un ejemplo de dicho tipo de implementación. 
+                                </p>
+                                <h2 style="background:rgba(255,250,0,0.5);border:3px solid darkred;color: darkred;cursor: pointer; display: inline;" onclick="alert('Este es un ejemplo de código JavaScript escrito dentro de un llamado a acción.')">Haz click aqui</h2>
+                            </dd>
+                        </dl>
+                        <p>
+                            En el siguiente enlace veremos un ejemplo de implementación de código javascript dentro del documento XHTML. 
+                        </p>
+                        <a href="ejemplo-codigo.html">Ir a ejemplo</a>
+                    </div>
+                   
+                </div>
+            </article>
+            <!-- Fin bloque de contenido -->
+
+            <!-- Bloque de contenido -->
+            <article>
+                <div class="content-box">
+                    <div class="content-row">
+                        <h2>Método de importación de código Javascript desde un archivo externo.</h2>
+                        <p>
+                            Este método es el más aconsejado debido a que es más sencillo modificar y mantener el código sin tener que cambiar página por página todos los códigos que deseemos modificar.
+                        </p>
+                        <p>
+                            Para ello tenemos que crear un archivo externo en nuestro editor de código preferido y añadirle al archivo la extensión ".js". Para enlazar el archivo a la página que deseemos tenemos que introducir en el &#60;head&#62; un elemento &#60;script&#62; con su respectivo "type" y ademas un atributo src"/ruta" que indicara la ruta ya sea absoluta o relativa del documento que contiene el código JavaScript que deseamos utilizar.
+                        </p>
+                        <p>
+                            En esta misma página hemos hecho uso de este tipo de método para enlazar un código JavaScript que se esta ejecutando.
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <!-- Fin bloque de contenido -->
+
+            <!-- Bloque de contenido -->
+            <article>
+                <div class="content-box">
+                    <div class="content-row">
+                        <h2>Uso de la etiqueta &#60;script&#62; </h2>
+                        <p>
+                            Esta etiqueta se agrega a los documentos XHTML para mostrarle al usuario un mensaje para indicarle que tiene deshabilitado JavaScript y nosotros poder mostrarle un mensaje como deseemos.
+                        </p>
+                        <p>
+                            Esta etiqueta se introduce dentro del body del documento XHTML.
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <!-- Fin bloque de contenido -->
+
+        </section>
+        
+        <!-- Sección del Aside de la página -->
+
+        <aside>
+            <h2>Menú de navegación</h2>
+            <ul class="menu-lateral">
+                <li class="menu-lateral__items">
+                    <h3><a href="index.html">Bienvenida</a></h3>
+                </li>
+                <li class="menu-lateral__items">
+                    <h3><a href="implementacion.html">Conceptos Básicos</a></h3>
+                </li>
+                <ul class="submenu">
+                    <li class="submenu__items">
+                        <a href="implementacion.html">Implementacion de código</a>
+                    </li>
+                    <li class="submenu__items">
+                        <a href="glosario.html">Glosario y Sintáxis Básica</a>
+                    </li>
+                    <li class="submenu__items">
+                        <a href="posibilidades-limitaciones.html">Posibilidades y Limitaciones</a>
+                    </li>
+                </ul>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Sección del Aside de la página -->
+
+    <!-- Fin de la sección de contenido-->
+
+    <!-- Seccion de los botones de navegación inferiores-->
+    <div class="navegador">
+        <div class="navegador__boton">
+            <a href="index.html"><img src="images/flecha-boton.png" alt="Flecha izquierda"></a>
+        </div>
+        <div class="navegador__boton">
+            <a href="glosario.html"><img src="images/flecha-boton.png" alt="Flecha derecha"></a>
+        </div>
+    </div>
+
+    <!-- Inicio Footer -->
+    <footer>
+
+    </footer>
+    <!-- Fin footer-->
+</body>
+</html>

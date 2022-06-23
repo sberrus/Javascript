@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Propiedades de Texto en CSS</title>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/bloque-linea.css">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+	</head>
+	<body>
+		<h1>Método de cajas en CSS</h1>
+		<h2>Tipos de cajas</h2>
+		<p>
+			En HTML tenemos dos tipos de cajas que repasaremos a continuación:
+		</p>
+		<h3>Cajas en Linea</h3>
+		<p>
+			Estas son las cajas que solo ocupan el espacio que este considere necesario para mostrar su contenido. Estas cajas si dentro de ellas solo mostraremos una cadena de 3 caracteres, la caja solo ocupara el espacio que abarquen esos 3 caracteres. Las cajas de linea pueden y estan siempre dentro de cajas de bloque. Ejemplo: La etiqueta &#60;a&#62;, Esta solo ocupa el espacio que necesite para mostrar su contenido. <a href="#">Ejemplo de caja en linea de la etiqueta &#60;a&#62;</a> 
+		</p>
+		<h3>Cajas en Bloque</h3>
+		<p>
+			Las cajas de Bloque son aquellas que abarcan todo el espacio desde el inicio hasta el final del elemento que los contiene. Estas pueden ser por ejemplo las etiquetas &#60;p&#62; &#60;h1&#62; &#60;h2&#62; etc...<br>
+			Ejemplo:
+		</p>
+		<h5>Elemento de bloque</h5>
+		<p>
+			#######################################Otro elemento de bloque################################## 
+		</p>
+		<h3>Modificaciñon de comportamientos (display)</h3>
+		<p>
+			Para modificar el comportamiento de un elemento en bloque para que se comporte como un elemento en linea y viceversa hay que utilizar la regla CSS (display). Esta regla tiene 2 variables: block; display;. Con estas reglas podemos alterara el comportamiento de un Elemento para que se visualiza de otra manera. Por ejemplo:
+		</p>
+		<h2 class="block">Título h2 en bloque</h2>
+		<h2 class="inline">Título h2 en linea</h2>
+		<h2 class="inline">Otro título h2 en linea</h2>
+		<br>
+		<a class="inline" href="#">Enlace en linea</a>
+		<a class="inline" href="#">Otro enlace en linea</a>
+		<a class="block" href="#">Enlace en Bloque</a>
+		<a class="block" href="#">Enlace en Bloque</a>
+		<p>
+			Ahora visto lo basico con respecto a las cajas en la siguiente clase veremos lo correspondiente a las propiedades de las cajas en CSS. <a href="propiedades-cajas.html">Clase Propiedades de las Cajas en CSS</a>
+		</p>
+	</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Responsive Design</title>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<link rel="stylesheet" type="text/css" href="css/responsive-design.css">
+	</head>
+	<body>
+		<h1>Responsive Design</h1>
+		<h2>Conceptos Básicos</h2>
+		<p>
+			<span style="font-size: 1.3em; font-weight: 900; color: red"><b>Hay que tomar en cuenta que para hacer diseños responsive design hay que hacer uso conjunto de CSS y JavaScript, En esta clase veremos hasta donde se pueda como hacer Responsive Design usando solamente CSS.</b></span>
+		</p>
+		<p>
+			Cuando hablamos de responsive design hablamos de la capacidad que tienen las páginas web para adaptar sus estructuras y sus dimensiones tomando en cuenta las dimensiones de los equipos con los que estamos trabajando. Cada uno de los dispositivos tomando en cuenta sus dimensiones, se trabaja con unos layouts distintos que optimizan la lectura y el tamaño de los elementos dentro de la página web.
+		</p>
+		<h3>@Media query</h3>
+		<p>
+			Las páginas con responsive design trabajan principalmente con Estructuras flexibles, Media queries (que es la linea de codigo implementada después de una arroba(@) que especifica el medio y las dimensiones, Se verá más adelante). 
+		</p>
+		<p>
+			Con estas consultas podemos aplicar diferentes estilos a los distintos dispositivos y sus respectivas dimensiones. Nos ayuda a consultar y validar ciertos aspectos condicionales que le indicamos al programa como: el ancho y el alto de la ventana gráfica, el alto y el ancho del dispositivo, la orientación del dispitivo (pantalla horizontal o vertical), la resolución de la pantalla del dispositivo, etc. Existen 4 tipos de consultas con los que podemos trabajar:
+		</p>
+		<h4>all</h4>
+		<p>
+			Apto para todos los dispositivos.
+		</p>
+		<h4>print</h4>
+		<p>
+			Apto para aquel material destinado a ser impreso y se visualizara (como se ve al momento de guardar una página como PDF).
+		</p>
+		<h4>screen</h4>
+		<p>
+			Destinado principalmente para las pantallas. <b>(Es el más utilizado actualmente).</b>
+		</p>
+		<h4>speech</h4>
+		<p>
+			Destinado principalmente para sintetizadores de voz.
+		</p>
+		<h3>Operadores logísticos AND | OR</h3>
+		<p>
+			Estos operadores relacionales se aplican para que se comparen dos estados en los objetos a los que se aplica. 
+		</p>
+		<h4>AND</h4>
+		<p>
+			El operador relacional AND indica que dos estados tienen que coincidir para que se aplique dicho operador
+		</p>
+		<h3>OR</h3>
+		<p>
+			El operador relacional OR, sirve para indicar en el caso de que tengamos dos estados que relacione si se cumple uno u otro. Al momento de encontrarse con alguno de los dos estados que se le hayan indicado pues este se ejecutara. 
+		</p>
+		<h3>Orientación</h3>
+		<p>
+			La orientación es el estado o la visualización que tiene una pantalla (como los móviles o tabletas), Cuando la orientación hace que el dispositivo sea más ancho que alto (landscape), como las pantallas de ordenadores, monitores, televisores, la posición vertical de los móviles y tablets, etc... O cuando la orientación es más alta que ancha (Portrait), como las pantallas en vertical, los moviles y tabletas en vertical, etc... De esta manera podemos darle el aspecto adecuado a la página tomando en cuenta la orientación y las dimensiones de la pantalla del dispositivo.
+		</p>
+		<h2>Tipos de Responsive Design</h2>
+		<h3>_MOBILE FIRST</h3>
+		<p>
+			Con este tipo de Responsive Desing hacemos una página web diseñada principalmente para móviles y respecto a esa base modificamos el comportamiento para el resto de pantallas y dispositivos. (Esto es lo más recomendado actualmente).
+		</p>
+		<h3>_DESKTOP FIRST</h3>
+		<p>
+			Este tipo de Responsive Desgin se crea partiendo de la base de una página destinada para pantallas de ordenadores y de allí se modifican las dimensiones y los aspectos de las páginas para el resto de dispositivos.
+		</p>
+		<h3>_CONTENT FIRST</h3>
+		<p>
+			Este es el menos usado actualmente. Se basa en primero crear el contenido con el que vamos a trabajar y después se modifican los aspectos para que estos se adapten al resto de dimensiones de los dispositivos.
+		</p>
+		<h2>Sintaxis y uso de las reglas para páginas Responsive Design</h2>
+		<p>
+			Para poder usar el Responsive Desgin primero tenemos que indicar la regla @media en el CSS, seguido del @media queri (all, screen, print, speech, etc...), Luego el operador logístico (and | or) y entre paréntesis la condición (min-width, max-width, min-heigth, max-weigth etc...). Ejemplo práctico:<br>
+			<br>
+			<span style="color: black; align-">@media screen and (min-width: 1100px){body{background:red}}</span>
+		</p>
+		<p>
+			Con el ejemplo anterior podemos leer lo siguiente. En los dispositivos con pantalla y que sean mas anchos que 400px se le aplican las siguientes instrucciones: body:background: red;
+		</p>
+		<p>
+			<b>Si agrandas la ventana del navegador podras observar que se ha aplicado esta regla al documento actual.</b>
+		</p>
+		<p>
+			Podemos utilizar cuantas condiciones como consideremos necesarias. Si queremos agregar más condiciones a la regla anterior solo tenemos que agregarle el operador logístico correspondiente y después la regla a tomar en cuenta, AND | OR donde sea conveniente.
+		</p>
+		<p>
+			<b>Al agrandar la ventana del navegador este modificara su aspecto mediante operadores logísticos combinados.</b>
+		</p>
+		<p>
+			Visto el uso básico para que una web sea responsive ahora veremos el uso de la <a href="transition.html">propiedad transition</a>
+		</p>
+	</body>
+</html>

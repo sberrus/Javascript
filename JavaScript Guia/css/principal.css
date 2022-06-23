@@ -1,0 +1,274 @@
+/*########## Variables de la página ##########*/
+:root{
+    scroll-behavior: smooth;
+    --color-verde:rgba(1, 102, 23, 0.76);
+    --color-verde-claro: rgba(1, 155, 35, 0.76);
+    --color-azul-oscuro: rgb(0, 33, 179);
+    --color-azul-claro: rgb(0, 162, 255);
+    --color-fondo-box: rgb(14, 14, 14);
+    --color-subtitulos: rgb(150, 150, 150);
+    --fuente-titulos: 'Secular one', sans-serif;
+    --bordes: rgba(255, 255, 255, 0.4);
+}
+
+/*########## Instrucciones generales del sitio ##########*/
+body{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--fuente-titulos);
+    color: var(--color-azul-oscuro);
+}
+
+h1{
+    font-size: 3em;
+}
+
+h2{
+    color: var(--color-azul-oscuro)
+}
+
+h3{
+    margin-left: 25px;
+    color: var(--color-azul-claro)
+}
+
+p{
+    font-weight: 200;
+    letter-spacing: 0.3px;
+}
+
+.subtitulo{
+    margin: -25px 0 25px 15px;
+    font-size: 0.9em;
+    color: var(--color-subtitulos)
+}
+
+/* Estilos para bloques de código */
+code{
+    padding: 5px;
+    display: block;
+    margin: 1px;
+    background-color: rgb(48, 48, 48);
+}
+
+code .function{color: yellow;}
+
+code .var {color: orange;}
+
+code .comentario{color: rgb(112, 112, 112);}
+
+code .let{color: green;}
+
+table{
+    margin: auto;
+}
+
+td{
+    border: 1px solid white;
+}
+
+/*########## Elementos del header ##########*/
+
+header{
+    display: flex;
+    position: sticky;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    background-color: var(--color-fondo-box);
+    z-index: 1000;
+}
+.header__logo{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 90px;
+    border-radius: 25px;
+}
+
+.header__logo  img {
+    margin: 5px;
+    width: 90px;
+    filter: hue-rotate(250deg) brightness(2);
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.header__nav--div {
+    background-color: var(--color-fondo-box);
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    flex-basis: 150px ;
+    height: 50px;
+}
+
+/* Botones del menú */
+
+.header__nav--a{
+    display: block;
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: auto;
+    padding: 8px;
+    transition: all 1s;
+}
+
+.header__nav--a:hover{
+    text-decoration-line: underline;
+    letter-spacing: 1.5px;
+}
+
+/* ########## Elementos del Main ########## */
+
+
+/* Instrucciones del contenido del main */
+
+.main-container{
+    z-index: 100;
+    display: flex;
+    margin: 15px 0;
+    height: auto;
+    min-height: 100vh;
+}
+
+section{
+    padding: 25px 25px;
+    margin: 10px 80px;
+    flex-basis: 100%;
+}
+
+article{
+    margin: 25px 0;
+}
+
+/* Caja de contenido */
+.content-box{
+    background-color: var(--color-fondo-box);
+    display: flex;
+    flex-direction: column;
+    padding: 50px 50px;
+    width: 90%;
+}
+
+.content-box > img{
+    float: right;
+    right: 0;
+    filter: drop-shadow(0px 0px 10px var(--color-azul-claro)) drop-shadow(0px 0px 10px var(--color-azul-claro));
+    height: 200px;
+    z-index: 100;
+}
+
+/* Caja laboratorio */
+
+.content-box__laboratorio{
+    min-width: 150px; min-height: 80px;
+    padding: auto;
+    border: 1px solid orange;
+    border-radius: 15px;
+    text-align: center;
+}
+.content-box__laboratorio--boton{
+    font-size: 1.3em;
+    background-color: var(--color-azul-oscuro);
+    color: orange;
+    font-weight: bold;
+}
+
+/*##### Instrucciones para el aside y sus componenetes*/
+
+aside{
+    display: block;
+    padding: 25px;
+    margin: 150px 0;
+    flex-basis: 30%;
+}
+
+
+
+/*########## Sección de botones inferiores ##########*/
+
+.navegador{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 90px;
+    margin: 15px 0;
+}
+
+.navegador__boton{
+    margin: 3px;
+    height: 80px;
+    width: 80px;
+}
+
+.navegador__boton  img{
+    width: inherit;
+    height: inherit;
+}
+
+.navegador__boton  a{
+    display: block;
+    width: inherit;
+    height: inherit;
+}
+.navegador__boton:first-child{
+    position: relative;
+    transform: rotate(180deg);
+}
+
+.navegador__boton:hover{
+    filter: drop-shadow(0px 0px 15px white);
+}
+/*########## Decaración del footer ##########*/
+footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    outline: 3px solid var(--bordes);
+}
+
+@media screen and (max-width: 800px){
+    h1{
+        position: relative;
+        top: -40px;
+        font-size: 2em;
+        margin-left: 15px;
+    }
+    .header__logo > img{
+        width: 70px;
+        margin-top:10px;
+    }
+    .main-container{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    section, aside{
+        margin: 0px;
+        padding: 15px 0;
+    }
+    .content-box{
+        margin: auto;
+        padding: 20px;
+    }
+    .navegador{
+        margin: 0;
+    }
+    aside{
+        padding: 0 50px;
+    }
+}

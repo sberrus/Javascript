@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mobile first con CSS</title>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<link rel="stylesheet" type="text/css" href="css/colores.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<h1>Responsive Design y Mobile-First</h1>
+		<h2>Responsive Design</h2>
+		<p>
+			Se refiere a responsive design a la capacidad que tiene una página web diseñada principalmente para pantallas de ordenador en adaptarse a las distintas pantallas, ya sean tablets, mobiles u otros dispositivos.
+		</p>
+		<h2>Mobile-First</h2>
+		<p>
+			Este concepto es parecido al anterior pero de manera contraria. Este hace referencia a aquellas páginas webs que son diseñadas principalmente para pantallas de smartphones y su capacidad para que se adapten a pantallas de ordenador. Esto vino después de que Google mejorara el posicionamioento para las páginas que contengan esta particularidad.
+		</p>
+		<p>
+			Para que HTML pueda interepretar que el contenido que va a mostrar en un smartphone hay que hacer 2 cosas:
+		</p>
+		<h3>1- Agregar Viewport</h3>
+		<p>
+			Primero hay que indicar mediante meta datos que esa pagina tienen disponible una versión para smartphones. Esto se implementando la siguiente linea de codigo en el &#60;head&#62; del documento en cuestión.<br>
+			<span class="destacado">&#60;meta name="viewport" content="width=device-width, user-scalable=no"&#62;</span>
+		</p>
+		<h3>2- Agregar @media en el codigo CSS.</h3>
+		<p>
+			Esta linea de codigo CSS se utiliza para modificar ciertos aspectos de la página para que esta modifique sus dimensiones y su interacción al momento de que le tamaño sea inferior a los campos que nosotros hayamos indicado mediante la instrucción @media. (Esto es más un concepto responsive design asi que se vera más adelante).
+		</p>
+		<p>
+			En este enlace encontraras un ejemplo de una página que tienen diseño responsive <a href="pagina-responsive.html">Ir a pagina Responsive</a>
+		</p>
+	</body>
+</html>

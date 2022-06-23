@@ -1,0 +1,1 @@
+alert("Bienvenidos al curso de JavaScript--- \nEste es un ejemplo de código Enlazado a esta página.");

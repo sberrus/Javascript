@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Transform en CSS</title>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<link rel="stylesheet" type="text/css" href="css/transform.css">
+	</head>
+	<body>
+		<h1>Propiedad transform en CSS</h1>
+		<h2>Conceptos básicos</h2>
+		<p>
+			Está propiedad nos permite transformar los objetos de varias formas ya sea su ubicación, sus dimensiones, su comportamiento, etc...
+		</p>
+		<p>
+			Cada una de las transformaciones reciben funciones que son las que nos permiten alterar los objetos en CSS.
+		</p>
+		<h3>Funciones de ubicación.</h3>
+		<p>
+			Con estas funciones podemos transformar la posición de los elementos al cual le estamos aplicando la propiedad transform.
+		</p>
+		<h4>Función translateX(valorMedida)</h4>
+		<p>
+			Con esta función indicamos que al elemento al que le estemos aplicando dicha función en la propiedad transform que se mueva en el eje X (horizontal) la cantidad que tenga dentro de los paréntesis de izquierda a derecha en el caso de valores positivos y de arriba hacia abajo en el caso de valores negativos.
+		</p>
+		<div class="container">
+			<div class="box" id="translateX">HOLA MUNDO</div>
+		</div>
+		<p>
+			<small>A la caja superior se le aplico el función translate(150px)</small>
+		</p>
+		<h4>Funciones translateY(valorMedida)</h4>
+		<p>
+			Con esta función indicamos que el elemento al que se le aplica la propiedad transform se mueva el espacio indicado dentro de los paréntesis en el Eje Y (Vertical)
+		</p>
+		<div class="container">
+			<div class="box" id="translateY">HOLA MUNDO</div>
+		</div>
+		<p style="margin-top: 120px;">
+			<small>Al elemento anterior se le aplico la función translateY(150px)</small>
+		</p>
+		<h4>Función Shorthand translate(valorMedidaEjeX , valorMedidaEjeY)</h4>
+		<p>
+			Esta función es un shorthand de las funciones translateX y translateY indicando dentro de los parentesis separados por una coma, primero el valor de medida del eje X y luego el valor de medida del eje Y.
+		</p>
+		<div class="container">
+			<div class="box" id="translate">HOLA MUNDO</div>
+		</div>
+		<p>
+			<small>En el ejemplo anterior la caja tiene la función translate(350px, -45px)</small>
+		</p>
+		<h3>Funciones de dimensión.</h3>
+		<p>
+			Con esta propiedad podemos transformar las dimensiones de los elementos a los que le aplicamos la propiedad transform.
+		</p>
+		<h4>Función scale(valorEscala)</h4>
+		<p>
+			Con esta función podemos modificar la escala de dimensión que tiene el elemento al cual le aplicamos dicha función. El valor dentro de los parentésis indican la escala que se le va a aplicar al elemento, siendo 1 la escala 1:1, 2 la escala 2:1, 3 la escala 3:1 y así sucesivamente.
+		</p>
+		<div class="container">
+			<div class="box" id="escala">HOLA MUNDO</div>
+		</div>
+		<p>
+			<small>Al elemento superior se le ha aplicado la función scale(1.5)</small>
+		</p>
+		<h4>Funciones scaleX(escala) y scaleY(escala)</h4>
+		<p>
+			Estas funciones indican la escala que se le va a aplicar al elemento que contenga la propiedad transform, siendo scaleX() el que modifica la escala del eje X y scaleY() el que modifique la escala del eje Y.
+		</p>
+		<div class="container">
+			<div class="box" id="escalaX">HOLA MUNDO</div>
+			<div class="box" id="escalaY">HOLA MUNDO</div>
+		</div>
+		<p>
+			<small>En los cuadros anteriores se puede observar como los la caja de la izquierda es la que tiene la función scaleX() y la caja de al derecha la función scaleY() respectivamente.</small>
+		</p>
+		<h3>Combinación de Funciones</h3>
+		<p>
+			Esta propiedad también nos permite usar 2 funciones diferentes en una sola. Para el siguiente ejemplo usaremos las funciones translate() y scaleX() junto a la pseudoclase Hover.
+		</p>
+		<div class="container">
+			<div class="box" id="funciones-combinadas">HOLA MUNDO</div>
+		</div>
+		<p>
+			<small>La caja del ejemplo anterior tiene las funciones translate(250px) scale(2)</small>
+		</p>
+		<h3>Funciones de deformación</h3>
+		<p>
+			Estas funciones nos permiten deformar un elemento al cual le vayamos a aplicar dicha función.
+		</p>
+		<h4>Funcion skew(grados)</h4>
+		<p>
+			Con esta función podemos deformar el elemento al cual le estamos aplicando dicha función. El valor que va dentro de los paréntesis indica el grado de rotación que van a tener los bordes de la función en cuestión.
+		</p>
+		<div class="container">
+			<div class="box" id="skew">HOLA MUNDO</div>
+		</div>
+		<h2>Recursos útiles para trabajar con transform.</h2>
+		<p>
+			Hay muchos recursos que nos permiten trabajar de manera optima y mejorar los diseños y las animaciones dentro de CSS.
+		</p>
+		<h3>Página de la W3school</h3>
+		<p>
+			También en la página de la <a href="https://www.w3schools.com/cssref/css3_pr_transform.asp">W3School</a> podemos ver todas las funciones de la propiedad transform, y dentro de esta página podemos encontrar una inmensidad de recursos con los que podemos trabajar en CSS Además de los que ya hemos visto en este curso. 
+		</p>
+		<h3>Generadores</h3>
+		<p>
+			En internet hay una inmensidad de generadores de todo tipo que nos ayudaran a optimizar el tiempo de creación de las animaciones en CSS, como pueden ser los generadores de cubic-bazier que vimos en la clase pasada, generadores de sombras, de animaciones, de formas geometricas, y un monton más. Hay que aprender a buscar dichas páginas y probarlas para saber cuales son las más útiles para nosotros y nuestro trabajo.
+		</p>
+		<p>
+			Ya visto los usos de la propiedad transform y sus funciones, ahora veremos el suo de Background avanzado. <a href="background-avanzado.html">Ir a clase de Background avanzado</a>
+		</p>
+	</body>
+</html>

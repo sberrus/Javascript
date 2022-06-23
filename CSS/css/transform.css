@@ -1,0 +1,53 @@
+.container{
+	display: flex;
+	padding: 20px 10px;
+	background-color: #86f;
+	border: 4px solid darkred;
+	border-radius: 10px;
+}
+
+.box{
+	color: #fff;
+	height: 80px;
+	width: 80px;
+	background-color: #025;
+	border: 2px solid black;
+	margin: 20px;
+	padding: 0 10px;
+	display: flex;
+	align-items: center;
+	transition: transform 1s;
+}
+
+#translateX{
+	transform: translateX(150px);
+}
+
+#translateY{
+	transform: translateY(150px);
+}
+
+#translate{
+	transform: translate(350px, -45px);
+}
+
+#escala{
+	transform: scale(1.5);
+}
+
+#escalaX{
+	transform: scaleX(1.5);
+}
+
+#escalaY{
+	transform: scaleY(1.5);
+}
+
+.container:hover > #funciones-combinadas{
+	transform: translate(250px) scale(2);
+}
+
+.container:hover > #skew{
+	transition: transform 2s;
+	transform: skew(40deg);
+}

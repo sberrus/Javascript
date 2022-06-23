@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formularios en HTML</title>
+</head>
+<body>
+	<h1>Formularios en HTML</h1>
+	<h3>Veremos los distintos tipos de formularios que nos ofrece html.</h3>
+	<p>
+		hmtl nos brinda herramientas para que nosotros podamos interactuar desde la pagina hacia un servidor para procesar, administrar o almacenar informacion. Para llevar a cabo estas tareas html nos brinda de herramientas como botones, textefields, campos para contraseñas, comprobadores de formato mail, etc... Y con esto podemos realizar paginas mas complejas ya sea para crear buscadores, regisrtros de clientes, administracion de las paginas etc...
+	</p>
+	<p>
+		En esta clase veremos la manera de crear aplicaciones web sencillas mediante el uso de HTML. (OJO. ESTO SOLO APLICA PARA LA PARTE DE LA ESTRUCTURACION DE LOS DISTINTOS COMPONENTES DENTRO DE HTML. PARA EL PROCESO DE LOS DATOS Y LA MANIPULACION DE LOS MISMOS ES NECESARIO SABER LO RELACIONADO CON EL BACKEND EN DESARROLLO WEB QUE SE VERA MAS ADELANTE AL INCORPORAR APLETS DE JAVA O UTILIZAR JAVASCRIPT PARA DESARROLLAR EL BACKEND DE LA PAGINA)
+	</p>
+	<p>
+		Para usar los distintos componentes que nos ofrece html hay que utilizar la etiqueta &#60;form&#62; para utilizar los formularios.
+		Los principales etiquetas para el desarrollo de aplicaciones web son los siguientes:
+	</p>
+	<ul>
+		<li>
+			<p>
+				action = "url" - Indica la URL que se encarga de procesar los datos del formulario.
+			</p>
+		</li>
+		<li>
+			<p>
+				method = "POST o GET" - Método HTTP empleado al enviar el formulario.
+			</p>
+		</li>
+		<li>
+			<p>
+				enctype = "application/x-www-form-urlencoded o multipart/form-data" - Tipo de codificación empleada al enviar el formulario al servidor (sólo se indica de forma explícita en los formularios que permiten adjuntar archivos)
+			</p>
+		</li>
+		<li>
+			<p>
+				accept = "tipo_de_contenido" - Lista separada por comas de todos los tipos de archivos aceptados por el servidor (sólo para los formularios que permiten adjuntar archivos)
+			</p>
+		</li>
+		<li>
+			<p>
+				Otros: accept-charset, onsubmit, onreset
+			</p>
+		</li>
+	</ul>
+	<p>
+		Para declarar que tipo de formulario vamos a utilizar usaremos dentro de la etiqueta &#60;form&#62; la etiqueta &#60;input&#62; que es la que realmente nos proporciona los elementos que vamos a utilizar para desarrollar las aplicaiones web. Esta Consta de los siguientes atributos:
+	</p>
+	<ul>
+		<li>
+			<p>
+				type = "text | password | checkbox | radio | submit | reset | file | hidden | image | button" - Indica el tipo de control que se incluye en el formulario
+			</p>
+		</li>
+		<li>
+			<p>
+				name = "texto" - Asigna un nombre al control (es imprescindible para que el servidor pueda procesar el formulario)
+			</p>
+		</li>
+		<li>
+			<p>
+				value = "texto" - Valor inicial del control
+			</p>
+		</li>
+		<li>
+			<p>
+				size = "unidad_de_medida" - Tamaño inicial del control (para los campos de texto y de password se refiere al número de caracteres, en el resto de controles se refiere a su tamaño en píxel)
+			</p>
+		</li>
+		<li>
+			<p>
+				maxlength = "numero" - Máximo número de caracteres para los controles de texto y de password
+			</p>
+		</li>
+		<li>
+			<p>
+				checked = "checked" - Para los controles checkbox y radiobutton permite indicar qué opción aparece preseleccionada
+			</p>
+		</li>
+		<li>
+			<p>
+				disabled = "disabled" - El control aparece deshabilitado y su valor no se envía al servidor junto con el resto de datos
+			</p>
+		</li>
+		<li>
+			<p>
+				readonly = "readonly" - El contenido del control no se puede modificar
+			</p>
+		</li>
+		<li>
+			<p>
+				src = "url" - Para el control que permite crear botones con imágenes, indica la URL de la imagen que se emplea como botón de formulario
+			</p>
+		</li>
+		<li>
+			<p>
+				alt = "texto" - Descripción del control
+			</p>
+		</li>
+	</ul>
+	<dl>
+		<dt><b>Diferentes Elementos de la etiqueta &#60;input&#62;</b></dt>
+		<dd>
+			<ul>
+				<li>
+					<h4>text</h4>
+					<p>
+						Este elemento se implementa para enviar datos de caracteres o numericos al servidor.
+					</p>
+					<form>
+						<input type="text" name="text" value="Este es un ejemplo">
+					</form>
+					<p>
+						Como se puede observar. Este permite insertar texto y muestra los caracteres tal cual se escriben.
+					</p>
+				</li>
+				<li>
+					<h4>Password</h4>
+					<p>
+						Este elemento es parecido a <i>text</i> pero se diferencian en que este no muestra los caracteres que estamos escribiendo.
+					</p>
+					<form>
+						<input type="password" name="password" value="*****">
+					</form>
+				</li>
+				<li>
+					<h4>Checkbox</h4>
+					<p>
+						El checkbox es un elemento que nos permite seleccionar casillas para que el servidor luego los interprete. Pueden haber tantas como el programador desee.
+					</p>
+					<form>
+						<input type="checkbox" name="checkbox" value="opcion 1">
+						<input type="checkbox" name="checkbox" value="opcion 2">
+						<input type="checkbox" name="checkbox" value="opcion 3">
+						<input type="checkbox" name="checkbox" value="opcion 4">
+					</form>
+				</li>
+				<li>
+					<h4>radio</h4>
+					<p>
+						El elemento radio funciona al igual que el elemento checkbox pero con la diferencia de que solo puede haber seleccionado uno a la vez. Al momento de seleccionar otro radiobutton el que este seleccionado con anterioridad se deseleccionara. Se recomienda usar el atributo checked para aquellos formularios en los que se deba seleccionar un elemento obligatoriamente (lo mismo para el elemento checkbox)
+					</p>
+					<form>
+						<input type="radio" name="radio" checked="">
+						<input type="radio" name="radio">
+						<input type="radio" name="radio">
+						<input type="radio" name="radio">
+					</form>
+				</li>
+				<li>
+					<h4>Submit</h4>
+					<p>
+						El elemento submit es un boton que permite enviar la informacion y la eleccion del usuario al servidor. De esta manera este es el encargado recopilar y enviar los elementos al servidor en cuestion.
+					</p>
+					<form>
+						<input type="submit" name="submit" value="Presionaaaa!!!">
+					</form>
+				</li>
+				<li>
+					<h4>Reset</h4>
+					<p>
+						Este boton sirve para borrar todos los datos que el usuario haya modificado con anterioridad. Este es el tipico boton que se suele usar para las opciones de "Empezar de 0" o "Borrar todo" etc...
+						Este es muy util para emplear en caso de querer realizar formularios con gran extension de datos.
+					</p>
+					<form>
+						<input type="reset" name="reset" value="borrar todo">
+					</form>
+				</li>
+				<li>
+					<h4>File</h4>
+					<p>
+						Este Elemento es muy util ya que permite navegar entre tus archivos para buscar alguno en especifico mediante el "tree" de el discoduro. Muy util para cuando se necesita enviar archivos enteros al servidor. Adjunta archivos para luego enviarlos al servidor.
+					</p>
+					<form>
+						<input type="file" name="file" value="Adjuntar archivos">
+					</form>
+				</li>
+				<li>
+					<h4>hidden</h4>
+					<p>
+						Este elemento permite enviar datos al servidor pero sin que el usuario pueda visualizar en ningun momento que se hace con este. No muestra ningun o elemento en pantalla.
+					</p>
+				</li>
+				<li>
+					<h4>image</h4>
+					<p>
+						Mas facil de recordar como boton de imagen. Este sirve para insertar una imagen que funcione como un boton. (alternativa estetica al tipico "button")
+					</p>
+					<form>
+						<input type="image" name="enviar" src="images/check.png">
+					</form>
+				</li>
+				<li>
+					<h4>Boton</h4>
+					<p>
+						Este funciona como cualquier boton que hayamos conocido con anterioridad. no hace falta explicar mas.
+					</p>
+					<form>
+						<input type="button" name="boton" value="Esto es un boton">
+					</form>
+				</li>
+			</ul>
+		</dd>
+	</dl>
+	<p>
+		Existen mas tipos de elementos que no estan en esta pagina. Si se desea indagar mas al respecto y sobre mas tipos de elementos se recomienda ir al siguiente enlace:<br>
+		<a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/input" target="_BLANK">Input a fondo</a>
+	</p>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>JavaScript Mid-Level -- Await, Asinc en JavaScript</title>
+</head>
+
+<body>
+    <!-- Plantilla Cabecera -->
+    <div class="cabecera">
+        <h1>Await y Asinc en JavaScript</h1>
+        <p class="subtitulo">
+            Uso de Await y Asinc en JavaScript
+        </p>
+    </div>
+    <!---->
+    <h2>Asincronia en JavaScript</h2>
+    <p>
+        Se refiere a asincronia a la habilidad que tiene un elemento del código en ejecutarse en tiempo real, haciendo que hasta que el objeto no obtenga toda la información que precise, este, no devuelva nada hasta que resuelva todo lo que este dentro de si.
+    </p>
+
+    <p>
+        En la consola se puede ver un ejemplo. Se ve como, hasta que el temporizador no devuelva los valores del objeto, este no devuelve nada en la consola para que podamos visualizarlo.
+    </p>
+    <p>
+        <img src="img.png" alt="" style="border: 2px solid #fff;">
+    </p>
+
+    <h2>Funciones asíncronas con await y async</h2>
+    <h3>Async</h3>
+    <p>
+        Para hacer uso de las funciones asíncronas hay que declararlas como una función normal. En el caso de las funciones comúnes hay que poner la palabra reservada "async" antes de "function" para indicarle al sistema que va a ser asíncrona.
+    </p>
+    <p>
+        En el caso de las funciones flecha hay que indicar la palabra reservada "async" después del primer signo de igual (=). ej: <i>const funcionAsincrona = async () => {}</i>. De esta manera se declara una función flecha asíncrona.
+    </p>
+    <h3>Await</h3>
+    <p>
+        Dentro del bloque con el que estemos trabajando tenemos que esperar donde el programa tiene que <i>esperar</i>(await), hasta que se termine de ejecutar para que continue con el resto del código. En este caso se utiliza el await.
+    </p>
+    <p>
+        Por ende, el await sirve para indicarle al programa que dato, función o consulta debe resolver primero antes de continuar ejecutando dicha función en segundo plano, o en otras palabras en otro hilo.
+    </p>
+    <h3>¿Para qué sirven?</h3>
+    <p>
+        Las funciones asíncronas sirven para cuando tenemos que traer información pero que está no esta disponible al momento, pero, queremos que el cógido se siga ejecutando indiferentemente de sí la función se termino de ejecutar o no. Digamos que hace que las funciones se ejecuten en segundo plano.
+    </p>
+
+<script src="await-asinc.js"></script>
+</body>
+
+</html>

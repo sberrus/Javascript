@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos para los childs</title>
+    <script src="js/metodosChilds.js"></script>
+</head>
+<body>
+    <h1>Uso de los metodos para los hijos en JavaScript</h1>
+    <h2 style="text-decoration: underline;">Métodos para los elementos Hijos</h2>
+
+    <p>Reemplazar elementos h3 con método replaceChild().</p>
+    <input type="button" value="Reemplazar titulo con método replace" onclick="reemplazarTitulos()">
+    <p>Elminar Parrafo con método removeChild().</p>
+    <input type="button" value="Eliminar Parrafo" onclick="eliminarParrafo()">
+    <p>Preguntar si el elemento tiene hijos</p>
+    <input type="button" value="Tienes Hijos?" onclick="preguntarPorHijos()">
+
+    <h2 style="text-decoration: underline;">Métodos para los elementos Padre</h2>
+    <p>Apuntar al elemento Padre</p>
+    <input type="button" value="Cual es el elemento padre del cuadro negro?" onclick="mostrarPadre()">
+
+    <h2 style="text-decoration: underline;">Metodos para los elementos hermanos</h2>
+    <p>Apuntar al Siguiente Hermano</p>
+    <input type="button" value="Cual es el siguiente hermano del titulo?" onclick="mostrarSiguienteHermano()">
+    <input type="button" value="Cual es el siguiente Elemento hermano del titulo?" onclick="mostrarSiguienteElementoHermano()"><br>
+    <p>Apuntar al Hermano Anterior</p>
+    <input type="button" value="Cual es el anterior hermano del Párrafo?" onclick="mostrarHermanoAnterior()">
+    <input type="button" value="Cual es el anterior Elemento hermano del Párrafo?" onclick="mostrarElementoHermanoAnterior()">
+    <input type="button" value="Apuntar a la Mazunkamba" onclick="apuntarAMazunkamba()">
+
+    <div class="contenedor" style="border: 3px solid black; border-radius: 5px;">
+        <h3 id="h3_antiguo">Título antiguo</h3>
+        <p class="parrafo">Un Elemento Párrafo</p>
+        <p>Hola</p>
+        <p>Hermano</p>
+        <p>Mazunkamba</p>
+        <p class="mazunkamba">Tal?</p>
+    </div>
+</body>
+</html>

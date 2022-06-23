@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Curso de JavaScript desde 0</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Curso de JavaScript desde 0 Con dalto</h1>
+        <p>
+            Antes de ver el resto del curso e integrando los conocimientos vistos en el código, presentare estas dos funciones.
+        </p>
+        <h3>prompt(string)</h3>
+        <p>
+            Con esta función podemos pedir al usuario que introduzca texto en una caja que luego será utilizado dentro del código JavaScript. 
+        </p>
+        <h3>document.write(contenido)</h3>
+        <p>
+            Con esta función escribimos texto simple dentro del documento. <b>Hay que recordar que lo que se escriba con esta función es directamente codigo HTML que se agrega directamente al documento original</b>
+        </p>
+        <p>
+            Para ver como se comportan estas funciones Pediremos unos datos en la siguiente página. <a href="primera-prueba.html">Probar código</a>
+        </p>
+        <p>
+            En la siguiente página haremos una práctica de código con lo que hemos visto. <a href="practica2.html">Practica en JavaScript</a>
+        </p>
+        <h3>Arrays asociatívos</h3>
+        <p>
+            Los arrays asociatívos son aquellos que almacenan información y se accede a ella mediante asociaciones literales. Se trabaja parecido que con los datos JSON, el cual primero se indica la variable y se le asignan los valores con el operador de asignación. Después se introducen campos dentro de este objeto y se le asignan valores. Cada uno de los campos y sus valores se separan mediante comas "," <br>
+            let pc1 = {<br>
+                nombre: "Samuel",<br>
+                apellido: "Berrus",<br>
+                edad: 25 <br>
+            };
+            <p>
+                Para acceder a los datos de los arreglos asociativos hay que hacer llamadas mediante el campo que aloja el dato. Tomando como ejemplo el arreglo anterior, si queremos extraer la información del campo nombre hay que extraerlo de la siguiente manera = <br>
+                pc1["nombre"] // devuelve samuel <br>
+                En el código anterior devolvera el valor que esta dentro del campo "nombre".
+            </p>
+            <p>
+                Para ver este ejemplo en un caso práctico lo veremos en la siguiente página: <a href="arrays-asociativos.html">Arrays Asociativosº</a>
+            </p>
+        </p>
+        <h3>Metodo para llamar a los function mediante flecha ( => )</h3>
+        <p>
+            Este es otro metodo para crear funciones. Consta de crear una variable "const" a la que se le asignara la función. La sintáxis es primero la palabra reservada "constant" debido a que esta no se modificara en el futuro, después el nombre de la función seguido del signo de asignación ( = ) entre paréntesis van los argumentos de la función y luego se abren las llaves de las intrucciones. <br>
+            const slaudar = (nombre) =>{ <br>
+            let frase = `Hola como estas $nombre`;<br>
+            document.write(frase);<br>
+            }
+        </p>
+        <p>
+            
+        </p>
+    </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Filter en CSS</title>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<link rel="stylesheet" type="text/css" href="css/filter.css">
+	</head>
+	<body>
+		<h1>Filter en CSS</h1>
+		<h2>Conceptos básicos</h2>
+		<p>
+			Filter es una propiedad que nos permite darle filtros a las imágenes del documento y modificar su aspecto visual como su brillo, su opacidad, contraste, fooc, etc...
+		</p>
+		<h3>Propiedad filter:</h3>
+		<p>
+			Esta es la propiedad con la cual vamos a trabajar las imágenes y modificara su aspecto tomando en cuenta los valores que le indiquemos a la misma.
+		</p>
+		<h4>Valor none:</h4>
+		<p>
+			Es el valor por defecto, lo cual no hace ningún efecto en el aspecto visual de la imágen.
+		</p>
+		<div class="container">
+			<img src="images/brujula.jpg">
+		</div>
+		<h4>Valor blur (unidadMedida)</h4>
+		<p>
+			Con esta propiedad podemos indicar el desenfoque de la imágen mediante el uso de un valor de medida para la misma.
+		</p>
+		<div class="container">
+			<img src="images/brujula.jpg" id="blur">
+			<img src="images/brujula.jpg" id="blur2">
+		</div>
+		<h4>Valor brightness(#)</h4>
+		<p>
+			Con este valor indicamos el brillo que va a tener el elemento al que se le aplica. Este valor es númerico en el que 0 es el valor de menor brillo y 1 el o normal, de alli en adelante el brillo aumenta hasta quemar la imágen.  
+		</p>
+		<div class="container" >
+			<img src="images/brujula.jpg" id="brightness">
+			<img src="images/brujula.jpg" id="brightness2">
+		</div>
+		<h4>Valor contrast(#)</h4>
+		<p>
+			Este valor como indica su nombre modifica el contraste del elemento al que se le aplica. Sus valores funcionan parecidos al de brightness siendo 0 nada de contraste y 1 el contraste normal y de alli en adelante el contraste aumentado. En este valor podemos utilizar porcentajes siendo 1 el equivalente a 100%. 
+		</p>
+		<div class="container">
+			<img src="images/brujula.jpg" id="contrast">
+			<img src="images/brujula.jpg" id="contrast2">
+		</div>
+		<h4>Valor drop-shadow(px px px color)</h4>
+		<p>
+			El valor drop-shadow funciona con los mismos valores que box-shadow, pero con la diferencia que este le da sombras a los bordes de la imágen (siempre que esta sea .png con transparencia), cosa que no pasa con box-shadow que solo le da sombras al contenedor. Al repetir el mismo valor en la propiedad se da un efecto de resaltado de la sombra la cual nos permite dar diseños bastante imaginativos.
+		</p>
+		<div class="container">
+			<img src="images/s-roja.png" id="drop-shadow">
+			<img src="images/s-roja.png" id="drop-shadow2">
+		</div>
+		<h4>Valor greyscale(#)</h4>
+		<p>
+			Con este valor podemos establecer la escala de grises del elemento. El valor va desde el 0 hasta el 1, donde 0 es sin escala de grises y 1 es gris totalmente. También existe la posibilidad de indicar esta propiedad mediante porcentajes.
+		</p>
+		<div class="container">
+			<img src="images/s-roja.png" id="grayscale">
+			<img src="images/s-roja.png" id="grayscale2">
+		</div>
+		<h4>Valor hue-rotate(#deg)||(%)</h4>
+		<p>
+			Con este valor indicamos al elemento que cambie la gama de colores tomando en cuenta los colores de origen y moviendolos. El valor para modificar los colores es en grados (deg).
+		</p>
+		<div class="container">
+			<img src="images/s-roja.png" id="hue-rotate">
+			<img src="images/s-roja.png" id="hue-rotate2">
+		</div>
+		<h4>Valor invert(%)</h4>
+		<p>
+			Con esta propiedad podemos invertir la gama de colores. Funciona parecido que la propiedad hue-rotate(#deg) pero con la diferencia de que esta funciona principalmente con porcentajes.
+		</p>
+		<div class="container">
+			<img src="images/s-roja.png" id="invert">
+			<img src="images/s-roja.png" id="invert2">
+		</div>
+		<h4>Valor opacity(0-1)</h4>
+		<p>
+			Con este valor podemos darle una opacidada o transparencia, al objeto al que se le aplica. Este valor del 0 al 1, donde 0 es totalmente visible y 1 es totalmente transparente. 
+		</p>
+		<div class="container">
+			<img src="images/s-roja.png" id="opacity">
+			<img src="images/s-roja.png" id="opacity2">
+		</div>
+		<h4>Valor saturate(%)</h4>
+		<p>
+			Este valor lo que hace es saturar el elemento al que le aplicamos dicho valor. Este valor se recomienda usar también como porcentaje. Por lo que a mayor porcentaje, mayor será la saturación.
+		</p>
+		<div class="container">
+			<img src="images/s-roja.png" id="saturate">
+			<img src="images/s-roja.png" id="saturate2">
+		</div>
+		<h4>Valor sepia(#)</h4>
+		<p>
+			Con este valor indicamos al elemento que se visualize de color sepia. Esta valor va del 0 al 1, donde 0 es sin ningún grado de sepia y 1 es totalmente sepia.	
+		</p>
+		<div class="container">
+			<img src="images/s-roja.png" id="sepia">
+			<img src="images/s-roja.png" id="sepia2">
+		</div>
+		<h4>Combinación de valores en la propiedad filter</h4>
+		<p>
+			Con filter podemos usar más de una sola instrucción, de manera que podamos establecer en una sola linea de código todas las instrucciones de esta propiedad como necesitemos. 
+		</p>
+		<div class="container">
+			<img src="images/s-roja.png" id="combinacion">
+			<img src="images/s-roja.png" id="combinacion2">
+		</div>
+	</body>
+</html>

@@ -1,0 +1,85 @@
+body{
+	background: rgb(36, 36, 36);
+}
+
+.flex-container{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+	background: #133;
+	margin: 50px 50px;
+	padding: 10px;
+	border: 20px solid black;
+	outline: 4px solid rgb(0,180,180);
+}
+
+.form{
+	min-width: 400px;
+	flex: 1;
+	text-align: center;
+	padding: 30px;
+	order: 5;
+}
+
+.form__input{
+	width: 100%;
+	padding: 6px;
+	margin: 6px 0;
+	border: none;
+	border: 1px solid rgba(0,255,255,0.2);
+	border-bottom: 3px solid #5dd;
+	background-color: rgba(0,0,0,0.6);
+	color: rgb(255,255,255);
+	font-weight: 900;
+	order: 2;
+}
+.form__input:focus {
+	background: rgba(0,255,255,0.2);
+	outline: 3px solid rgba(0,255,255,.5);
+	transition: all .5s;
+}
+
+.form textarea{
+	min-height: 140px;
+	resize: none;
+}
+
+.form-img{
+	flex: 1;
+	display: flex;
+	min-width: 200px;
+	max-width: 400px;
+	order: 2;
+}
+
+.form-img div{
+	padding: 10px;
+	
+}
+
+.img-container {
+	margin: auto;
+}
+
+.img-container div{
+	background-color: black;
+	border-radius: 35%;
+	text-align: center;
+	padding: 20px;
+}
+
+.form-img img{
+	width: 80%;
+}
+
+.form input[type="submit"]{
+	background-color: rgb(0,80,80);
+	border-bottom:none;
+	padding: 12px;
+	cursor: pointer;
+}
+.form input[type="submit"]:hover{
+	background-color: rgb(0,150,150);
+	transition: 0.5s
+}

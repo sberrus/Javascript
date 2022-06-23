@@ -1,0 +1,25 @@
+Página de notas y de seguimiento de proyecto:
+    -En este documento haremos un seguimiento y también anotaciones de las cosas que se harán y de los elementos que nos falta por introducir al proyecto.
+
+Cosas por hacer:
+
+1) Programar que el contenido de los article arropen a las imágenes en la versión para móvil. [Revisar el ultimo article de la página repositorio]
+
+2) Darle estilos a las etiquetas de listas (ul, ol, li, dt y dd).
+
+3) Programar botones y menú de navegación del aside.
+
+4) Crear pequeño arbol en el tope de la página.
+
+Notas:
+
+    1) Buscar a hacer un pequeño curso de colores e implementación.
+
+#############################################
+            Para versión móvil.
+
+Cosas por hacer:
+
+1) Programar que el contenido de los article arropen a las imágenes en la versión para móvil y escritorio. (Buscar clase de float en la carpeta CSS. /css/float.html)
+
+2) Adaptar las dimensiones del logo en la versión móvil.

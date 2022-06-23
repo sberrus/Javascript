@@ -1,0 +1,31 @@
+.caja {
+	padding-top: 35px;
+	text-align: center;
+	background-color: rgb(178, 255, 166);
+	width: 300px;
+	height: 100px;
+	margin: 30px 
+}
+#margin1{
+	margin: 90px;
+}
+#margin2{
+	margin: 20px;
+}
+#border{
+	border: 3px solid black;
+}
+#border-radius{
+	border: 3px solid black;
+	border-radius: 50px;
+}
+#box-shadow{
+	box-shadow: 5px 8px 15px 3px black;
+}
+#text-shadow{
+	text-shadow: 5px 8px 2px black; 
+}
+#outline1, #outline2 {
+	margin: auto;
+	outline: 3px solid red;
+}

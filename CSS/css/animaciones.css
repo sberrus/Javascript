@@ -1,0 +1,135 @@
+
+
+.contenedor{
+	display: flex;
+	flex-direction: column;
+	height: 150px;
+	width: 100%;
+	background-color: black;
+	border: 3px solid darkred;
+	padding: 20px 5px;
+}
+
+.caja{
+	height: 90px;
+	width: 90px;
+	background-color: #0d078a;
+	border: 2px solid red;
+	position: relative;
+	margin: 5px
+}
+
+#desplazarse{
+	animation-name: desplazarse;
+	animation-duration: 3s;
+}
+
+#desplazarse2{
+	animation-name: desplazarse-2;
+	animation-duration: 3s;
+}
+
+#desplazarse-iteration{
+	animation-name: desplazarse-2;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+
+#desplazarse-direction-normal{
+	background-color: green;
+	animation-timing-function: ease-in-out;
+	animation-name: desplazarse;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+#desplazarse-direction-reverse{
+	animation-timing-function: ease-in-out;
+	animation-name: desplazarse;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: reverse;
+}
+
+#desplazarse-direction-alternate{
+	background-color: orange;
+	animation-timing-function: ease-in-out;
+	animation-name: desplazarse;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+#desplazarse-direction-alternate-reverse{
+	background-color: yellow;
+	animation-timing-function: ease-in-out;
+	animation-name: desplazarse;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+}
+
+#forward{
+	animation-timing-function: ease-in-out;
+	animation-name: desplazarse;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+.delay{
+	animation-delay: 1s
+}
+
+#both{
+	animation-timing-function: ease-in-out;
+	animation-name: desplazarse;
+	animation-duration: 2s;
+	animation-delay: 1s;
+	animation-fill-mode: both;
+}
+
+#cubic-bazier{
+	animation-timing-function: ease-in-out;
+	animation-name: desplazarse;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(0.2, 0.5, 0.1, .4);
+	animation-direction: alternate;
+}
+
+.height{
+	height: 550px;
+}
+
+.height2{
+	height: 300px;
+}
+
+@keyframes desplazarse-2{
+	0%{
+		background-color: black;
+		left: 0;
+	}
+	50%{
+		background-color: red;
+		left: 85%;
+	}
+	100%{
+		background-color: black;
+		left: 0;
+	}
+}
+
+
+
+@keyframes desplazarse{
+	from{
+		left: 0;
+		background-color: darkred;
+	}
+	to{	
+		left: 85%;
+		background-color: black;
+	}
+}

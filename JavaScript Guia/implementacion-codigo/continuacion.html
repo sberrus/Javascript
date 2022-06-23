@@ -1,0 +1,147 @@
+<html>
+
+<head>
+    <title>Continuación de curso de JavaScript</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/principal.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Secular+One&display=swap"
+        rel="stylesheet">
+    <script src="../js/continuacion.js"></script>
+</head>
+
+<body>
+    <!-- Inicio del menú principal -->
+    <header>
+        <div class="header__logo">
+            <img src="../images/s-roja.png" alt="Logo de repositorio Samuel Berrus">
+        </div>
+        <nav class="header__nav">
+            <a href="../index.html" class="header__nav--a">Inicio</a>
+            <a href="#" class="header__nav--a">Contenido</a>
+            <a href="#" class="header__nav--a">Prácticas Propias</a>
+        </nav>
+    </header>
+
+    <!-- Contenido principal de la página Web-->
+
+    <div class="main-container">
+
+        <section>
+            <h1>Continuación del curso de JavaScript</h1>
+            <p class="subtitulo">Continuación y puesta al día de curso de JavaScript con @soyDalto</p>
+
+            <!-- Caja de contenido -->
+            <article>
+                <div class="content-box">
+                    <h2>Nuevas funciones útiles.</h2>
+
+                    <h3>prompt(String)</h3>
+                    <p>
+                        Con esta función podemos pedirle al usuario datos mediante una ventana emergente con un mensaje.
+                    </p>
+                    <div class="content-box__laboratorio">
+                        <input type="button" onclick="javascript:imprimirNombre()" value="Presionar boton"
+                            class="content-box__laboratorio--boton">
+                        <p id="nuevo-texto"></p>
+                    </div>
+                    <h3>Función .write(String)</h3>
+                    <p>
+                        Esta función permite escribir directamente codigo HTML donde se le indique. Hay que tener en
+                        cuenta de que lo que se introduzca mediante esta funcion es codigo html y podemos introducir
+                        etiquetas, atributos y lo que deseemos siempre en código XHTML. Esta función crea un documento
+                        XHTML desde 0 así que su uso es recomendable solo para explicar cosas.
+                    </p>
+                    <div class="content-box__laboratorio">
+                        <input type="button" onclick="javascript:imprimirCodigo()" value="Presionar boton"
+                            class="content-box__laboratorio--boton">
+                        <p id="nuevo-texto"></p>
+                    </div>
+                    <h3>Arrays asociatívos</h3>
+                    <p>
+                        Los arrays asociatívos son aquellos que almacenan información y se accede a ella mediante
+                        asociaciones literales. Se trabaja parecido que con los datos JSON, el cual primero se indica la
+                        variable y se le asignan los valores con el operador de asignación. Después se introducen campos
+                        dentro de este objeto y se le asignan valores. Cada uno de los campos y sus valores se separan
+                        mediante comas "," <br>
+                        <code>  <span class="let">let</span> pc1 = {<br>
+                                    nombre: "Samuel",<br>
+                                    apellido: "Berrus",<br>
+                                    edad: 25 <br>
+                                };</code>
+                    <p>
+                    <h3>Uso de las acentos inversos (``) y de las  variables ${variable} para introducir en las cadenas de texto o variables String.</h3>
+                    <p>
+                        En javascript además de poder usar las comillas simples ('') y las dobles comillas (""), para introducir cadenas donde se necesite. Pero, también podemos usar los acentos inversos (``) ya que estos nos brindan ciertas funciones que nos facilitaran el evitar conflictos de comillas (cuando queremos utilizar comillas dobles dentor de una variable o simples pero sin que estas cierren la variable), y para introducir variables dentro de estas ya que nos proporcionan una manera más comoda de hacerlo.
+                    </p>
+                    <h4>Uso de las variables ${variable} dentro de las cadenas.</h4>
+                    <p>
+                        Con el uso de estas variables podemos introducir en las cadenas de texto que se hayan tipeado dentor de acentos inversos (``), de manera que nos facilita la tarea de introducir variables dentro de las cadenas de texto. En vez de utilizar los signos de concatenacion para introducir una variable: <br>
+                        <code><span class="let">let</span> <span class="var">texto</span> = "Hola " + <span class="var">nombre</span> + " Como estas? <span class="comentario">// devuelve "Hola samuel como estas?"</span></code> <br>
+                        Con el uso de las variables %{variable} se haría mejor de la siguiente manera: <br>
+                        <code><span class="let">let</span> texto = `Hola <span class="var">${nombre}</span> como estas?` <span class="comentario">// devuelve "Hola samuel como estas?</span></code> <br>
+                        De esta forma el código es más limpio y fácil de mantener.
+                    </p>
+                    <h3>Uso de las funciones flechas (=>)</h3>
+                    <p>
+                        Con el uso de las funciones flechas podemos simplificar las funciones ya que reducen la sintaxis de las mismas.
+                    </p>
+                    <p>
+                        Para hacer uso de las funciones de flechas hay que realizar la siguiente sintaxis: Primero hay que añadir el asignador de variables "const" luego el nombre de la función seguido del operador de asignación, después se añaden los argumentos entre paréntesis, si solo se envia un argumento no hace falta encerrarlo entre paréntesis y si no se envia ningún argumento no hace falta poner los paréntesis tampoco. Luego se añade la flecha (=>) indicando de que esa variable es una función y se abre la sección de instrucción con las llaves {instrucciones}.
+                    </p>
+                    <code><span class="let">const</span> <span class="var">function</span> = (argumentos) => { <br>
+                    [instrucciones] <br>
+                    }</code>
+                    <p>
+                        De esta manera podemos trabajar también con funciones.
+                    </p>
+                    <div class="content-box__laboratorio">
+                        <input type="button" value="Empezar cuestionario" onclick="javascript:iniciarCuestionario()">
+                        <p id="cuestionario"></p>
+                    </div>
+                </div>
+            </article>
+            <!-- Sección del Aside de la página -->
+
+            <aside>
+                <!-- Menú lateral o inferior -->
+                <h2>Menú de navegación</h2>
+                <ul class="menu-lateral">
+                    <li class="menu-lateral__items">
+                        <h3><a href="../index.html">Bienvenida</a></h3>
+                    </li>
+                    <li class="menu-lateral__items">
+                        <h3><a href="../implementacion.html">Conceptos Básicos</a></h3>
+                    </li>
+                    <ul class="submenu">
+                        <li class="submenu__items">
+                            <a href="../implementacion.html">Implementacion de código</a>
+                        </li>
+                        <li class="submenu__items">
+                            <a href="../glosario.html">Glosario y Sintáxis Básica</a>
+                        </li>
+                        <li class="submenu__items">
+                            <a href="../posibilidades-limitaciones.html">Posibilidades y Limitaciones</a>
+                        </li>
+                    </ul>
+                </ul>
+            </aside>
+    </div>
+
+    <!-- Seccion de los botones de navegación inferiores-->
+    <div class="navegador">
+        <div class="navegador__boton" style="left: -500px;">
+            <a href=""><img src="../images/flecha-boton.png" alt="Flecha izquierda"></a>
+        </div>
+        <div class="navegador__boton">
+            <a href=""><img src="../images/flecha-boton.png" alt="Flecha derecha"></a>
+        </div>
+    </div>
+
+    <!-- Inicio Footer -->
+    <footer>
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="temporizadores.css">
+    <title>JavaScript Mid-Level -- Eventos en Js</title>
+</head>
+
+<body>
+    <!-- Plantilla Cabecera -->
+    <div class="cabecera">
+        <h1>Capítulo 3 -- Eventos</h1>
+        <p class="subtitulo">
+            Manejo de Eventos en JavaScript
+        </p>
+    </div>
+    <!---->
+
+    <h2>Temporizadores en JavaScript</h2>
+    <p>
+        Los temporizadores nos permiten utilizar el tiempo como herramienta de desarrollo y poder implementar con esta multiples tareas de manera eficaz.
+    </p>
+    <h3>setTimeout("funcion","cantidadTiempoEnMiliSegundos")</h3>
+    <p>
+        Con esta herramienta podemos establecer un delay para que se ejecute una función después de haber pasado la cantidad de tiempo enviada como segundo parámetro en milisegundos.
+    </p>
+    <h4>clearTimeout(variable con "setTimeout")</h4>
+    <p>
+        Si queremos que se cancele el setTimeout() para que codifiquemos la cancelación de dicha ejecución. Primero, tenemos que crear una variable que almacenara el temporizador como variable global, de esta manera podemos en otra función indicar mediante el metodo clearTimeout(variable) la cancelación de dicho temporizador.
+    </p>
+    <span id="aviso">ESPERANDO INSTRUCCIÓN...</span><br>
+    <button id="disparador">Empezar Temporizador</button>
+    <button id="parar">Para Temporizador</button>
+
+    <h3>setInterval(funcion,milisegundos)</h3>
+    <p>
+        Este temporizador nos permite en vez de ejecutar una función pasado el tiempo establecido, está, nos permite ejecutar unma función cada cierto tiempo que nosotros indiquemos como segundo parámetro.
+    </p>
+    <button id="iniciarCronometro">Iniciar Cronómetro</button>
+    <button id="pararCronometro">Para Cronómetro</button>
+    <button id="reiniciar">Reiniciar cuenta</button>
+    <p>Cronómetro</p>
+    <span id="cronometro"></span>
+    <h3>Ojo!!</h3>
+    <p>
+        Este tipo de recursos no se recomienda usar en exceso porque consume muchos recursos.
+    </p>
+    <script src="temporizadores.js"></script>
+</body>
+</html>

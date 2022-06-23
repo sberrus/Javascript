@@ -1,0 +1,89 @@
+.container{
+	width: 600px;
+	height: 400px;
+	background-color: black;
+	background-image: url(https://dam.ngenespanol.com/wp-content/uploads/2019/06/arbol-mas-alto-del-mundo.png);
+	margin: 40px;
+	padding: 40px;
+	border: 20px solid rgba(214, 165, 58, 0.5);
+}
+
+#size1{
+	background-size: 50% 50%;
+}
+
+#size2{
+	background-size: cover;
+}
+
+#size3{
+	background-size: contain;
+}
+
+#repeat1{
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#border-box{
+	background-clip: border-box;
+	background-repeat: no-repeat;
+}
+
+#padding-box{
+	background-clip: padding-box;
+	background-repeat: no-repeat;
+}
+
+#content-box{
+	background-clip: content-box;
+	background-repeat: no-repeat;
+}
+
+#origin-border{
+	background-origin: border-box;
+	background-repeat: no-repeat;
+}
+
+#origin-padding{
+	background-origin: padding-box;
+	background-repeat: no-repeat;
+}
+
+#origin-content{
+	background-origin: content-box;
+	background-repeat: no-repeat;
+}
+
+#position{
+	transition: all 1s;
+	background-repeat: no-repeat;
+	background-size: 400px;
+	background-position: right top;
+}
+#position:hover{
+	background-repeat: no-repeat;
+	background-size: 400px;
+	background-position: right bottom;
+}
+#position:active{
+	background-repeat: no-repeat;
+	background-size: 400px;
+	background-position: center top;
+}
+
+#attachment-scroll{
+	background: url(https://img.freepik.com/vector-gratis/desliza-letrero-neon-puntero-flecha-neon-brillante-aislado-realista-brillante-flecha-neon-brillante-boton-redes-sociales_145391-389.jpg?size=338&ext=jpg&ga=GA1.2.1141011505.1595894400);
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-position: center center; 
+	background-color: rgba(0, 0, 18);
+}
+
+#attachment-fixed{
+	background: url(https://img.freepik.com/vector-gratis/desliza-letrero-neon-puntero-flecha-neon-brillante-aislado-realista-brillante-flecha-neon-brillante-boton-redes-sociales_145391-389.jpg?size=338&ext=jpg&ga=GA1.2.1141011505.1595894400);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: left 250px center; 
+	background-color: rgba(0, 0, 18);
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tablas Avanzadas en HTML</title>
+</head>
+<body>
+	<h1>Tablas Avanzadas en HTML</h1>
+	<p>
+		En esta clase ahondaremos mas en el uso de las tablas y su uso mas complejo de las mismas. Para ello hay que saber que las tablas tienden a separarse en 3 secciones que tienen sus propias etiquetas como lo son la cabecera o &#60;thead&#62;, el cuerpo de la tabla o &#60;tbody&#62; y el pie de la tabla o &#60;tfoot&#60; y estas se encargan de agrupar las celdas en sus respectivas secciones dentro de la tabla.<br>
+		Como curiosidad hay que saber que al ordenar el codigo las etiquetas &#60;thead&#62; y &#60;tfoot&#62; deben ser las primeras en ser escritas seguidas de la etiqueta &#60;tbody&#62; debido a que si no se realiza de esta manera la pagina no sera correctamente validada.<br>
+		Por ende procederemos a crear una tabla compleja para realizar una demostracion de la misma.
+	</p>
+	<table border="1px">
+		<caption>Tabla compleja</caption>
+		<thead>
+			<tr>
+				<th rowspan="2" scope="col">AÑO</th>
+				<th colspan="4" scope="col">Expansion de ventas</th>
+			</tr>
+			<tr>
+				<th scope="col">Producto A</th>
+				<th scope="col">Producto B</th>
+				<th scope="col">Producto C</th>
+				<th scope="col">Producto D</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<th rowspan="2" scope="col">AÑO</th>
+				<th scope="col">Producto A</th>
+				<th scope="col">Producto B</th>
+				<th scope="col">Producto C</th>
+				<th scope="col">Producto D</th>
+			</tr>
+			<tr>
+				
+				<th colspan="4" scope="col">Expansion de ventas</th>
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr>
+				<th scope="row">N-3</th>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+			</tr>
+			<tr>
+				<th scope="row">N-2</th>
+				<td>3</td>
+				<td>5</td>
+				<td>8</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<th scope="row">N-1</th>
+				<td>4</td>
+				<td>4</td>
+				<td>7</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<th scope="row">N</th>
+				<td>5</td>
+				<td>7</td>
+				<td>6</td>
+				<td>2</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+		despues de Haber visto las tablas ahora veremos los formularios y sus usos en html. <br>
+		Ir a clase de <a href="formularios.html">Formularios</a>
+	</p>
+</body>
+</html>

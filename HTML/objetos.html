@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objetos en HTML</title>
+</head>
+<body>
+	<h1>Objetos en HTML</h1>
+	<p>
+		En HTML tambien podemos incluir software mas complejo utilizando aplets de Java o videos en diferentes formatos como QuickTime o Flash. Estos no son arrancados desde el navegador directamente sino que usan pequeños programas llamados plugins los cuales permite interactuar con ellos.<br>
+		Para ello utilizamos la etiqueta &#60;object&#62; para imvocar los fragmentos que utilizara luego los diferentes objetos. La etiqueta &#60;object&#62; tiene los siguientes atributos:
+	</p>
+	<ul>
+		<li>
+			<p>
+				data = "url" - Indica la URL de los datos que utiliza el objeto.
+			</p>
+		</li>
+		<li>
+			<p>
+				classid, codebase, codetype - Informacion especifica que depende del tipo de objeto.
+			</p>
+		</li>
+		<li>
+			<p>
+				type - indica el tipo de contenido de los datos.
+			</p>
+		</li>
+		<li>
+			<p>
+				height = "unidad_de_medida" - Indica la altura con la que se debe mostrar el objeto.
+			</p>
+		</li>
+		<li>
+			<p>
+				width = "unidad_de_medida" - Indica la anchura con la que se debe mostrar el objeto.
+			</p>
+		</li>
+	</ul>
+	<p>
+		Ejemplo de imagen usando la etiqueta &#60;object&#62;: <br>
+		<object data="images/ejemplo_mapa_imagen.gif" type="image/gif" height="100px">
+		</object>
+	</p>
+	<p>
+		Ademas de usar los objetos. A estos se les pueden asignar parametros mediante el uso de la etiqueta &#60;param name="" value=""&#62;. Estas deben estar dentro de la etiqueta &#60;object&#62; y tiene 2 atributos:  
+	</p>
+	<ul>
+		<li>
+			<p>
+				name = &#34;texto&#34; - Se utiliza para asignarle una identificacion unica al atributo.
+			</p>
+		</li>
+		<li>
+			<p>
+				value = &#34;String&#34; - Se utiliza para asignarle un valor a dicho parametro. 
+			</p>
+		</li>
+	</ul>
+	<p>
+		Al incluir videos de tipo flash algunos navegadores tienden a tener ciertos problemas respecto a la rapidez o a que algunos no permitiran ver el video a menos que termine de cargar dicho video un 100%. Para solucionar este problema se introdujo a HTML una etiqueta &#60;embed&#62; la cual permite introducir dichos videos.<br>
+		El principal inconveniente respecto a usar este metodo es que la pagina web tendra problemas al momento de la validacion de dicha pagina web. Aunque en un futuro se vera que no es completamente necesario que las paginas web tengan precisamente que ser validada ya que incluso la pagina principal de google no esta correctamente validada pero no deja de ser de las paginas mas visitadas del mundo.
+	</p>
+	<p>
+		Vistas las clases de objetos e imagenes procederemos a ver como se comportan las tablas y como utilizarlas correctamente.
+		<br><br>
+		
+		Ir a clase de <a href="tablas_simples.html">Tablas</a>.
+	</p>
+</body>
+</html>

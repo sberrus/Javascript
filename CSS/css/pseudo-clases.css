@@ -1,0 +1,92 @@
+.contenedor{
+	height: 220px;
+	width: 30%;
+	background: rgb(50, 168, 82);
+	text-align: center;
+	font-size: 2em;
+	/* Se le aplica la propiedad transition al contenedor para que este no vuelva
+	de manera brusca a su posicion original*/ 
+	transition: all 0.5s;
+	margin: auto;
+}
+.contenedor:hover {
+	width: 100%;
+	/* Esto se explica mas adelante pero modifica el tiempo el cual durara 
+	la transicion de la propiedad.*/
+	transition: all 1s;
+	font-size: 2.5em;
+}
+.texto-instructivo{
+	font-size: 22px;
+	font-weight: 900;
+	color:darkgreen;
+	text-align: center;
+}
+.link-standard{
+text-align: center;
+margin: 10px;
+font-size: 2em;
+display: block;	
+}
+.link {
+text-align: center;
+margin: 10px;
+font-size: 2em;
+display: block;
+}
+.link:link{
+	color:rgb(79, 255, 129);
+}
+.link:visited{
+	color: red;
+}
+.contenedor-active{
+	width: 250px;
+	height:150px;
+	margin: auto;
+	background: black;
+	color:red;
+	font-size: 1.65em;
+	text-align: center;
+	transition: all 1s;
+}
+.contenedor-active:active{
+	color: black;
+	background: red;
+	width: 100%;
+}
+.contenedor-formulario{
+	width:30%;
+	height: 150px;
+	margin: auto;
+	padding: 6px;
+	background-color: rgb(53, 156, 101);
+	font-weight: 900;
+}
+.formulario-focus{
+	margin: auto;
+	display: block;
+	border-radius: 6px;
+	transition: 0.7s;
+	background-color: rgb(173, 255, 211);
+}
+.formulario-focus:focus{
+	background-color: rgb(31, 102, 64);
+	padding: 2px;
+	transition: 0.5s;
+	font-weight: 900;
+	color: white;
+}
+.contenedor-lang{
+	width: 50%;
+	height: 100px;
+	margin:auto;
+	background: rgb(209, 255, 230);
+}
+:lang(en){
+	background-color: red;
+	color: black;
+}
+i {
+	font-weight: 900;
+}

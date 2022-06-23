@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Colores en CSS</title>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<link rel="stylesheet" type="text/css" href="css/colores.css">
+	</head>
+	<body>
+		<h1>Colores en CSS</h1>
+		<p>
+			Los colores ya se han utilizado varias veces a lo largo de estas clases pero básicamente es eso los diferentes tipos de colores que podemos aplicar a los elementos y a ciertas propiedades en CSS. 
+		</p>
+		<h2>Color Name</h2>
+		<p>
+			Los color name son los colores que podemos utilizar como valor directamente utilizando su nombre tenemos varios color name.
+		</p>
+		<p>
+			El principal inconveniente de usar este método es que cada navegador tiene definidos sus propios colores. Por ejemplo: Si definimos como valor "red" no va a ser el mismo tono de rojo en mozilla que en firefox por ejemplo.
+		</p>
+		<div class="contenedor">
+			<img src="images/color-name.png">
+		</div>
+		<p>
+			<small>Lista de colores (color name) en CSS.</small>
+		</p>
+		<h2>Hexadecimal</h2>
+		<p>
+			Para solucionar el problema anteriormente mencionado con respecto a los diferentes colores por navegador existen varios métodos o soluciones para esto. Por ejemplo el valor hexadecimal.
+		</p>
+		<p>
+			el valor hexadecimal se diferencia porque contiene una almoadilla o signo gato (#), seguido del código del color que deseamos implementar al elemento. Con este valor y con los que veremos a continuación se soluciona el problema de compatibilidad de colores que tenemos con los valores (color name).
+		</p>
+		<h2>RGB, RGB/A HSL Y DEMÁS</h2>
+		<p>
+			Hay diversos formátos para trabajar los colores en CSS. Pero para indagar más al respecto recomiendo visitar la página de <a href="https://uniwebsidad.com/libros/css/capitulo-3/colores" target="_BLANK">Uniwebsidad</a> para saber los demás formátos para la implementación de los colores en nuestros documentos.
+		</p>
+		<p>
+			El valor interesante es el RGBA ya que este funciona igual que el RGB con al diferencia que este tiene un 4to valor que va a ser igual a que si hayamos implementado una opacity al elemento al que le queremos aplicar dicho color.
+		</p>
+		<div class="contenedor-rgba">
+			texto
+			<div>
+				texto
+				<div>texto</div>
+			</div>
+		</div>
+		<div class="contenedor-rgba">
+			texto
+			<div>
+				texto
+				<div>texto</div>
+			</div>
+		</div>
+		<p>
+			<small>En el ejemplo anterior se han implementado cajas que contienen otras cajas pero las que estan contenidas tienen colores rgba</small>
+		</p>
+		<p>
+			De igual forma en Google nos proporciona una herramienta para poder escoger distintos colores en CSS y nos los muestra en varios formatos como rgb, hexadecimal y otros. <a href="https://www.google.com/search?q=color+picker&rlz=1C1CHBF_esES906ES906&oq=color+picker&aqs=chrome.0.69i59j0l7.1463j0j7&sourceid=chrome&ie=UTF-8" target="_BLANK">Ir a Color Picker</a>
+		</p>
+		<p>
+			A continuación veremos la clase de mobile first.
+			<a href="mobile-first.html">Ir a clase de mobile-first.</a>
+		</p>
+	</body>
+</html>

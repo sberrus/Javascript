@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="promesas.css">
+    <title>JavaScript Mid-Level -- Callbacks y Promesas</title>
+</head>
+
+<body>
+    <!-- Plantilla Cabecera -->
+    <div class="cabecera">
+        <h1>Capítulo 4 -- Promesas en JavaScript</h1>
+        <p class="subtitulo">
+            Manejo Promesas en JavaScript
+        </p>
+    </div>
+    <h2>¿Qué es una promesa?</h2>
+    <p>
+        Las promesas son un objeto en js, representan dos cosas un <b>"reject"</b> y un <b>"resolve"</b> (Se verá más adelante en el curso). Uno representa la <b>terminación</b> de una operación asincrona y otra representa el <b>fracaso</b> de la misma.
+    </p>
+    <p>
+        Básicamente es otra forma de trabajar con los callbacks pero de manera mas ordenada
+    </p>
+    <h2>Uso de promesas en JavaScript</h2>
+    <p>
+        Haremos una prueba. Has click en el siguiente botón y escribe en la respuesta 1, sino, devolvera un error.
+    </p>
+    <button id="preguntar">Haz click aquí</button>
+    <div id="display-promise">
+        <h2 class="title-promise"></h2>
+        <p class="content-promise"></p>
+    </div>
+
+    <h2>Asincronía en Promise</h2>
+    <p>
+        Las promesas son por naturaleza asincronas. Esto significa que las sincronas, estas devuelven la información después que haya resuelto todo lo que tenga que resolver de fondo.
+    </p>
+    <!---->
+    <script src="promesas.js"></script>
+    <script src="pruebas.js"></script>
+    <script src="asincronia.js"></script>
+</body>
+
+</html>

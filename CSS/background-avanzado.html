@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Background avanzado en CSS</title>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<link rel="stylesheet" type="text/css" href="css/background-avanzado.css">
+	</head>
+	<body>
+		<h1>Background Avanzado</h1>
+		<h2></h2>
+		<p>
+			A lo largo de este curso hemos usado creo que en todas las clases la propiedad background-color, sobretodo con los valor rgb() rgba() códigos hex y los nombres de colores, pero también hay formas avanzadas con las cuales podemos trabajar con la propiedad background. 
+		</p>
+		<h3>Propiedad background-image: url(direcciónImagen)</h3>
+		<p>
+			Con esta propiedad podemos establecer como background una imágen que nosotros deseemos introducir ya sea desde los archivos internos o desde un enlace que nos lleve a otro archivo fuera de nuestros archivos locales.
+		</p>
+		<div class="container"></div>
+		<p>
+			<small>Ejemplo del uso de la propiedad background-image.</small>
+		</p>
+		<h3>Propiedad background-size: x, y, auto, cover, contain.</h3>
+		<p>
+			Con esta propiedad podemos modificar el aspecto y el comportamiento de la imágen del background para modificarla. Esta lo que hace es recortar la imágen para que se muestre correctamente desde donde se le indique al programa.
+		</p>
+		<h4>Valor en porcentajes y en píxeles</h4>
+		<p>
+			Con este valor indicamos en porcentaje de que tanto queremos que se vea de la imágen en el fondo. Este valor contendrá un solo valor en porcentaje si solo deseamos indicar que tanto queremos ver de la imágen en el eje x (Horizontal). El segundo valor indicará que tanto queremos ver del eje y (Vertical).
+		</p>
+		<div class="container" id="size1"></div>
+		<p>
+			<small>En el ejemplo anterior podemos ver el uso de la propiedad background-size con los valores en porcentajes 50% 50%.</small>
+		</p>
+		<h4>Valor cover</h4>
+		<p>
+			Con este valor indicamos que mustre la imágen pero adaptando sus dimensiones para que se muestre de mejor manera en el background dandole dimensiones más optimas.
+		</p>
+		<div class="container" id="size2"></div>
+		<p>
+			<small>En este ejemplo podemos observar como el comportamiento de esta propiedad se asemeja al valor cover de la propiedad object-fill para tratar el comportamiento de las imágenes dentro de CSS.</small>
+		</p>
+		<h4>Valor Contain</h4>
+		<p>
+			Con este valor indicamos al background que visualize la imágen completa en la caja indiferentemente del tamaño de la misma. 
+		</p>
+		<div class="container" id="size3"></div>
+		<h3>Propiedad background-repeat</h3>
+		<p>
+			Esta propiedad es útil al momento de utilizar imágenes que no ocupen el espacio designado en el código y este se repita para rellenar ese espacio vacio. Para evitar esto tenemos la propiedad background-repeat. 
+		</p>
+		<h4>Valor no-repeat</h4>
+		<p>
+			Con este valor indicamos al background que en el caso de que la imágen sea más pequeña que el elemento que la contiene, esta no debera repetirse en ningún caso.
+		</p>
+		<div class="container" id="repeat1"></div>
+		<p>
+			<small>Uso del valor no-repeat en la propiedad background. El color negro indica el resto del espacio que tiene el cotenedor pero que no esta siendo ocupado por la imágen en cuestión.</small>
+		</p>
+		<h3>Propiedad background-clip</h3>
+		<p>
+			Esta propiedad indica en qué caja mostrará el contenido y cuales van a ser los bordes de la misma.
+		</p>
+		<h4>border-box</h4>
+		<p>
+			Con este valor indicamos al background que empieze desde los bordes del contenedor.
+		</p>
+		<div class="container" id="border-box"></div>
+		<h4>Valor padding-box</h4>
+		<p>
+			Con este valor indicamos que el contenido se muestre desde los bordes del padding.
+		</p>
+		<div class="container" id="padding-box"></div>
+		<h4>Valor content-box</h4>
+		<p>
+			Este valor indica que muestre el background en la caja content del elemento donde se aplica.
+		</p>
+		<div class="container" id="content-box"></div>
+		<h3>Propiedad background-origin</h3>
+		<p>
+			Con esta propiedad indicamos al background que muestre los contenidos desde donde se le indique pero sin recortar la imágen desde la esquina inferior izquierda hasta la esquina superior derecha.
+		</p>
+		<h4>Valor border-box</h4>
+		<p>
+			Este valor indica el background que muestre el contenido en el border-box.
+		</p>
+		<div class="container" id="origin-border"></div>
+		<h4>Valor padding-box</h4>
+		<p>
+			Con este valor indicamos al programa que muestre la imágen desde el padding-box del contenedor al que se le aplica.
+		</p>
+		<div class="container" id="origin-padding"></div>
+		<h4>Valor content-box</h4>
+		<p>
+			Este valor indica al background que muestre el contenido solo en el content-box para mostrar el contenido dentro de este.
+		</p>
+		<div class="container" id="origin-content"></div>
+		<h3>Propiedad background-position</h3>
+		<p>
+			Con esta propiedad podemos modificar la posición de la imágen con la que estamos trabajando en el background.
+		</p>
+		<h4>Valores absolutos (right, left, top, bottom, center)</h4>
+		<p>
+			Con estos valores podemos indicarle al programa la posición la cual el background va a mostrarse en el contenedor. Hay que usar 2 posiciones para que el elemento se muestre correctamente. Si indicamos solo una posición la propiedad no tendra efecto.
+		</p>
+		<span class="destacado-verde">Posicione y de click en el contenedor inferior</span>
+		<div class="container" id="position"></div>
+		<h3>Propiedad background-attachment</h3>
+		<p>
+			Con esta propiedad podemos establecer el comportamiento visual de la imágen de fondo con el uso del scroll y el portview del navegador.
+		</p>
+		<h4>Valor scroll</h4>
+		<p>
+			Con este valor la imágen de fondo forma parte del fondo del viewport y este se desplaza junto al body de la imágen.
+		</p>
+		<div class="container" id="attachment-scroll"></div>
+		<h4>Valor fixed</h4>
+		<p>
+			Con este valor podemos establecer que la imágen de fondo se mantenga en una capa inferior al body y esta se desplaze junto con el portview en la posición indicada.
+		</p>
+		<div class="container" id="attachment-fixed"></div>
+		<h3>Más aún...</h3>
+		<p>
+			En CSS podemos trabajar con otras propiedades que nos permiten trabajar con el background de manera más eficiente pero estas las podremos ver en la página de <a href="https://www.w3schools.com/cssref/default.asp#cssproperties" target="_BLANK">W3School</a> donde se pueden ver el resto de funcionalidades y propiedades que se le pueden aplicar al background en CSS.
+		</p>
+		<p>
+			Visto lo visto con el uso avanzado de la porpiedad background, ahora iremos a la clase de variables en CSS y como trabajar con estas dentro de nuestra página. <a href="variables.html">Ir a clase de variables en CSS.</a>
+		</p>
+	</body>
+</html>

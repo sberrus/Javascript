@@ -1,0 +1,32 @@
+.display-promise{
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+}
+
+.display-correct{
+    border: 1px solid #008d00;
+    color: #008d00;
+    margin: 5px;
+    padding: 5px;
+}
+
+.display-incorrect{
+    border: 1px solid #970000;
+    color: #970000;
+    margin: 5px;
+    padding: 5px;
+}
+
+.display-correct > h2{
+    margin: 5px;
+    padding: 5px;
+    font-size: 2em;
+    color: #008d00;
+}
+.display-incorrect > h2{
+    margin: 5px;
+    padding: 5px;
+    font-size: 2em;
+    color: #970000;
+}

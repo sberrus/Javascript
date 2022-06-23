@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Enlaces En HTML</title>
+</head>
+<body>
+	<h1>Enlaces en HTML</h1>
+	<h3>Distintos tipos de enlaces y como programarlos</h3>
+	<p>
+		En html tenemos diferentes tipos de enlaces. la etiqueta para realizar los enlaces dentro de html es < a >. Con su atributo href. El codigo entero seria: < a href="<i>enlace</i>"> texto del enlace</ a>. <br>
+		Los enlaces en si son botones que indican una ruta la cual el programa va a seguir para llegar a un archivo u otra pagina web la cual nosotros queramos que el usuario pueda acceder desde dicha pagina web que estemos programando.
+
+		Existen enlaces locales y externas.<br>
+	</p>
+	<h2>Enlaces locales</h2>
+	<p>
+		Las enlaces locales son aquellas que permiten ir de un archivo a otro navegando dentro del mismo servidor.<br>
+		Para navegar debemos saber como escribir el codigo dentro del atributo href. ej:<br>
+		<br>
+		-Para ir den un archivo a otro dentro de la misma carpeta:
+		para ir de un archivo a otro dentro de la misma carpeta dentro del href hay que poner el nombre del archivo con su respectiva extensión.
+		Las rutas inician desde la localizacion del archivo de origen. suponiendo que la pagina index.html que esta alojada en la carpeta que se llama "paginaweb" queremos agregarle un enlace que lleve a la pagina index2.html que esta dentro de la misma carpeta. el href ya que el archivo se encuentra en el mismo origen que el archivo que esta utilizando el enlace, solo hay que poner el nombre del otro archivo al cual deseamos abrir al pinchar sobre el enlace.
+		<br>
+		codigo: < a href="index2.html"> texto del enlace </ a>.<br>
+		-Ahora. Sabiendo como funcionan la navegación entre archivos supognamos ahora que hay un archivo que se llama usuario.html en la carpeta "modulouno" dentro de la carpeta "paginaweb" siendo la ruta ..paginaweb/modulouno/usuario.html. Para llegar a dicho archivo tenemos que indicarle al href la ruta hacia donde esta el archivo al cual queremos abrir mediante dicho enlace. <br>
+		codigo: < a href="modulouno/usuario.html"> texto del enlace </ a>.
+		-en este supuesto haremos que de el archivo usuario que esta en la siguiente ruta: <i>..paginaweb/modulouno/usuario.html</i> queremos porgramar un enlace que nos devuelva a la pagina index.html que esta en la carpeta paginaweb. Como bien vemos la carpeta "modulouno" esta contenida dentro de la carpeta pagina web, entonces, para ir una carpeta mas arriba del arbol de archivos tenemos que poner dentro del href "../" y luego el nombre del archivo mas su extension al cual deseamos acceder. <br>
+		codigo: < a href="../index.html"> texto del enlace </ a>.<br>
+		-Por ultimo supongamos que hay dos carpetas dentro de la carpeta "paginaweb" llamadas "modulouno" y "modulodos". Y queremos ir de una pagina que esta en "modulouno" a la carpeta "modulodos" tenemos que subir un nivel para salir de la carpeta "modulouno" y despues indicar la ruta hacia el archivo al cual deseamos llegar que llamaremos "contacto".<br> 
+		codigo: < a href="../modulodos/contacto.html"> texto del enlace < /a>.
+	</p> 
+	<h2>Enlaces Externos</h2>
+	<p>
+		Ya visto lo relacionado a los enlaces internos y su navegacion veremos lo correspondiente a los enlaces externos. Siendo estos más simples. <br>
+		Para este caso solo debemos indicar la URL con su protocolo "http" o "https" al principio indicando al sitio web al cual deseamos ir
+		por ejemplo: haremos un enlace que lleve a la pagina de YouTube<br>
+		codigo: < a href="https://www.youtube.com/"
+	</p>
+	<h2>Propiedades de la etiqueta a</h2>
+	<p>
+		Con la etiqueta "a" podemos indicar tambien si deseamos que el archivo a pagina se abra dentro de la misma pestaña, o en una nueva, o en otra ventana de navegador. Eso se realiza de la siguiente forma.<br>
+		Hareos el ejemplo indicandole al programa que nos lleve a Google utilizando los siguientes enlaces indicados con anterioridad.<br>
+		Ejemplos:<br>
+		<strong>Enlace en la misma pestaña en la que estamos navegando.</strong> &#40; Sin ningun atributo. &#41;<br>
+		<a href="https://www.google.com/">Enlace en misma pestaña</a> <br>
+		<strong>Enlace en nueva pestaña.</strong> &#40; Atributo target&#61;&#34;_BLANK&#34;&#41;<br>
+		<a href="https://www.google.com/" target="_BLANK">Enlace en nueva pestaña</a> <br>
+	</p>
+
+	<p>
+		Siguiente clase Enlaces 2.
+	</p>
+	<a href="enlaces2">Ir a Enlaces 2</a>
+	
+
+</body>
+</html>

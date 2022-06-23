@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Variales en CSS</title>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<link rel="stylesheet" type="text/css" href="css/variables.css">
+	</head>
+	<body>
+		<h1>Variables en CSS</h1>
+		<h2>Conceptos básicos</h2>
+		<p>
+			Las variables en CSS e igual que en los demás lenguajes de programación, se trata de la capacidad que tiene un programa de almacenar datos dentro de si para después poder usarlos y modificarlos a futuro. En CSS podemos utilizar variables para almacenar datos de funciones, colores, texto, etc...
+		</p>
+		<p>
+			Es una forma muy útil de trabajar en CSS ya que con ésta podemos almacenar cosas para luego tener una documentación apropiada para poder trabajar de manera modular de manera más eficazmente.
+		</p>
+		<h3>Ustilización de variables CSS</h3>
+		<p>
+			Para poder utilizar variables en CSS tenemos que hacer uso de la pseudo-clase :root que ésta nos permite darle instrucciones directamente al HTML de la página web. Dentro de esta instrucción con este selector indicaremos dentro las variables.
+		</p>
+		<h4>Definir variables</h4>
+		<p>
+			Luego para crear la variable primero se agregan dos guiones medios (--) seguido del nombre de la variable que vamos a crear dos puntos (:) y el valor que va a contener dicha variable. EJ: --color-rojo:darkred;. La linea de código anterior indica que la variable --color-rojo = darkred; por lo tanto donde sea que introduzcamos dicha variable va a ser igual a que introduzcamos el valor "darkred"
+		</p>
+		<h4>Variables Globales</h4>
+		<p>
+			Este tipo de variables pueden ser utilizadas desde cualquier lugar dentro del documento HTML. Para hacer uso de estas variables tenemos que crear la instrucción con la psudoclase :root que como ya hemos indicado, que asigna propiedades y/o en esta caso variables a todo el conjunto de elementos dentro del HTML, después introducimos la variable con su respectivo valor.
+		</p>
+		<h4>Variables locales</h4>
+		<p>
+			Las variables locales en CSS son aquellas que declaramos dentro de la instrucción donde se va a usar. Esta variable solo se puede usar en esta instrucción. Si una variable local toma el nombre de una variable global, esta, usa los valores de la variable local.
+		</p>
+		<h4>Hacer uso de las variables en CSS</h4>
+		<p>
+			Para usar las variables que hemos definido ya sean globales o locales, tenemos que introducirlas mediante la función var(nombre_variable). La función var(...) es la encargada de invocar los valores que hayamos introducido en dicha variable. Siguiendo el ejemplo dado anteriormente en el cual habiamos declarado la variable --color-rojo: darkred; veremos como introducir dicha variable como un valor dentro de una propiedad CSS, EJ: background-color: var(--color-rojo). El uso de la anterior instrucción sería equivalente a usar la propiedad background-color: darkred;
+		</p>
+		<div class="container">
+			<div class="container1"></div>
+			<div class="container2"></div>
+		</div>
+		<p>
+			<small>En el ejemplo anterior podemos observar el uso de las variables en el background del contenedor padre, y de los dos hijos. Todos los colores visibles hacen uso de las variables incluyendo los border.</small>
+		</p>
+	</body>
+</html>

@@ -1,0 +1,140 @@
+<html>
+
+<head>
+    <title>Operadores en JavaScript</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/principal.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Secular+One&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Inicio del menú principal -->
+
+    <header>
+        <div class="header__logo">
+            <img src="../images/s-roja.png" alt="Logo de repositorio Samuel Berrus">
+        </div>
+        <nav class="header__nav">
+            <a href="../index.html" class="header__nav--a">Inicio</a>
+            <a href="#" class="header__nav--a">Contenido</a>
+            <a href="#" class="header__nav--a">Prácticas Propias</a>
+        </nav>
+    </header>
+    <!-- Fin del menú principal-->
+
+    <!-- Contenido principal de la página Web-->
+    <div class="main-container">
+        <section>
+            <h1>Operadores en JavaScript</h1>
+            <p class="subtitulo">
+                Operadores en JavaScript lógicos, de asignación, de acumulación, etc... 
+            </p>
+                
+            <!-- Bloque de contenido -->
+
+            <article>
+                <div class="content-box">
+                    <h2>Conceptos Básicos</h2>
+                    <p>        
+                        Los operadores nos permiten modificar los valores de las variables para darles uso y asignarles valores, con estos operadores podemos hacer cálculos complejos y tomar decisiones lógicas en función de comparación y otros tipos de condiciones.
+                    </p>
+                    <h3>Asignación</h3>
+                    <p>
+                        Los operadores de asignación son los que nos permiten introducir valores dentro de las variables. La que hemos estado utilizando hasta el momento es el operador de asignación “=” a la izquierda de este operador se pone el nombre de la variable a la que se le va a asignar un valor y a la derecha se le asignan valores, variables, condiciones lógicas, etc. 
+                    </p>
+                    <h3>Incremento o Decremento</h3>
+                    <p>
+                        Estos dos operadores son solo validos para las variables numéricas y se utilizan para incrementar o decrementar en una unidad el valor de una variable.<br>
+                        <b>Ejemplo:</b>
+                        <code>
+                            <span class="var">var</span> numero = 5;<br>
+                            ++numero; <br>
+                            <span class="function">alert</span>(numero);  <span class="comentario">// numero = 6</span>
+                        </code>
+                    </p>
+                    <p>
+                        El valor de incremento se declara con el uso del nombre de la variable seguido de los caracteres “++”. Y para decrementar lo mismo, pero con los caracteres “--“.
+                    </p>
+                    <code>
+                        <span class="var">var</span> numero = 5;<br>
+                        --numero;<br>
+                        <span class="function">alert</span>(numero);  // numero = 4
+                    </code>
+                    <p>
+                        El uso de los caracteres de incremento o de decremento en función de su disposición en la asignación a una variable puede alterar la forma en la que el programa realiza dichas acciones.<br>
+                        Al momento de incorporar al código los caracteres de incremento o decremento al inicio de la variable, al momento de usar el programa esta variable realizará el incremento o decremento antes de terminar la función. Si la colocas al final de la variable, el programa realizará el incremento o decremento después de haber culminado la ejecución de la función.
+                    </p>
+                    <code>
+                        <span class="var">var</span> numero1 = 5;<br>
+                        <span class="var">var</span> numero2 = 2;<br>
+                        numero3 = numero1++ + numero2;<br>
+                        <span class="comentario">// numero3 = 7, numero1 = 6 </span>
+                    </code>
+                    <code>
+                        <span class="var">var</span> numero1 = 5;<br>
+                        <span class="var">var</span> numero2 = 2;<br>
+                        numero3 = ++numero1 + numero2;<br>
+                        <span class="comentario">// numero3 = 8, numero1 = 6</span>
+                    </code>
+                    <h3>Lógicos</h3>
+                    <p>
+                        Los operadores lógicos son los necesarios para poder realizar operaciones complejas dentro de la aplicación. El resultado de cualquier operación que contenga operadores lógicos dará como resultado un valor booleano.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Fin bloque de contenido -->
+
+        </section>
+
+        <!-- Sección del Aside de la página -->
+
+        <aside>
+            <h2>Menú de navegación</h2>
+            <ul class="menu-lateral">
+                <li class="menu-lateral__items">
+                    <h3><a href="../index.html">Bienvenida</a></h3>
+                </li>
+                <li class="menu-lateral__items">
+                    <h3><a href="../implementacion.html">Conceptos Básicos</a></h3>
+                </li>
+                <ul class="submenu">
+                    <li class="submenu__items">
+                        <a href="../implementacion.html">Implementacion de código</a>
+                    </li>
+                    <li class="submenu__items">
+                        <a href="../glosario.html">Glosario y Sintáxis Básica</a>
+                    </li>
+                    <li class="submenu__items">
+                        <a href="../posibilidades-limitaciones.html">Posibilidades y Limitaciones</a>
+                    </li>
+                </ul>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Sección del Aside de la página -->
+
+    <!-- Fin de la sección de contenido-->
+
+    <!-- Seccion de los botones de navegación inferiores-->
+    <div class="navegador">
+        <div class="navegador__boton">
+            <a href="programacion-basica.html"><img src="../images/flecha-boton.png" alt="Flecha izquierda"></a>
+        </div>
+        <div class="navegador__boton">
+            <a href="siguiente-pagina.html"><img src="../images/flecha-boton.png" alt="Flecha derecha"></a>
+        </div>
+    </div>
+
+    <!-- Inicio Footer -->
+    <footer>
+
+    </footer>
+    <!-- Fin footer-->
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de control de alumnado</title>
+    <script src="registroAlumnos.js"></script>
+</head>
+<body>
+    <form>
+        <input type="button" value="Agregar Alumno" onclick="inscripcion()">
+        <input type="button" value="Agregar Profesor" onclick="modificarProfesor()">
+    </form>
+
+    <div style="min-height: 150px; border: 1px solid black; margin: 15px;; padding: 35px;">
+        <h3>Profesor:</h3>
+        <h2 id="campoProfesor" style="color: red; font-size: 2.5em; margin: 25px;"></h2>
+    </div>
+    <div style="min-height: 150px; border: 1px solid black; margin: 15px;; padding: 35px;">
+        <h3>Lista de Alumnos:</h3>
+        <span id="campoAlumnos"></span>
+    </div>
+</body>
+</html>

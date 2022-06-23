@@ -1,0 +1,47 @@
+.contenedor {
+	height: 125px;
+	width: 75%;
+	margin: auto;
+	background: rgb(182, 224, 190);
+}
+#firstline::first-line {
+	color: red;
+}
+#firstletter::first-letter {
+	color:red;
+	font-size: 3em;
+	font-weight: 900;
+}
+#firstletter{
+	height: 150px;
+}
+form{
+	margin: 25px auto;
+	background: grey;
+	padding: 20px;
+	width: 50%
+}
+input{
+	padding: 6px;
+	width: 100%;
+	text-align: center;
+}
+#placeholder::placeholder{
+	color:red;
+}
+#selection::selection{
+	background: black;
+	color: red;
+}
+b{
+	color:red;
+}
+b::before{
+	color: orange;
+	content: "Esta parte del contenido forma parte del pseudo-elemento ::before dentro de CSS"
+}
+b::after{
+	color: green;
+	content: ". Y está forma parte del pseudo-elemento ::after dentro de CSS."
+}
+

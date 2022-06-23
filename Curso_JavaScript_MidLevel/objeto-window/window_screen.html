@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>JavaScript Mid-Level -- window screen-scroll</title>
+</head>
+
+<body>
+    <!-- Plantilla Cabecera -->
+    <div class="cabecera">
+        <h1>Window screen-scroll</h1>
+        <p class="subtitulo">
+            Uso del objeto window con las propiedades de la screen
+        </p>
+    </div>
+    <!---->
+    <section>
+        <h2>screen</h2>
+        <p>
+            Ahora veremos el objeto window y como utilizar las propiedades y referencias dadas de la posición de la
+            pantalla.
+        </p>
+    </section>
+    <section style="min-height: 1500px;">
+        <h2>Métodos y propiedades del screen</h2>
+        <ul>
+            <li>
+                <h4>window.screen: mostrar propiedades</h4>
+                <input type="button" value="Mostrar Propiedades del objeto screen" id="propiedades-screen">
+                <p>Para ver las propiedades ir a la consola y desplegar el objeto</p>
+            </li>
+            <li>
+                <h4>Ver propiedades de window.screen:</h4>
+                <ul>
+                    <li>availHeight = <span id="availHeight"></span></li>
+                    <li>availLeft = <span id="availLeft"></span></li>
+                    <li>availwidth = <span id="availWidth"></span></li>
+                    <li>orientation = <span id="orientation"></span></li>
+                    <input type="button" value="Ver Propiedades del screen" id="propiedades">
+                </ul>
+            </li>
+            <li>
+                <h4>Propiedades de la ventana del navegador y de la pantalla dle usuario</h4>
+                <ul>
+                    <li>screen Left = <span id="screen-left"></span></li>
+                    <li>screen Top = <span id="screen-top"></span></li>
+                    <input type="button" value="Obtener distancia de los bordes" id="btn-show-distance">
+                </ul>
+            </li>
+            <li>
+                <h4>Propiedades del window.scroll:</h4>
+                <ul>
+                    <li>
+                        ScrollY = <span id="scrollY"></span>
+                    </li>
+                    <li>
+                        ScrollX = <span id="scrollX"></span>
+                    </li>
+                    <input type="button" value="Obtener ejes 'x' y 'y'" id="btnScroll">
+                    <li>
+                        Scroll(): <input type="button" value="Bajar" id="bajar">
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h4>window.resizeBy() y window.resizeTo()</h4>
+                <ul>
+                    <li>
+                        window.resizeBy(): Esto se verá mejor más adelante<br>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h4>Propiedades de location:</h4>
+                <ul>
+                    <li>
+                        window.location.href
+                        <br>
+                        <span id="urlPagina"></span>
+                    </li>
+                    <li>
+                        window.location.hostname <br>
+                        <span id="hostname"></span>
+                    </li>
+                    <li>
+                        window.location.pathname <br>
+                        <span id="pathname"></span>
+                    </li>
+                    <li>
+                        window.location.protocol: <br>
+                        <span id="protocol"></span>
+                    </li>
+                    <li>
+                        window.location.assign("url");
+                        <br>
+                        <form action="">
+                            <input type="text" name="" id="url-enlace">
+                            <input type="button" value="Ir al sitio" id="btn-enlace">
+                        </form>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <script src="js/window_screen.js"></script>
+</body>
+
+</html>

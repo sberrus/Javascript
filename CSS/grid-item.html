@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Grid-item en CSS</title>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<link rel="stylesheet" type="text/css" href="css/grid3.css">
+	</head>
+	<body>
+		<h1>Propiedades para grid-items</h1>
+		<h2>Conceptos básicos</h2>
+		<p>
+			Asi como podemos modificar el aspecto de los grids y sus cledas y elementos en conjunto, con CSS también podemos modificar el aspecto de las celdas de manera individual para darles un aspecto más especial a nuestras páginas web.
+		</p>
+		<h3>Propiedad align-self y justify-self</h3>
+		<p>
+			Al igual que en 
+			<a href="flex-box.html" target="_BLANK">Flex-box</a> 
+			y en los 
+			<a href="grid2.html" target="_BLANK">grids</a>
+			en CSS las propiedades align modifican el aspecto de los elementos a los que se les aplique de manera vertical y aquellos elementos a los que se les aplique las propiedades justify modificaran sus dimensiones de manera horizontal. Siendo los más comunes (center, start, end, space-around, space-between, etc...).
+		</p>
+		<p>
+			Estas propiedades se le pueden aplicar tanto a los contenidos de los contenedores o a los items o elementos que las contienen. En esta clase veremos aquellas que modifican el aspecto de un solo elemento en especifico sin que esta propiedad afecte a sus hermanos. Hay que decir que estas propiedades se aplican directamente al item, no al contenedor.
+		</p>
+		<span class="destacado-verde">Uso de las propiedades justify-self y align-self (En las herramientas de desarrollo del navegador podemos observar de manera más efectiva el posicionamiento de cada una de las celdas del grid)</span>
+		<div class="grid-container">
+			<div class="grid-item align-self">align-self: start;<br> justify-self: start;</div>
+			<div class="grid-item">2</div>
+			<div class="grid-item">3</div>
+			<div class="grid-item align-self-end">align-self: end;</div>
+			<div class="grid-item justify-self-end align-self-end">align-self: end;<br>justify-self: end;</div>
+			<div class="grid-item justify-self-start align-self-end">align-self: end;<br>justify-self:start;</div>
+			<div class="grid-item align-self-start">align-self: start;</div>
+			<div class="grid-item justify-self-end align-self-start">align-self: start;<br> justify-self: end;</div>
+			<div class="grid-item justify-self-start align-self-start">align-self: start;<br> justify-self: start;</div>
+		</div>
+		<p>
+			<small>En el ejemplo anterior podemos observar como mediante el uso de las propiedades align-self y justify-self podemos modificar individualmente el posicionamiento y la distribución del contenido de cada una de las celdas</small>
+		</p>
+		<h3>Shorthand place-self</h3>
+		<p>
+			Con la propiedad shorthand place-self indicamos al grid que haga lo mismo que align-self y justify-self en una misma linea de CSS. Por lo tanto es un shorthand de estos. 
+		</p>
+		<p>
+			Para usarlos tenemos que indicar seguido de la propiedad separados por un espacio, primero el valor correspondiente a la propiedad align-self y luego, la correspondiente a la propiedad justify-self.
+		</p>
+		<span class="destacado-verde">Propiedad shorthand place-self</span>
+		<div class="grid-container">
+			<div class="grid-item place-self">Celdas con place-self</div>
+			<div class="grid-item">2</div>
+			<div class="grid-item">3</div>
+			<div class="grid-item">4</div>
+			<div class="grid-item place-self">Celdas con place-self</div>
+			<div class="grid-item">6</div>
+			<div class="grid-item">7</div>
+			<div class="grid-item">8</div>
+			<div class="grid-item place-self">Celdas con place-self</div>
+		</div>
+		<h3>Propiedad order</h3>
+		<p>
+			Esta propiedad de igual forma que el order en las flex-box, indicando el orden en el que el grid mostrara sus contenidos indiferentemente de como se haya declarado en el código. El valor por defecto de esta propiedad es "1"
+		</p>
+		<span class="destacado-verde">Propiedad order números aleatorios</span>
+		<div class="grid-container">
+			<div class="grid-item order3">1 <br> <b>order: 3</b></div>
+			<div class="grid-item">2</div>
+			<div class="grid-item">3</div>
+			<div class="grid-item order5">4 <br> <b>order: 5</b></div>
+			<div class="grid-item">5</div>
+			<div class="grid-item">6</div>
+			<div class="grid-item order6">7 <br> <b>order: 6</b></div>
+			<div class="grid-item">8</div>
+			<div class="grid-item order2">6 <br> <b>order: 2</b></div>
+		</div>
+		<p>
+			<small>En el ejemplo anterior podemos observar como las cajas se van ordenando tomando en cuenta la propiedad order que tienen asignadas.</small>
+		</p>
+		<p>
+			Para poner en práctica lo aprendido con los grid, vamos a hacer una galeria simple en CSS. <a href="practica-galeria.html">Ir a la galería</a>
+		</p>
+	</body>
+</html>

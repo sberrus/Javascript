@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tablas en HTML</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+<body>
+	<h1>Tablas En HTML</h1>
+	<h4>
+		Veremos todos los aspectos y el uso correcto de las tablas en HTML
+	</h4>
+	<p>
+		En hmtl podemos insertar tablas para ordenar y mostrar la informacion que nosotros deseemos mostrar.
+	</p>
+	<p>
+		HTML es un lenguaje de marcado de texto, por lo tanto, anteriormente se utilizaban las tablas para estructurar las paginas de HTML. Esto se dejo de hacer debido a que resulta mucho mas eficiente ordenar el aspecto visual de las paginas web a traves de CSS.
+	</p>
+	<p>
+		Las tablas constan de los tipicos elementos que podemos encontrar en otros softwares o tablas como podrian ser las tablas en excel por citar alguno. Existen filas(row), las columnas se les denominan datos pero tienen la misma naturaleza que las columnas en excel o las cell data En Java. Cabeceras (theader), el pie (tfooter), el cuerpo (body) que cada uno de sus elementos cuentan con unos atributos y caracteristicas especiales para cada uno de los casos en los que vayamos a darle uso a las mismas. 
+	</p>
+	<h3>Tablas Basicas</h3>
+	<table border="1px">
+		<caption><b>Tabla de Ejemplo</b></caption>
+		<tr>
+			<td><strong>Id</strong></td>
+			<td><strong>Nombre</strong></td>
+			<td><strong>Apellidos</strong></td>
+			<td><strong>Pago</strong></td>
+		</tr>
+		<tr>
+			<td>M-001</td>
+			<td>Hellen</td>
+			<td>Contreras</td>
+			<td>Exonerada</td>
+		</tr>
+		<tr>
+			<td>M-002</td>
+			<td>Samuel</td>
+			<td>Berrus</td>
+			<td>250.000.000&euro;</td>
+		</tr>
+	</table>
+	<p>
+		En las tablas de html se implementan utilizando la etiqueta &#60;table&#62; dentro de esta se crea la tabla siendo &#60;tr&#62; la etiqueta que implementa la fila y dentro de esta fila se introduciran el resto table data &#60;tr&#62; para ir rellenando el contenido de dicha celda o dato.
+	</p>
+	<p>
+		Cada una de las etiquetas tiene su propio atributo. Como explicaremos a continuacion:
+	</p>
+	<dl>
+		<dt><h4>Etiqueta &#60;table&#62;</h4></dt>
+		<dd>
+			La etiqueta &#60;table&#62; es la encargada de encapsular las tablas que se desean insertar en nuestro documento html. Dentro de las mismas se insertaran las etiquetas &#60;tr&#62;(table row, <i>filas</i>) y &#60;td&#62; (table data, <i>columna</i>). Aunque en HTML no define las columnas como tal, sino que se consideran celdas de datos.<br>
+			Esta cuenta con los siguientes atributos:
+			<ul>
+				<li>
+					<p>
+						sumary = &#34;texto&#34; - Permite describir el contenido de la tabla en cuestion. (Lo utilizan los navegadores para personas discapacitadas)
+					</p>
+				</li>
+			</ul>
+		</dd>
+		<dt><h4>Etiqueta &#60;tr&#62;</h4></dt>
+			<dd>
+				<p>
+					Esta se utiliza para declarar las filas de la tabla. Va creando de arriba hacia abajo las filas que utilizara la tabla en cuestion. Dentro de esta etiqueta se incorporara la etiqueta &#60;td&#62; siendo esta la encargada de mostrar los datos. De igual forma se profundizara mas adelante al respecto. Esta etiqueta no cuenta con ningun atributo.
+				</p>
+			</dd>
+		<dt><h4>Etiqueta &#60;td&#62;</h4></dt>
+		<dd>
+			<p>
+				La etiqueta &#60;td&#62; es la encargada de los datos que deseamos introducir dentro de la celda de la tabla en cuestion. Esta etiqueta es la mas compleja dentro de las tablas basicas. La etiqueta &#60;td&#62; cuenta con los siguientes atributos:
+			</p>
+			<ul>
+				<li>
+					<p>
+						abbr = &#34;texto&#34; - Permite describir el contenido de la celda. (sobre todo para mejorar la accesibilidad de la tabla para las personas discapacitadas.)
+					</p>
+				</li>
+				<li>
+					<p>
+						headers = &#34;lista_de_id&#34; - Indica las celdas que actuan como cabeceras para esta celda (los titulos de las columnas y las filas). Funciona como una ID de las celdas
+					</p>
+				</li>
+				<li>
+					<p>
+						scope = "col, row, colgroup, rowgroup" - indica las celdas para las que esta celda sera su cabecera. Ej: scope="col" indica que esta celda es la cabecera de todas las demás celdas que están en la misma columna.
+					</p>
+				</li>
+				<li>
+					<p>
+						colspan = "numero" - Número de columnas que ocupa esta celda
+					</p>
+				</li>
+				<li>
+					<p>
+						rowspan = "numero" - Número de filas que ocupa esta celda
+					</p>
+				</li>
+			</ul>
+		</dd>
+		<dt><h4>Etiqueta &#60;th&#62;</h4></dt>
+		<dd>
+			<p>
+				Esta Etiqueta se utiliza para definir las celdas que van a ser cabecera de fila o de las columnas. <br>
+				Esta Comparte los mismos atributos con la etiqueta &#60;td&#62;.
+			</p>
+			<ul>
+				<li>
+					<p>
+						abbr = &#34;texto&#34; - Permite describir el contenido de la celda. (sobre todo para mejorar la accesibilidad de la tabla para las personas discapacitadas.)
+					</p>
+				</li>
+				<li>
+					<p>
+						headers = &#34;lista_de_id&#34; - Indica las celdas que actuan como cabeceras para esta celda (los titulos de las columnas y las filas). Funciona como una ID de las celdas
+					</p>
+				</li>
+				<li>
+					<p>
+						scope = "col, row, colgroup, rowgroup" - indica las celdas para las que esta celda sera su cabecera. Ej: scope="col" indica que esta celda es la cabecera de todas las demás celdas que están en la misma columna.
+					</p>
+				</li>
+				<li>
+					<p>
+						colspan = "numero" - Número de columnas que ocupa esta celda
+					</p>
+				</li>
+				<li>
+					<p>
+						rowspan = "numero" - Número de filas que ocupa esta celda
+					</p>
+				</li>
+			</ul>
+		</dd>
+		<dt><h4>Etiqueta &#60;caption&#62;</h4></dt>
+		<dd>
+			<p>
+				Esta Etiqueta sirve para establecer la leyenda o titulo de la tabla en cuestion para definirlas de entre las que hayan presentes.
+			</p>
+		</dd>
+	</dl>
+	<p>
+		Las tablas suelen ser muy utiles para mostrar inforamcion de manera ordenada y que sea facil de interpretar por los usuarios. Anteriormente las paginas web en html se ordenaban con el uso de multiples tablas. Ya esta practica no es necesaria con la introduccion de CSS para las hojas de estilos que definen la estetica del Documento html.
+		Acontinuacion se recreara la siguiente tabla usando las etiquetas mencionadas anteriormente.
+	</p>
+	<img src="images/tabla.gif">
+	<h2>Su pedido</h2>
+	<table>
+		<tr>
+			<th scope="col">Nombre Producto</th>
+			<th scope="col">Precio Unitario</th>
+			<th scope="col">Unidades</th>
+			<th scope="col">Subtotal</th>
+		</tr>
+		<tr>
+			<td>Reproductor MP3 (80GB)</td>
+			<td>192.02</td>
+			<td>1</td>
+			<td>192.02</td>
+		</tr>
+		<td>Fundas de colores</td>
+			<td>2.50</td>
+			<td>5</td>
+			<td>12.50</td>
+		<tr>
+			<td>Reproductor de radio y control remoto</td>
+			<td>12.99</td>
+			<td>1</td>
+			<td>12.99</td>
+		</tr>
+		<tr>
+			<td scope="row">TOTAL</td>
+			<td>-</td>
+			<td>7</td>
+			<td><b>207.51</b></td>
+		</tr>
+	</table>
+	<h3>Rango de celdas, combinacion y fusion</h3>
+	<p>
+		En html podemos crear tablas y en estas tambien podemos establecer el rango de las mismas mediante los atributos rowspan y colspan. Estos nos permiten establecer el rango de las celdas que deseamos usar en nuestros documentos hmtl. Para esto se utilizan los terminos: fusion de columnas  y fusion de filas. Por ejemplo:
+	</p>
+	<p>
+		En la siguiente tabla haremos una fusion de celdas indicando que la celda A ocupe dos columnas.
+	</p>
+	<table>
+		<caption>fusion de columnas</caption>
+		<tr>
+			<td colspan="2" bgcolor="yellow" align="center">
+				A
+			</td>
+		</tr>
+		<tr>
+			<td bgcolor="blue">B</td>
+			<td bgcolor="red">C</td>
+		</tr>
+	</table>
+	<p>
+		En esta tabla haremos una fusion de filas indicando que la celda A ocupe 2 filas desde la primera columna.
+	</p>
+	<table>
+		<caption>Fusion de filas</caption>
+		<tr>
+			<td rowspan="3" bgcolor="yellow" align="center">A</td>
+			<td bgcolor="blue">B</td>
+		</tr>
+		<tr>
+			<td bgcolor="red">C</td>
+		</tr>
+	</table>
+	<p>
+		Ahora ahondaremos mas en la siguiente clase de <a href="tablas_avanzadas.html">Tablas avanzadas</a>
+	</p>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<html>
+
+<head>
+    <title>Repositorio de Atomos en HTML</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/principal.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Secular+One&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Inicio del menú principal -->
+
+    <header>
+        <div class="header__logo">
+            <img src="../images/s-roja.png" alt="Logo de repositorio Samuel Berrus">
+        </div>
+        <nav class="header__nav">
+            <a href="../index.html" class="header__nav--a">Inicio</a>
+            <a href="#" class="header__nav--a">Contenido</a>
+            <a href="#" class="header__nav--a">Prácticas Propias</a>
+        </nav>
+    </header>
+
+    <!-- Fin del menú principal-->
+
+    <!-- Contenido principal de la página Web-->
+
+    <div class="main-container">
+        <section>
+            <h1>Programación Básica</h1>
+            <p class="subtitulo">Variables y tipos de variables.</p>
+            <!-- Bloque de contenido -->
+            <article>
+                <div class="content-box">
+                    <h2>Variables</h2>
+                    <p>
+                        Las variables son un espacio en memoria que utiliza el programa para almacenar información que
+                        será luego utilizada dentro del programa.
+                    </p>
+                    <p>
+                        Las variables pueden ser modificables o inalterables tomando en cuenta las especificaciones del
+                        programa. (Parecido a cómo funcionan las variables en Java, pero con la diferencia de que estas
+                        tienen un comportamiento diferente al momento de declarar el tipo de variable, esto se verá más
+                        a delante).
+                    </p>
+                    <p>
+                        La palabra reservada “var” se utiliza para declarar una variable por primera vez. Cuando se
+                        utiliza la variable en el resto de la instrucción solo hace falta indicar el nombre de la
+                        variable.
+                    </p>
+                    <p>
+                        Cuando una variable se le asigna un valor se dice que ha sido <b>inicializada</b>, en JavaScript
+                        no hace falta inicializar las variables con declararlas es suficiente.
+                    </p>
+                    <p>
+                        Otra de las características de las variables en JavaScript es que no hace falta declararlas, por
+                        lo tanto, el uso de la palabra reservada “var” puede omitirse al momento de declarar una
+                        variable (aunque no hace falta declarar las variables con la palabra reservada “var”, esta toma
+                        relevancia al momento de declarar variables locales y globales, esto se verá más adelante). Al
+                        no declarar la variable esta será declarada de manera predeterminada como una variable global.
+                    </p>
+                    <p>
+                        En cualquier caso, también se recomienda declarar todas las variables principalmente por temas
+                        de mantenimiento del código.
+                    </p>
+                    <p>
+                        El nombre de la variable se considera a su vez como <b>identificador</b> y debe cumplir las
+                        siguientes reglas:
+                    </p>
+                    <ul>
+                        <li>
+                            Solo puede estar formado por letras, números y los símbolos “$” y “_”.
+                        </li>
+                        <li>
+                            El primer carácter no puede ser un número.
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Fin bloque de contenido -->
+
+            <!-- Bloque de contenido -->
+
+            <article>
+                <div class="content-box">
+                    <h2>Tipos de variables</h2>
+                    <p>
+                        Otra característica de JavaScript es que el tipo de variable se define al momento de almacenar
+                        en ella un valor (texto, número, decimales, etc.), dicha variable toma el tipo del valor que ha
+                        almacenado.
+                    </p>
+                    <h3>Valores númericos</h3>
+                    <p>
+                        Pueden ser enteros (intenger) o decimales (float). Los valores decimales en JavaScript se
+                        declaran con puntos “.” En vez de comas “,”.
+                    </p>
+                    <p>
+                        <b>Entero</b> = 1 <br><b>Decimal</b> = 1.1 <br><b>Error decimal</b> = 1,1
+                    </p>
+                    <h3>Cadena de Texto</h3>
+                    <p>
+                        Las cadenas de texto son texto que se almacena en las variables, se declaran asignándoseles con
+                        comillas simples o comillas dobles.
+                    </p>
+                    <p>
+                        <b>Texto con comillas dobles</b> = “ejemplo”<br> <b>Texto con comillas simples</b> = ‘ejemplo’
+                    </p>
+                    <p>
+                        Si deseamos introducir comillas simples o dobles en una cadena de texto para que se almacene tal
+                        cual debemos alternar las comillas que deseamos que se muestren. Por ejemplo, si deseamos
+                        introducir un texto que contenga comillas dobles, la variable se debe declarar con comillas
+                        simples, y viceversa.
+                    </p>
+                    <p>
+                        <b>Cadena con comillas simples internas</b> = “texto ‘con comillas’ simples”.<br>
+                        <b>Cadena con comillas dobles internas</b> = ‘texto “con comillas” dobles’.
+                    </p>
+                    <p>
+                        Existen también otros caracteres que son difíciles de introducir dentro de las cadenas como (los
+                        espacios, las nuevas líneas, etc.) Para resolver estos problemas JavaScript define un mecanismo
+                        para solucionar estos problemas. Solo hay que incluir una serie de caracteres para declarar
+                        dichos caracteres que queremos utilizar.
+                    </p>
+                    <table>
+                        <tr>
+                            <td>Una nueva linea</td>
+                            <td>\n</td>
+                        </tr>
+                        <tr>
+                            <td>Un tabulador</td>
+                            <td>\t</td>
+                        </tr>
+                        <tr>
+                            <td>Una comilla simple</td>
+                            <td>\'</td>
+                        </tr>
+                        <tr>
+                            <td>Una comilla doble</td>
+                            <td>\"</td>
+                        </tr>
+                        <tr>
+                            <td>Una barra inclinada</td>
+                            <td>\\</td>
+                        </tr>
+                    </table>
+                    <h3>Arrays</h3>
+                    <p>
+                        Los Arrays, también conocidos como vectores, matrices o arreglos (Aunque generalmente en
+                        programación se conocen en términos generales como arrays) son una colección de datos que se
+                        almacenan en una variable. Todas son del mismo tipo y son muy útiles cuando tienes que almacenar
+                        datos de una misma naturaleza, pero sin tener que declararlos uno a uno.
+                    </p>
+                    <p>
+                        En vez de declarar variables de esta manera …
+                    </p>
+                    <code>
+                        <span class="var">var</span> dia1 = "Lunes"<br>
+                        <span class="var">var</span> dia2 = "Martes"<br>
+                        ...<br>
+                        <span class="var">var</span> dia7 = "Domingo";<br>
+                    </code>
+                    <p>
+                        Para agilizar el proceso y mejorar el mantenimiento se recomienda utilizar un arreglo. Para
+                        declarar un arreglo se hace como si fuera una variable simple, con la diferencia que los datos
+                        que almacenara deberán ser arropados por corchetes [] y separados por comas “,”.
+                    </p>
+                    <code>
+                        <span class="var">var</span> dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+                    </code>
+                    <p>
+                        De esta manera es más fácil de mantener y de utilizar estos datos que son todos de la misma naturaleza y no tenemos que almacenar uno a uno en una variable distinta. (Los arrays tienen muchas formas de trabajar pudiendo funcionar como pilas, matrices y diversas formas de insertar, extraer y eliminar datos de esta. Pero eso se verá más adelante.).
+                    </p>
+                    <p>
+                        Para acceder a los datos del array es muy simple, solo hay que poner el nombre de la variable y entre corchetes “[]” indicar el índice de la posición que ocupa dicha variable. <b>(JavaScript es un lenguaje de indexado 0, esto quiere decir que el primer valor de los índices es 0 en lugar de 1).</b> Tomando en cuenta la variable declarada anteriormente que almacena los días de la semana podemos extraer los datos de la siguiente manera.
+                    </p>
+                    <code>
+                        <span class="var">var</span> diaSeleccionado = dias[0];    <span class="comentario">// diaSeleccionado = "Lunes"</span><br>
+                        <span class="var">var</span> otroDia = dias[5];            <span class="comentario">// otroDia = "Sábado"</span>
+                    </code>
+                    <h3>Booleanos</h3>
+                    <p>
+                        Las variables de tipo booleano son variables lógicas. Son utilizadas para la programación avanzada (esto se verá más adelante) y su funcionamiento es realmente sencillo.
+                    </p>
+                    <p>
+                        Estas variables declaran dos estados, true y false (verdadero y falso). Para declararlos simplemente hay que utilizar los valores (true) y (false) respectivamente.
+                    </p>
+                    <code>
+                        <span class="var">var</span> clienteRegistrado = false; <br>
+                        <span class="var">var</span> ivaIncluido = true;
+                    </code>
+                </div>
+            </article>
+
+            <!-- Fin bloque de contenido -->
+
+        </section>
+
+        <!-- Sección del Aside de la página -->
+
+        <aside>
+            <h2>Menú de navegación</h2>
+            <ul class="menu-lateral">
+                <li class="menu-lateral__items">
+                    <h3><a href="index.html">Bienvenida</a></h3>
+                </li>
+                <li class="menu-lateral__items">
+                    <h3><a href="implementacion.html">Conceptos Básicos</a></h3>
+                </li>
+                <ul class="submenu">
+                    <li class="submenu__items">
+                        <a href="implementacion.html">Implementacion de código</a>
+                    </li>
+                    <li class="submenu__items">
+                        <a href="glosario.html">Glosario y Sintáxis Básica</a>
+                    </li>
+                    <li class="submenu__items">
+                        <a href="posibilidades-limitaciones.html">Posibilidades y Limitaciones</a>
+                    </li>
+                </ul>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Sección del Aside de la página -->
+
+    <!-- Fin de la sección de contenido-->
+
+    <!-- Seccion de los botones de navegación inferiores-->
+    <div class="navegador">
+        <div class="navegador__boton">
+            <a href="../posibilidades-limitaciones.html"><img src="../images/flecha-boton.png" alt="Flecha izquierda"></a>
+        </div>
+        <div class="navegador__boton">
+            <a href="operadores.html"><img src="../images/flecha-boton.png" alt="Flecha derecha"></a>
+        </div>
+    </div>
+
+    <!-- Inicio Footer -->
+    <footer>
+
+    </footer>
+    <!-- Fin footer-->
+</body>
+
+</html>

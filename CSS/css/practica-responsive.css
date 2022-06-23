@@ -1,0 +1,62 @@
+body{
+	margin: 0;
+}
+
+.content{
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.header, .main, .aside, .footer{
+	padding:20px;
+	flex-basis: 20px;
+}
+.header{
+	background-color: lightblue;
+	flex-basis: 60px;
+}
+
+.main{
+	background-color: slateblue;
+	flex-basis: 300px;
+	flex-grow: 2;
+	flex-shrink: 0;
+}
+
+.aside{
+	background-color: darkslateblue;
+	flex-basis: 200px;
+	flex-grow: 1;
+	flex-shrink: 0;
+}
+
+.footer{
+	background-color: violet;
+	flex-grow: 1;
+}
+
+
+
+@media screen and (min-width: 700px){
+	.content{
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.main, .aside{
+		height: 590px;
+	}
+	.main{
+		flex-grow: 4
+	}
+	.aside{
+		flex-grow: 1
+	}
+	.header{
+		flex-basis: 100%;
+		max-height: 60px;
+	}
+	.footer{
+		flex-basis: 100%;
+	}
+}

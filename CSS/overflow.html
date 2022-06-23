@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Display en CSS</title>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<link rel="stylesheet" type="text/css" href="css/overflow.css">
+	</head>
+	<body>
+		<h1>Overflow en CSS</h1>
+		<p>
+			Con la propiedad overflow nos permite modificar la interacción que el navegador va a tener con aquellos contenidos que sobresalgan de la caja que los contiene.
+		</p>
+		<div class="caja">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess
+		</div>
+		<p id="descripcion-caja-overflow">
+			<small>como se puede observar en el ejemplo anterior, el texto contenido en la caja div sobre sale de la misma, para poder midificar la estetica que el contenido va a tener con respecto a los demas elementos se utiliza la propiedad overflow.</small>
+		</p>
+		<h2>overflow: auto;</h2>
+		<p>
+			Con este valor modificamos el comportamiento de la caja y de los elementos que no caben en esta. Con este valor mantenemos el tamaño de la caja y agrega unas scrollpane (barras de scroll) en dicha caja para poder ver de manera correcta el contenido de la caja. El scrollpane se va a implementar si es necesario. Si el contenido no sobresale de al caja, el scrollpane no aparecera.
+		</p>
+		<div class="caja" id="overflow-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess
+		</div>
+		<p>
+			<small>Ejemplo de caja con overflow:auto;</small>
+		</p>
+		<h2>overflow:scroll;</h2>
+		<p>
+			Con este valor obligamos al programa que implemente los scrollpane asi el contenido se vea correctamente en la caja contenedora.
+		</p>
+		<div class="caja" id="overflow-scroll">hola mundo</div>
+		<p>
+			<small>Como se puede observar, se implementaron los scrollpane en ambos ejes a pesar de que el contenido se ve correctamente dentro de la caja. </small>
+		</p>
+		<p>
+			A continuación veremos lo relativo a la propiedad float.
+			<a href="float.html">Ir a la clase de float</a>
+		</p>
+	</body>
+</html>

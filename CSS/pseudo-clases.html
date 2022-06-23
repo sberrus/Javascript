@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pseudo-elementos en CSS</title>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<link rel="stylesheet" type="text/css" href="css/pseudo-clases.css">
+	</head>
+	<body>
+		<h1>Pseudo-clases en CSS</h1>
+		<p>
+			La pseudo clase funciona a nivel de codigo igual que un pseudo-elemento. Este se aplica directamente a otro elemento y este resulta ser hijo del elemento al que se le aplica. 
+		</p>
+		<p>
+			La principal propiedad de las pseudo-clases es la posibilidad de escuchar eventos para luego realizar sus respectivos cambios (pasar el cursor por encima de el elemento por ejemplo). Este elemento realizar una "escúcha" a continaución veremos algunas pseudo-clases.
+		</p>
+		<p class="texto-instructivo">Posiciona el cursor por encima del la siguiente caja</p>
+		<div class="contenedor">
+		</div>
+		<p>
+			<small>Con esta propiedad podemos aplicar diversas modificaciones estéticas a los elementos a la que se la apliquemos que se apliquen al momento de posicionar el cursor por encima de dicho elemento con la pseudo-clase :hover</small>
+		</p>
+		<p>
+			<small>Con la propiedad transition modificamos la velocidad en la que los elementos cambiaran su apariencia expresada en segundos.</small>
+		</p>
+		<h2>:link y :visited</h2>
+		<p>
+			Con estas pseudo-clases podemos cambiar el aspecto de los links &#34;&#60;a&#62;&#34; antes (:link) y después (:visited) de haberlos visitados.
+		</p>
+		<p class="texto-instructivo">
+			Por favor hacer clic en los enlaces todos los enlaces para poder visualizar correctamente el pseudo-elemento.
+		</p>
+		<a href="asdasd" class="link-standard">Enlace Standard</a>
+		<a href="#" class="link-standard">Enlace Visitado Standard</a>
+		<a href="www.asdioufaosdfiu.aisdufhaosidfuhaslñ" class="link" target="_BLANK">Enlace Modificado</a>
+		<a href="#" class="link">Enlace Visitado Modificado</a>
+		<p>
+			<small>Ejemplos de links con y sin las pseudo-clases :link y :visited</small>
+		</p>
+		<h2>:active</h2>
+		<p>
+			Esta pseudo-clase funciona al momento de hacerle click a un elemento este cambia su aspecto, pero este se mantendra la misma cantidad de tiempo que la del usuario mientras mantenga presionado el click
+		</p>
+		<div class="contenedor-active">
+			<p>
+				Deja el click pulsado aqui para activar la pseudo-clase
+			</p>
+		</div>
+		<h2>:focus</h2>
+		<p>
+			Esta pseudo-clase se aplica principalmente a los elementos de formulario input. Esta pseudo-clase se aplica al momento de que se este enfocando (cuando se le da clic al elemento input como textarea o en los passwords fields, cuando se esta escribiendo algo en dichos campos).
+		</p>
+		<div class="contenedor-formulario">
+			<form>
+				<p>Nombre</p>
+				<input type="text" name="nombre"  class="formulario-focus">
+				<p>Contraseña</p>
+				<input type="passwords" name="contrasena"  class="formulario-focus">
+			</form>
+		</div>
+		<p>
+			<small>Al hacer clic en los campos de la caja anterior podemos observar como esta cambia su aspecto mientras podemos escribir dentro de las mismas.</small>
+		</p>
+		<h2>:lang</h2>
+		<p>
+			<i>Esta Pseudo-clase se encuentra en desuso.</i>
+		</p>
+		<p>
+			Esta pseudo-clase se utiliza para modificar el aspecto de aquellos elementos que contengan la etiqueta de lenguaje lang(es-en-in...etc). Al momento de que a algun elemento le pongamos el atributo "lang" la pseudo-clase busca el valor de dicho atributo mediante el parametro que estara encerrado entre parentesis del pseudo-elemento.
+		</p>
+		<div class="contenedor-lang">
+			<p lang="es">Hola, buenos dias.</p>
+			<p lang="en">Hello, good morning.</p>
+			<p>
+				<span lang="en">Hello how are you?</span>, hola como estas?
+				<span lang="en">good,good. And you?</span>, Bien bien y tu?
+			</p>
+		</div>
+		<p>
+			<small>En la caja anterior podemos observar como el texto que tiene como valor de atributo "en" del atributo "lang" cambia su aspecto a diferencia del valor "es"</small>
+		</p>
+		<p>
+			Con el uso de las pseudo-clases podemos realizar diseños para las páginas web dinámicos que resulten más fluidos para la interacción del usuario con la página web. Ádemas, Estas clases permiten generar una sensación de fluidez en la estética de la pagina haciendola más compleja.
+		</p>
+		<p>
+			En la siguiente clase veremos el tratamiento de las imagenes con la propiedad object-fil y su correcta implementación dentro de CSS.
+		</p>
+		<p>
+			<a href="object-fil.html">Ir a clase de object-fil de CSS</a>
+		</p>
+	</body>
+</html>

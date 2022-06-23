@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Flex Box con CSS</title>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<link rel="stylesheet" type="text/css" href="css/flexbox.css">
+	</head>
+	<body>
+		<h1>Flexbox</h1>
+		<h2>Conceptos básicos</h2>
+		<p>
+			Esta es una nueva forma de maquetar páginas web sustituyendo a los anteriores formatos como podian ser el maquetado mediante etiquetas &#60;table&#62;. Después, se empezo a utilizar los maquetados mediante cajas con position float y divs pero tambien surgian ciertos problemas. Ahora para solucionar los problemas anteriores que conllevaban utilizar las anteriores maquetaciones se empezo a utilizar los maquetados Flex-box y Grid.
+		</p>
+		
+		<p>
+			Para implementar esta maquetación, hay que tener dos elementos en cuenta.
+		</p>
+		<h2>Flex Container</h2>
+		<p>
+			El container es el que contiene a los elementos y dentro de estos seran los que tendran los diferentes elementos del mismo.
+		</p>
+		<p>
+			El flex conteiner tiene 2 ejes. El main axis(Eje horizontal) y el cross axis (Eje vertical)
+		</p>
+		<img src="images/flex_terms.png">
+		<p>
+			<small>Ilustracion de los componentes de la maquetación con flexbox</small>
+		</p>
+		
+		<div class="flex-container">
+			<div class="flex-item">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+			<div class="flex-item">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+		</div>
+		<p>
+			<small>En la caja anterior tenemos un flex container que dentro tiene 2 items para mostrar el comportamiento de los flex containers.</small>
+		</p>
+		<p>
+			Como se puede ver en el ejemplo anterior, las cajas que estan dentro del flexbox se ajustan y se posicionan una al lado de la otra para que estas puedan compartir el espacio que les ofrece el flexbox.
+		</p>
+		<p>
+			Una de las soluciones que ofrece flexbox con respecto a la estetica y la maquetación de las páginas HTML, es la posibilidad de poder cambiar el tamaño del contenido de los flex items pero sin modificar la relación y el aspecto de estos contenidos.
+		</p>
+				<div class="flex-container">
+			<div class="flex-item">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+			<div class="flex-item">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+		</div>
+		<p>
+			<small>En el ejemplo anterior se puede observar como el primer cuadro tiene 2 lorems y cambia las dimensiones de el contenido pero no altera la altura de ningina de las dos cajas.</small>
+		</p>
+		<h2>Propiedades en flexbox</h2>
+		<p>
+			Las propiedades flex box son las que nos permiten realizar modificaciones a los items que las contiene. Siempre se les dan al flex container.
+		</p>
+		<p>
+			A los flex items hay que darles altura y anchura para poder visualizarlos si no contienen ningun contenido dentro de estas. Si solo estableces la altura o solo la anchura estos no se veran en el flex container.
+		</p>
+		<h3>Propiedad flex-direction:</h3>
+		<p>
+			Con esta propiedad podemos modificar la dirección la cual los flex containers muestran el flujo de sus contenidos.
+		</p>
+		
+		<h4>Valor: row y row-reverse</h4>
+		<p>
+			Con estos valores indicamos el flujo horizontal (main axis) el cual el flex container va a mostrar los contenidos. El valor row india en el main axis que muestre los contenidos de izquierda a derecha y el row-reverse indica lo contrario, de derecha a izquierda.
+		</p>
+			<div class="flex-container">
+				<div class="flex-item" id="primero">1</div>
+				<div class="flex-item">2</div>
+				<div class="flex-item">3</div>
+				<div class="flex-item" id="ultimo">4</div>
+			</div>
+			<div class="flex-container-reverse">
+				<div class="flex-item-reverse" id="primero">1</div>
+				<div class="flex-item-reverse">2</div>
+				<div class="flex-item-reverse">3</div>
+				<div class="flex-item-reverse" id="ultimo">4</div>
+			</div>
+		<p>
+			<small>La caja con los bordes dotted se observa como estos estan invertidos con respecto a las cajas que estan por encima que no contienen la propiedad flex-direction reverse.</small>
+		</p>
+		<h4>Valor column y column-reverse</h4>
+		<p>
+			El Valor column indica que el flex conteiner muestre el flujo de contenidos de manera vertical (cross axis) de arriba hacia abajo, y el column-reverse indica que de manera vertical se muestren de abajo hacia arriba.
+		</p>
+		<div class="contenedor-principal">
+			<div class="contenedor-columna">
+				<div class="item-columna">1</div>
+				<div class="item-columna">2</div>
+				<div class="item-columna">3</div>
+			</div>
+			<div class="contenedor-columna-reverse">
+				<div class="item-columna-reverse">1</div>
+				<div class="item-columna-reverse">2</div>
+				<div class="item-columna-reverse">3</div>
+			</div>
+		</div>
+		<h3>Propiedad flex-wrap</h3>
+		<p>
+			Con la propiedad flex-wrap podemos establecer un comportamiento de las cajas en funcion de las dimensiones del objeto que las contenga; si deseamos que mantenga unas dimensiones fijas, si queremos que esta se adapte al ancho y alto de la caja que las contiene etc...
+		</p>
+		<h4>Valor wrap</h4>
+		<p>
+			Con este valor establecemos que la caja indiferentemente del tamaño de el contenedor mantenga siempre las mismas dimensiones.
+		</p>
+		<span class="destacado">Caja sin wrap</span>
+		<div class="contenedor-wrap" id="no-wrap">
+			<div class="item-wrap">Caja Flexible</div>
+			<div class="item-wrap">Caja Flexible</div>
+			<div class="item-wrap">Caja Flexible</div>
+			<div class="item-wrap">Caja Flexible</div>
+			<div class="item-wrap">Caja Flexible</div>
+		</div>
+		<p>
+			<small>Has más pequeña la ventana del navegador para que se vea el efecto del wrap.<br>
+			En la caja superior se observa que al momento de hacer el navegador más pequeño los flex-items se amoldan para mantener las mismas dimensiones dentro de la caja que las contiene.</small>
+		</p>
+		<span class="destacado texto-verde">Caja con wrap</span>
+		<div class="contenedor-wrap">
+			<div class="item-wrap">Caja Flexible</div>
+			<div class="item-wrap">Caja Flexible</div>
+			<div class="item-wrap">Caja Flexible</div>
+			<div class="item-wrap">Caja Flexible</div>
+			<div class="item-wrap">Caja Flexible</div>
+		</div>
+		<p>
+			<small>Has más pequeña la ventana del navegador para que se vea el efecto del wrap.<br>
+			En la caja superior se puede observar que con el valor "flex-wrap:wrap;" las cajas mantienen siempre las mismas dimensiones sin importar que tan grande o pequeña la ventana del navegador.</small>
+		</p>
+		<h4>Valor wrap-reverse</h4>
+		<p>
+			Además de las opciones anteriores, también podemos indicar la dirección la cual las cajas se iran acomodando. Como vimos en el ejemplo anterior al momento de que se empiezen a apilar las cajas para que estas quepan dentro de la caja, se van ordenando hacia abajo. La dirección la cual las cajas se van ordenando también se puede modificar. Esto lo logramos con el valor wrap-revers.
+		</p>
+		<span class="destacado texto-verde">Caja con wrap-reverse</span>
+		<div class="contenedor-wrap-reverse">
+			<div class="item-wrap-reverse">Flex Reverse</div>
+			<div class="item-wrap-reverse">Flex Reverse</div>
+			<div class="item-wrap-reverse">Flex Reverse</div>
+			<div class="item-wrap-reverse">Flex Reverse</div>
+			<div class="item-wrap-reverse">Flex Reverse</div>
+			
+		</div>
+		<h3>Shorthand flex-flow</h3>
+		<p>
+			La propiedad flex-flow es un shorthand que nos permite indicar en una misma linea de codigo tanto la propiedad flex-wrap y flex-direction.   
+		</p>
+		<p>
+			Para implementarla hay que utilizar la propiedad "flex-flow" seguido de sus dos puntos y como valores primero los pertenecientes a la propiedad "flex-direction" y luego la propiedad "flex-wrap". Ejemplo: flex-flow: column-reverse wrap;
+		</p>
+		<h2 class="separar">Alineación entre Flex-Items(Main Axis)</h2>
+		<p>
+			Otra de las ventajas que tienen los flex-box es la facilidad con la que podemos indicarle al programa la alineación y distribución de los contenidos dentro de los flex-containers. Podemos indicar la separación entre las cajas entre otras cosas que veremos a continuación.
+		</p>
+		<h3 id="justify-content">Propiedad justity-content</h3>
+		<p>
+			Con esta propiedad podemos modificar la forma en la que apareceran los contenidos dentro de los flex-box. De esta manera podemos indicar que si queremos que las cajas aparezcan centradas, de derecha a izquierda, la distancia entre las cajas, que tanta distancia tiene que tener una caja con relación a la otra, etc...
+		</p>
+		<h4>Valor center</h4>
+		<p>
+			Con este valor indicamos al flex container que muestre sus contenidos desde el centro hacia los costados.
+		</p>
+		<span class="destacado texto-verde">center</span>
+		<div class="contenedor-justify">
+			<div class="item-justify">Item 1</div>
+			<div class="item-justify">Item 2</div>
+			<div class="item-justify">Item 3</div>
+			<div class="item-justify">Item 4</div>
+			<div class="item-justify">Item 5</div>
+		</div>
+		<h4>Valor space-around</h4>
+		<p>
+			Con el valor space-around es indicarle al programa que debe tener el mismo espacio de margin entre todos los items de la caja.
+		</p>
+		<span class="destacado texto-verde">space-around</span>
+		<div class="contenedor-justify space-around">
+			<div class="item-justify">Item 1</div>
+			<div class="item-justify">Item 2</div>
+			<div class="item-justify">Item 3</div>
+			<div class="item-justify">Item 4</div>
+			<div class="item-justify">Item 5</div>
+		</div>
+		<h4>Valor space-between</h4>
+		<p>
+			Con este valor indicamos que utilizando el primero y ultimo flex item al final de cada punto, el resto que se repartan el espacio entre ellos equitativamente.
+		</p>
+		<span class="destacado texto-verde">space-between</span>
+		<div class="contenedor-justify space-between">
+			<div class="item-justify">Item 1</div>
+			<div class="item-justify">Item 2</div>
+			<div class="item-justify">Item 3</div>
+			<div class="item-justify">Item 4</div>
+			<div class="item-justify">Item 5</div>
+		</div>
+		<h4>Valor space-evenly</h4>
+		<p>
+			Este tiene un comportamiento similar al de space-around, con la diferencia de que el espacio comprendido entre los bordes del flex-container y los bordes del primer y el último item-flex van a tener la misma distancia que la separación entre los items entre si.
+		</p>
+		<span class="destacado texto-verde">space-evenly</span>
+		<div class="contenedor-justify space-evenly">
+			<div class="item-justify">Item 1</div>
+			<div class="item-justify">Item 2</div>
+			<div class="item-justify">Item 3</div>
+			<div class="item-justify">Item 4</div>
+			<div class="item-justify">Item 5</div>
+		</div>
+		<h2 class="separar">Alineación entre Flex-Items(Cross Axis)</h2>
+		<p>
+			Con los flex containers tambien podemos modificar el flujo de los flex-items de manera vertical siendo también un gran ventaja a la hora de maquetar los contenidos de las páginas webs.
+		</p>
+		<h3>Propiedad align-item</h3>
+		<p>
+			Con esta propiedad modificamos la distribución y la separación la cual los elementos apareceran dentro del flex container.
+		</p>
+		<p>
+			Es importante recalcar que esta propiedad va a afectar a la primera fila del flex-container, por lo tanto, si deseamos introducir un elemento que tendra más de una fila es mas util que utilizemos la propiedad "content-align" que veremos más adelante. 
+		</p>
+		<h4>Valor center</h4>
+		<p>
+			Una de las grandes ventajas que trae el uso de los flex containers es la facilidad con la que estos nos permiten centrar los elementos de manera vertical. Solo con este valor los flex items se van a alinear de manera vertical justo en el centro. Cosa que anteriormente era más complicado de lograr.
+		</p>
+		<span class="destacado texto-verde">center</span>
+		<div class="flex-container height-250 center">
+			<div class="flex-item item2"></div>
+			<div class="flex-item item2"></div>
+			<div class="flex-item item2"></div>
+			<div class="flex-item item2"></div>
+			<div class="flex-item item2"></div>
+		</div>
+		<p>
+			<small>En el cuadro anterior se puede observar como los flex-items estan alineados el cross axis justo en el centro de el contenedor.</small>
+		</p>
+		<h4>Valor flex-end</h4>
+		<p>
+			Con este valor indicamos que distribuya los items desde abajo hacia arriba.
+		</p>
+		<span class="destacado texto-verde">flex end</span>
+		<div class="flex-container height-250 flex-end">
+			<div class="flex-item item2"></div>
+			<div class="flex-item item2"></div>
+			<div class="flex-item item2"></div>
+			<div class="flex-item item2"></div>
+			<div class="flex-item item2"></div>
+		</div>
+		<h4>flex start</h4>
+		<p>
+			Con esta propiedad indicamos que los items que no contengan la propiedad height y width mantengan la posicion del item más grande pero sin ocupar el resto del espacio disponible de la caja.
+		</p>
+		<span class="destacado texto-verde">flex-start</span>
+		<div class="flex-container height-250 flex-start">
+			<div class="flex-item item2"></div>
+			<div class="flex-item item2"></div>
+			<div class="flex-item item2"></div>
+			<div class="flex-item item2"></div>
+			<div class="flex-item item2"></div>
+		</div>
+		<p>
+			<small>Como se pueden observar las cajas solo ocupan el espacio necesario que estas necesita para aparecer en el container pero sin ocupar más espacio de la cuenta.</small>
+		</p>
+		<h4>Valor stretch</h4>
+		<p>
+			Con este valor indicamos que los flex items ocupen todo el espacio vertical disponible en la caja indiferentemente del tamaño del contenido que contengan.
+		</p>
+		<span class="destacado texto-verde">stretch</span>
+		<div class="flex-container height-250 stretch">
+			<div class="flex-item item2"></div>
+			<div class="flex-item item2"></div>
+			<div class="flex-item item2"></div>
+			<div class="flex-item item2"></div>
+			<div class="flex-item item2"></div>
+		</div>
+		<h3>Propiedad content-align</h3>
+		<p>
+			Esta propiedad sirve para modificar el flujo de los flex-items y como se van a distribuir dentro del flex-container correspondiente. Esta propiedad si afecta al total de flex-items sin importar que tantas filas contenga el mismo.
+		</p>
+		<p>
+			Importante destacar que algunos elementos deben tener obligatoriamente la propiedad flex-wrap para que surja efecto.
+		</p>
+		<h4>Valores flex-start/flex-end/stretch/center</h4>
+		<p>
+			Los valores la propiedad content-align tienen los mismos comportamientos que el items-align con la diferencia de que este afecta al total de items sin tener en cuenta la cantidad de filas que tenga el flex-container.
+		</p>
+		<span class="destacado texto-verde">flex-start</span>
+		<div class="flex-container height-250 wrap flex-start-content">
+			<div class="flex-item item2">texto</div>
+			<div class="flex-item item2">texto</div>
+			<div class="flex-item item2">texto</div>
+			<div class="flex-item item2">texto</div>
+			<div class="flex-item item2">texto</div>
+		</div>
+		<span class="destacado texto-verde">flex-end</span>
+		<div class="flex-container height-250 wrap flex-end-content">
+			<div class="flex-item item2">texto</div>
+			<div class="flex-item item2">texto</div>
+			<div class="flex-item item2">texto</div>
+			<div class="flex-item item2">texto</div>
+			<div class="flex-item item2">texto</div>
+		</div>
+		<span class="destacado texto-verde">center</span>
+		<div class="flex-container height-250 wrap center-content">
+			<div class="flex-item item2">texto</div>
+			<div class="flex-item item2">texto</div>
+			<div class="flex-item item2">texto</div>
+			<div class="flex-item item2">texto</div>
+			<div class="flex-item item2">texto</div>
+		</div>
+		<span class="destacado texto-verde">stretch</span>
+		<div class="flex-container height-250 stretch-content">
+			<div class="flex-item item2">texto</div>
+			<div class="flex-item item2">texto</div>
+			<div class="flex-item item2">texto</div>
+			<div class="flex-item item2">texto</div>
+			<div class="flex-item item2">texto</div>
+		</div>
+		<h4>Valor baseline</h4>
+		<p>
+			Este valor es particular. Funciona como complemento del valor wrap-reverse de la propiedad flex-wrap. Con esta propiedad indicamos que los elementos se vayan apilande de abajo hacia arriba pero respetando el orden del flujo. Este efecto no lo podemos lograr con flex-end pero con el uso de base line combinado con row-reverse podemos obtener dicho efecto.
+		</p>
+		<div class="flex-container height-250 baseline wrap-reverse">
+			<div class="flex-item item2">texto</div>
+			<div class="flex-item item2">texto</div>
+			<div class="flex-item item2">texto</div>
+			<div class="flex-item item2">texto</div>
+			<div class="flex-item item2">texto</div>
+		</div>
+		<p>
+			Para no hacer más extensa esta clase vamos a separarla e iremos a ver la clase Flex-item por separado.
+		</p>
+		<a href="flex-item.html">Ir a clase Flex-Item</a>
+	</body>
+</html>

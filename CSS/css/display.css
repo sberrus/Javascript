@@ -1,0 +1,29 @@
+h3 {
+	margin: 20px;
+}
+.inline-block{
+	display: inline-block;
+	margin: 10px 0;
+	background: yellow;
+	height: 150px;
+	width: 150px;
+	border: 3px solid red;
+}
+.block{
+	height: 150px;
+	width: 150px;
+	border: 3px solid red;
+	margin: auto auto;
+	background: yellow;
+	text-align: center;
+	display: block;
+}
+.inline{
+	height: 150px;
+	width: 150px;
+	border: 3px solid red;
+	margin: 50px 50px;
+	background: yellow;
+	text-align: center;
+	display: inline;
+}

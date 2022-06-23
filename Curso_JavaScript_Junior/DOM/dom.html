@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilizar el DOM en HTML</title>
+    <script src="js/dom.js"></script>
+</head>
+<body>
+    <h2>Obtención y selectores en JavaScript</h2>
+    <p>sapooooo</p>
+    <p id="parrafo">sapooooo</p>
+    <p class="parrafo">sapooooo</p>
+    <p class="parrafo">iguana</p>
+
+    <h2>Obtención, modificación y eliminación de atributos en JavaScript</h2>
+
+    <input type="button" value="Cambiar a boton" onclick="changeInputToButton()">
+    <input type="button" value="Cambiar a color switcher" onclick="changeInputToColor()">
+    <input type="button" value="Cambiar a texto" onclick="changeInputToText()"> 
+    <br><br>  
+    <input type="text" value="" placeholder="Sapo mmg" id="input">
+    <br><br>
+    <input type="button" value="Mostrar Tipo de Atributo" onclick="obtenerAtributoDeElemento()">
+    <br>
+    <input type="button" value="Remover atributo Type" onclick="removerAtributoValue()">
+    <h2>Uso y explicación de atributos globales en XHTML.</h2>
+    <p>
+        Para ver el contenido y las explicaciones ir al siguiente archivo <a href="dom.js" target="_BLANK">dom.js</a>
+    </p>
+    <h4>Content editable</h4>
+    <input type="button" value="Editar" onclick="editarContenido()">
+    <input type="button" value="No Editar" onclick="noEditarContenido()">
+    <br>
+    <p contenteditable="false" id="parrafoEditable">Tocar Botón para poder modificar este párrafo</p>
+
+    <h4>Ordenar texto de derecha a izquierda o de izquierda a derecha</h4>
+    <input type="button" value="ordernar a la izquierda" onclick="izquierdaDerecha()">
+    <input type="button" value="ordenar a la derecha" onclick="derechaIzquierda()">
+    <p id="ltr/rtl">
+        Este texto podemos hacer <br>
+        que vaya de izquierda a derecha <br>
+        o de derecha a izquierda
+    </p>
+    <h4>Atributo hidden</h4>
+    <input type="button" value="Ocultar Contenido" onclick="ocultarContenido()">
+    <input type="button" value="Mostrar Contenido" onclick="mostrarContenido()">
+    <div style="min-height: 50px;">
+        <h2 id="ocultar/mostrar">Este texto se mostrara o se ocultara</h2>
+    </div>
+    <h4>uso del tabindex en formularios</h4>
+    <form action="">
+        <label for="">Nombre</label><br>
+        <input type="text" tabindex="2"><br>
+        <label for="">Apellido</label><br>
+        <input type="text" name="" id="" tabindex="3"> <br>
+        <label for="">Fecha de nacimiento</label><br>
+        <input type="date" name="" id="" tabindex="1"><br>
+    </form>
+    <h4>uso del atributo Title</h4>
+    <input type="button" value="Cambiar title del texto inferior" onclick="cambiarTitle()">
+    <h2 title="[Esperando actualización...]" id="titulo">Posiciona el mouse por encima de este texto</h2>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- saved from url=(0175)file:///C:/Users/samue/Google%20Drive/Cursos%20de%20Programaci%C3%B3n/Desarrollo%20Web/JavaScript%20puro%20c%C3%B3digo/Curso_JavaScript_MidLevel/capitulo-5/manejo-errores.html -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>JavaScript Mid-Level -- Control de Flujo</title>
+</head>
+
+<body>
+    <!-- Plantilla Cabecera -->
+    <div class="cabecera">
+        <h1>Capítulo 4 -- Control de Flujo</h1>
+        <p class="subtitulo">
+            Manejo Control de Flujo en JavaScript
+        </p>
+    </div>
+    <!---->
+
+    <h2>Control de Flujo</h2>
+    <p>
+        Se refiere a control de flujo a el orden en el que se ejecutan los programas dentro del DOM. Con el uso de
+        llaves "{}" podemos crear ambitos dentro del código js.
+    </p>
+    <h3>Ambitos dentro de JS</h3>
+    <p>
+        Se refiere a Ambito a los bloques internos con sus respectivas prioridades que permite ejecutar en cierto orden
+        las distintas líneas de código. (Un poco lo que se hace al momento de hacer funciones. Que hasta que no se
+        ejecute la función, no se ejecuta el código que esta dentro de está).
+    </p>
+    <p>
+        El ámbito permite que el código se comporte de cierta manera y esto junto con el <i>scope</i> nos permite
+        cambiar el comportamiento del código en sí.
+    </p>
+    <h3>Sentencias de Control de Flujo</h3>
+    <p>
+        Estas sentencias son las que nos permiten modficar el flujo del código. De esta manera podemos indicar si un
+        código se debe ejecutar o no. Estas sentencias son las que ya conocemos cono if() switch() etc...
+    </p>
+    <h4>Uso de la estructura Switch (case, default, break)</h4>
+    <p>
+        Igual manejo, uso y sintáxis que en Java.
+    </p>
+    <h3>Sentencias de manejo de Excepciones</h3>
+    <p>
+        Si por cualquier razón deseamos trabajar con los errores que se pueden generara dentro del programa por
+        cualquier razon podemos hacer uso del manejo de excepciones en JS.
+    </p>
+    <h4>Uso de las Excepciones</h4>
+    <p>
+        Las Excepciones sirven para que en el momento de que querramos hacer algo que pueda generar algún error en el
+        programa, este pueda seguir funcionando sin tomar en cuenta dicho error. Hace que continue con el flujo normal
+        del programa sin que tenga en cuenta dicho error. Existen 3 tipos de excepciones, las ECMAScript, las DOMError y
+        las DOMException.
+    </p>
+    <h3>try...catch...finally</h3>
+    <p>
+        try..catch como en java, es un bloque de código que nos permite manejar los erorres que nos devuleve el programa
+        y poder manejarlos de cierta manera como deseemos o que en caso de que ocurra, el programa lo omita haciendo que
+        mejore el funcionamiento del mismo.
+    </p>
+    <h4>Bloque try</h4>
+    <p>
+        En este bloque irá la sentencía que se intentará ejecutar y donde pudierá generarse cualquier error. El try no
+        puede ejecutarse si no esta el catch de ese bloque. Por lo tanto van siempre de la mano uno del otro.
+    </p>
+    <h4>Bloque catch(error)</h4>
+    <p>
+        En este bloque especificamos que se debe hacer con el error que devuelve este bloque de código. El parámetro que
+        recibe este bloque es el que nos permite realizar las acciones correspondientes en el momento de que haya algun
+        error.
+    </p>
+    <p>
+        Por definición el catch nos devuelve un objeto como parámetro que podemos, o no, usarlo.
+    </p>
+    <h4>Cosas a tomar en cuenta la trabajar con excepciones</h4>
+    <p>
+        Las excepciones no manejan todos los tipos de errores que pudiera contener el código. Hay expresiones o errores
+        (por ejemplo los de sintaxis) que no nos permiten trabajarlos con el uso de estos métodos.
+    </p>
+    <h5>typeof</h5>
+    <p>
+        <b>Este método es utilizado para saber de que tipo es la variable a la que se la aplicamos. Devuelve booleano,
+            object, number etc...</b>
+    </p>
+    <h4>Finally</h4>
+    <p>
+        Este bloque de código, si lo declaramos, se ejecuta siempre al final. Indiferentemente si hay algún error o no.
+        Este bloque de código no es obligatorio para que el manejo de excepciones sea efectivo.
+    </p>
+    <p>
+        Otra de las características principales de finally es que el valor que retornemos mediante este tiene prioridad
+        inclusive más que el try.
+    </p>
+
+    <p>Seleccione una de las opciones que se muestran a continuación.</p>
+
+    <h4>throw</h4>
+    <p>
+        Con el uso de Throw enviamos intencionalmente un error al programa en cuestión. El error puede ser un string
+        un objeto o un array.
+    </p>
+
+    <select id="opcion">
+        <option value="error">Generar Error</option>
+        <option value="!error">No Generar Error</option>
+    </select>a
+    <button id="error">Generar Error</button>
+    <script src="manejo-errores.js"></script>
+    <br><br><br>
+
+
+    <h2>Cosas a tomar en cuenta</h2>
+    <p>
+        Si es verda que el uso del manejo de excepciones es una herramienta que ayuda mucho en las labores de desarrollo de software, no se debe utilizar para todo. <b>Principalmente se debe priorizar el debuggear el código de manera nativa.</b>
+    </p>
+    <p>
+        En general no se debe usar el try..catch generalizadamente. Esto se usa en mayor medida con los async y los await
+    </p>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+<html>
+
+<head>
+    <title>Repositorio de Atomos en HTML</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/principal.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Inicio del menú principal -->
+    <header>
+        <div class="header__logo">
+            <img src="images/s-roja.png" alt="Logo de repositorio Samuel Berrus">
+        </div>
+        <nav class="header__nav">
+            <a href="index.html" class="header__nav--a">Inicio</a>
+            <a href="#" class="header__nav--a">Contenido</a>
+            <a href="#" class="header__nav--a">Prácticas Propias</a>
+        </nav>
+    </header>
+    <!-- Fin del menú principal-->
+
+    <!-- Contenido principal de la página Web-->
+    <div class="main-container">
+        <section>
+            <h1>Glosario y sintaxis de JavaScript</h1>
+            <p class="subtitulo">Glosario y sintáxis básica de la implementación de JavaScript</p>
+
+            <!-- Bloque de contenido -->
+                <article>
+                    <div class="content-box">
+                        <div class="content-row">
+                            <h2>Introducción</h2>
+                            <p>
+                                En esta clase veremos todo lo relacionado con el glosario básico para poder trabajar de manera correcta en JavaScript y su implementación dentro del código.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            <!-- Fin bloque de contenido -->
+
+            <!-- Bloque de contenido -->
+            <article>
+                <div class="content-box">
+                    <div class="content-row">
+                        <h2>Glosario Básico</h2>
+                        <ul>
+                            <li>
+                                <h3>Script:</h3>
+                                <p>
+                                    Cada una de las aplicaciones programas o trozos de código que contengan código JavaScript.  
+                                </p>
+                            </li>
+                            <li>
+                                <h3>Sentencia:</h3>
+                                <p>
+                                    Una sentencia son cada una de las instrucciones que forman un script.
+                                </p>
+                            </li>
+                            <li>
+                                <h3>Palabras Reservadas:</h3>
+                                <p>
+                                    Son las palabras en inglés que se utilizan para crear las sentencias dentro del script. Por lo tanto no puden ser utilizadas libremente a lo largo del script. Las palabras reservadas que utiliza JavaScript son: <b>break, case, catch, continue, default, delete, do, else, finally, for, function, if, in, instanceof, new, return, switch, this, throw, try, typeof, var, void, while, with.</b>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        <!-- Fin bloque de contenido -->
+
+         <!-- Bloque de contenido -->
+         <article>
+            <div class="content-box">
+                <div class="content-row">
+                    <h2>Sintáxis básica</h2>
+                    <p>
+                       Sin entrar en profundidad en el porqué simplemente iremos a las características generales de la programación en JavaScript, Siendo muy parecidas a las que podemos ver en los lenguajes de programación Java y C. Y dichas características son:
+                    </p>
+                    <ul>
+                        <li>
+                            <h3>No se tienen en cuenta los espacios en blanco ni las nuevas líneas.</h3>
+                            <p>
+                                El interprete JavaScript omite todos los espacios en blanco que no esten previamente codificados en le código fuente.
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Se distinguen las mayúsculas y las minúsculas.</h3>
+                            <p>
+                                En JavaScript si se intercambian mayúsculas y minúsculas el programa simplemente no funciona.
+                            </p>
+                        </li>
+                        <li>
+                            <h3>No se define el tipo de variable</h3>
+                            <p>
+                                Los tipos de variables dentro de JavaScript no se declaran como se hace en otros lenguajes como Java o C. Este interpreta el tipo de variable que va a utilizar tomando en cuenta el tipo de dato con el que este trabajando en ese momento. Siendo posible almacenar diferentes tipos de datos en una misma variable.
+                            </p>
+                        </li>
+                        <li>
+                            <h3>No es necesario terminar cada sentencia con un punto y coma ";"</h3>
+                            <p>
+                                Aunque no sea obligatorio si se puede y se recomienda implementarlo, sobretodo para separar sentencias y poder organizar mejor visualmente el código.
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Se pueden incluir comentarios.</h3>
+                            <p>
+                                En JavaScript se pueden usar comentarios de dos formas:
+                                <ul>
+                                    <li>
+                                        <h4>Comentarios en línea:</h4>
+                                        <p>
+                                            Se incluyen haciendo uso de dos barras inclinadas a la derecha "//" seguido del comentario en cuestión. Este comentario solo se puede usar en una sola línea de código
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h4>Comentarios en bloque:</h4>
+                                        <p>
+                                            Estos comentarios son los que nos permiten usar varias líneas como deseemos. También se suele usar para hacer que una o un grupo de sentencias no se ejecute cuando introducimos estas dentro del comentario en cuestión. Para hacer uso de estos comentarios tenemos que indicarlos mediante el uso de los caracteres "/*", indicando el inicio del comentario y "*/", para indicar el final del mismo.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+    <!-- Fin bloque de contenido -->
+    
+        </section>
+        
+        <!-- Sección del Aside de la página -->
+
+        <aside>
+            <h2>Menú de navegación</h2>
+            <ul class="menu-lateral">
+                <li class="menu-lateral__items">
+                    <h3><a href="index.html">Bienvenida</a></h3>
+                </li>
+                <li class="menu-lateral__items">
+                    <h3><a href="implementacion.html">Conceptos Básicos</a></h3>
+                </li>
+                <ul class="submenu">
+                    <li class="submenu__items">
+                        <a href="implementacion.html">Implementacion de código</a>
+                    </li>
+                    <li class="submenu__items">
+                        <a href="glosario.html">Glosario y Sintáxis Básica</a>
+                    </li>
+                    <li class="submenu__items">
+                        <a href="posibilidades-limitaciones.html">Posibilidades y Limitaciones</a>
+                    </li>
+                </ul>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Sección del Aside de la página -->
+
+    <!-- Fin de la sección de contenido-->
+
+    <!-- Seccion de los botones de navegación inferiores-->
+    <div class="navegador">
+        <div class="navegador__boton">
+            <a href="implementacion.html"><img src="images/flecha-boton.png" alt="Flecha izquierda"></a>
+        </div>
+        <div class="navegador__boton">
+            <a href="posibilidades-limitaciones.html"><img src="images/flecha-boton.png" alt="Flecha derecha"></a>
+        </div>
+    </div>
+
+    <!-- Inicio Footer -->
+    <footer>
+
+    </footer>
+    <!-- Fin footer-->
+</body>
+</html>

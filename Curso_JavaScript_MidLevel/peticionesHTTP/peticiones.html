@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Curso de JavaScript Mid-Level -- Capitulo x</title>
+</head>
+
+<body>
+    <!-- Plantilla Cabecera -->
+    <div class="cabecera">
+        <h1>Peticiones HTTP en JavaScript</h1>
+        <p class="subtitulo">
+            Peticiones HTTP en JavaScript
+        </p>
+    </div>
+    <!---->
+    <h2>¿Qué es una petición HTTP?</h2>
+    <p>
+        Se refiere a petición HTTP a la capacidad que tiene un ordenador de pedirle información o cualquier cosa a un
+        servidor y que este nos devuelva algo, per no solo esto, nosotros también podemos enviarle cosas al servidor y
+        que este nos devuelva cosas con las que podamos trabajar. En general se tiende a enviar datos en formato JSON.
+    </p>
+    <h2>¿Qué es un JSON?</h2>
+    <p>
+        Un archivo de formato JSON, es un archivo que almacena la información de manera similar a como lo hace un objeto
+        en JavaScript. De por si JSON significa JavaScript Object Notation. Su estructura es exactamente igual a un
+        array asociativo. objeto = [{"nombre":"Samuel"},{"nombre":"Pedro"},...].
+    </p>
+    <p>
+        La unica diferencia es que el JSON la variable asociativa se tiene que encerrar entre comillas dobles. Si las variables no se cierran entre comillas dobles es un array asociativo.
+    </p>
+    <h3>JSON Serializado</h3>
+    <p>
+        Se refiere a JSON serializado a un JSON en formato de cadena de texto (encerrado entre comillas, comillas dobles, etc...).
+    </p>
+    <p>
+        Se usan los JSON serializados ya que de esta manera los demás programas y lenguajes de programación pueden recibir esta cadena de texto y parsearla para poder utilizar los datos que esta contiene.
+    </p>
+    <h4>stringify()</h4>
+    <p>
+        Para serializar un objeto para convertirlo a JSON de manera que pueda ser enviado para luego ser interpretado, se hace uso del método stringify(objeto). Este método nos devuelve un objeto JSON serializado (en cadena de texto).  
+    </p>
+    <h4>parse()</h4>
+    <p>
+        Si recivimos desde otro sitio algun JSON serializado para poder acceder a los valores dentro de este hay que parsearlo con el metodo JSON.parse(JSON). Después de haberlo parseado y alojado en algún sitio, podemos hacer uso de sus valores. 
+    </p>
+
+
+    <script src="peticiones.js"></script>
+</body>
+
+</html>

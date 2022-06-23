@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Propiedades de Texto en CSS</title>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<link rel="stylesheet" type="text/css" href="css/propiedades-cajas.css">
+	</head>
+	<body>
+		<h1>Propiedades de las cajas en CSS</h1>
+		<p>
+			En esta clase veremos las distintas propiedades que tiene CSS para modificar el aspecto visual de los elementos de HTML. A continuación veremos algunas reglas CSS más comunes.
+		</p>
+		<ul>
+			<li>
+				<h3>background-color</h3>
+				<p>
+					Con esta regla podemos establecer el color de fondo de el elemento al que le apliquemos la regla. En el siguiente ejemplo cambiaremos el color de fondo de una etiqueta &#60;span&#62;
+				</p>
+				<span style="font-size: 2em; background-color: rgb(56, 168, 59);">Ejemplo</span>
+			</li>
+			<li>
+				<h3>Padding</h3>
+				<p>
+					El padding es la distancia que separa los bordes de la caja y el texto. Para modificar los valores para separar el texto se utiliza la regla shorthand padding, ya que esta funciona de la siguiente manera:
+				</p>
+				<p>
+					Padding tiene tres formas fundamentales para funcionar, y la mayoria de reglas shorthand funcionan de manera similar. Si solo declaramos un solo valor después de la regla padding (padding: 10px;), está establece dicho valor a los 4 paddings que hay que son top,rigth,botton,left.
+				</p>
+				<p>
+					Si declaramos 2 valores (padding: 10px, 5px;), la regla establece que el primer valor hace referencia a los padding top y botton, y el segundo valor a los paddings left y rigth.
+				</p>
+				<p>
+					Ahora si establecemos los 4 paddings (padding: 10px, 15px, 10px, 2px), este modifica los paddings estableciendo el primer valor (top), el segundo (rigth), el tercero (botton) y el ultimo (left). Pero tomando en cuenta las posiciones de los valores anteriormente mencionados, si uno de los valores falta, el valor faltante tomara el valor de su eje hermano. Si el valor faltante es el rigth, tomara el valor que hayamos definido en el left, y cuando falte el valor de bottom, tomara el valor de top y viceversa en ambos casos.
+				</p>
+				<span style="font-size: 2em; background-color: rgb(56, 168, 59);padding-left: 3em">padding-left 3em</span>
+				<span style="font-size: 2em; background-color: rgb(56, 168, 59);padding-right: 3em">padding-rigth 3em</span><br><br><br>
+				<span style="font-size: 2em; background-color: rgb(56, 168, 59); padding: 1em">padding 1em</span><br><br><br>
+			</li>
+			<li>
+				<h3>width y height</h3>
+				<p>
+					Con las instrucciones width y height establecemos el ancho(width) y el alto(heigth) de los elementos en CSS. Con estos valores podemos alterar el tamaño de la caja que contiene a los elementos en cuestión.  
+				</p>
+				<div class="caja">
+					<p>
+						Esto es una caja de 300x100
+					</p>
+				</div>
+			</li>
+			<li>
+				<h3>margin</h3>
+				<p>
+					La regla margin establece la distancia que las cajas van a tener de separación una de otra. A diferencia de la regla padding que establece la separación entre el texto y el borde de la caja (interno), margin se encarga de separar los los bordes del lado externo de las cajas.
+				</p>
+				<div class="caja" id="margin1">
+					<p>
+						Caja con margin 90
+					</p>
+				</div>
+				<div class="caja" id="margin2">
+					<p>
+						Caja con margin 20
+					</p>
+				</div>
+				<p>
+					Como se ve en el ejemplo anterior hay dos cajas. La primera tiene un (margin:90px;) y la segunda tiene un (margin:20px;). Al estar una encima de la otra el margin-botton de la primera caja se suma con el margin-top de la segunda dando como total un margin de 110px, para solucionar este problema en el caso de que queramos solo 50px de margin entre ambas hay que restarle a una o a ambas mediante la instruccion margin-top o margin-botton en cuestion, para que llegue a la distancia deseada.
+				</p>
+			</li>
+			<li>
+				<h3>border</h3>
+				<p>
+					Con la propiedad border podemos establecer el aspecto de los bordes de la caja. Es una instrucción shorthand por lo tanto tiene el siguiente orden de parametros:
+				</p>
+				<ol>
+					<li>
+						-Tamaño del trazo: cualquier medida de CSS(px, em, cm, mm etc...).
+					</li>
+					<li>
+						-Tipo de trazo: <span style="border: 3px solid black">linea continua (solid)</span>, <span style="border: 3px dotted black">puntos alineados (dotted)</span>,<span style="border: 3px dashed black">linea discontinua (dashed)</span>, <span style="border: 3px double black">dos lineas paralelas</span> entre otras... 
+					</li>
+				</ol>
+				<div class="caja" id="border">
+					<p>Caja con el borde estilizado</p>
+				</div>
+			</li>
+			<li>
+				<h3>border-radius</h3>
+				<p>
+					Con la propiedad border-radius podemos establecer que tan redondeado queremos los bordes de las cajas.
+				</p>
+				<div class="caja" id="border-radius">
+					<p>Caja con el borde redondeado</p>
+				</div>
+			</li>
+			<li>
+				<h3>box-shadow</h3>
+				<p>
+					Con esta propiedad nos permite darle sombra a la caja. Esta tambien es una propiedad shorthand por lo que debemos establecer el orden de la misma de la siguiente manera: 
+				</p>
+				<ol>
+					<li>
+						1 ) Eje X (Medidas CSS)
+					</li>
+					<li>
+						2 ) Eje Y (Medidas CSS)
+					</li>
+					<li>
+						3 ) Tamaño del desenfoque (Medidas CSS)
+					</li>
+					<li>
+						4 ) Cuanto borde va a tener (Medida CSS)
+					</li>
+					<li>
+						5) color (colores CSS)
+					</li>
+				</ol>
+				<div class="caja" id="box-shadow">
+					<p>Caja con sombra</p>
+				</div>
+			</li>
+			<li>
+				<h3>text-shadow</h3>
+				<p>
+					La propiedad text-shadow nos permite darle sombra pero esta vez al texto. Funciona de la misma manera que le box-shadow con la diferencia de que este no tiene el parametro numero 4 referente al borde de la sombra.
+				</p>
+				<div class="caja" id="text-shadow">
+					<p>caja con texto con sombra</p>
+				</div>
+			</li>
+			<li>
+				<h3>outline</h3>
+				<p>
+					La propiedad outline se comporta igual que la propiedad border con la diferncia de que esta no ocupa un espacio real dentro del documento. Se superpone a los demas.
+				</p>
+				<div class="caja" id="outline1">
+					<p>Caja con el borde redondeado</p>
+				</div>
+				<div class="caja" id="outline2">
+					<p>Caja con el borde redondeado</p>
+				</div>
+			</li>
+		</ul>
+		<p>
+			De igual manera en la página de <a href="https://uniwebsidad.com/libros/css/capitulo-4" target="_BLANK">Uniwebsidad</a> podemos encontrar más detalladamente el material de las instrucciones anteriormente mencionadas.
+		</p>
+		<p>
+			A continuación veremos lo correspondiente a las propiedades position y display a fondo.
+		</p>
+		<a href="position.hmtl">Ir a la siguiente clase</a>
+	</body>
+</html>

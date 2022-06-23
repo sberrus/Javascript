@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Flex Item con CSS</title>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<link rel="stylesheet" type="text/css" href="css/flex-item.css">
+	</head>
+	<body>
+		<h1>Flex-Item</h1>
+		<h2>Conceptos de los Flex-Items</h2>
+		<p>
+			Con la maquetación flex-box además de poder darle propiedades a los contenedores (flex-containers), también se le pueden dar propiedades directamente a los items que las contiene.
+		</p>
+		<p>
+			Las propiedades para los Flex-items son diferentes a las de los flex-containers que las iremos viendo a lo largo de esta clase.
+		</p>
+		
+		<h3>Propiedad align-self</h3>
+		<p>
+			Esta propiedad funciona de manera similar a la propiedad item-align pero con la diferencia de que esta se aplica directamente a un solo item o a aquellos que compartan la misma clase.
+		</p>
+		<p>
+			Comparte los mismos valores que la propiedad align-item y align-content: flex-start/flex-end/center/stretch/baseline. 
+		</p>
+		<span class="destacado-verde">flex-start/flex-end/center/stretch/baseline</span>
+		<div class="flex-container">
+			<div class="flex-item flex-start">flex-start</div>
+			<div class="flex-item flex-end">flex-end</div>
+			<div class="flex-item center">center</div>
+			<div class="flex-item stretch">stretch</div>
+			<div class="flex-item baseline">baseline</div>
+		</div>
+		<p>
+			<small>Propiedad align-self con distintos valores por cada caja</small>
+		</p>
+		<h3>Propiedad flex-grow</h3>
+		<p>
+			Con esta propiedad podemos indicarle al programa que reparta el espacio sobrante dentro del flex container a los elementos a los que les demos dicha propiedad. Se debe utilizar en conjunto con las propiedades flex-wrap y min-width para que se pueda observar bien el efecto de dicha propiedad.
+		</p>
+		<span class="destacado-verde">Cajas con flex-grow (reduce el tamaño de la ventana del navegador para poder visualizar el flex-grow)</span>
+		<div class="flex-container wrap">
+			<div class="flex-item flex-grow"></div>
+			<div class="flex-item flex-grow"></div>
+			<div class="flex-item flex-grow"></div>
+			<div class="flex-item flex-grow"></div>			
+		</div>
+		<p>
+			<small>Propiedad flex-grow implementada a todos los items del flex-container. Al momento de reducir la pantalla del navegador se puede apreciar la propiedad y como la ultima caja abarcara todo el espacio de la segunda fila.</small>
+		</p>
+		<span class="destacado-verde">Flex-grow implementado solo a un elemento</span>
+		<div class="flex-container wrap">
+			<div class="flex-item"></div>
+			<div class="flex-item"></div>
+			<div class="flex-item"></div>
+			<div class="flex-item flex-grow caja-red"></div>	
+		</div>
+		<p>
+			<small>Propiedad flex-grow implementada a un solo elemento.</small>
+		</p>
+		<h4>Valores de la propiedad flex-grow</h4>
+		<p>
+			En los ejemplos anteriores podemos observar que al darle un valor 1 a la caja o cajas esta reparte el espacio sobrante del flex-container para que se reparta entre los distintos items que lo contiene. Este valor hace referencia al numero de "partes" que tendra dicho elemento del sobrante que tenga la caja. Ejemplo:
+		</p>
+		<p>
+			Supongamos que tenemos un contenedor con 100px de width, y tenemos 3 cajas de 20px las cuales todas tienen como valor 1 en la propiedad flew-grow. El navegador lo que realiza es sumar el espacio que ocupan los items. En este caso los 3 items suman 60px, nos sobran 40px; ahora busca cuantos valores hay en total en el flex-grow (En este caso 3 porque cada item tiene un valor de 1). Por ultimo el navegador asigna una cantidad de pixeles por "parte" que haya en total de la suma de los valores de la propiedad flex-grow; (40/3= 13.3px) esos 13.3 px es lo que el valor da una de las partes del flex-grow y los reparte entre aquellos items que contengan dicha propiedad; como todos los items tienen la propiedad con valor 1 entonces todos suman 13.3px al width de cada uno de ellos. 
+		</p>
+		<span class="destacado-verde">Caja roja con valor 1 de flex-grow</span>
+		<div class="flex-container wrap">
+			<div class="flex-item"></div>
+			<div class="flex-item"></div>
+			<div class="flex-item"></div>
+			<div class="flex-item flex-grow caja-red">flex-grow: 1</div>	
+		</div>
+		<p>
+			<small>Al solo haber un solo elemento con la propiedad flex-grow todo el espacio sobrante se le asigna a dicha caja.</small>
+		</p>
+		<span class="destacado-verde">Caja roja y caja verde con valor 1 de flex-grow</span>
+		<div class="flex-container wrap">
+			<div class="flex-item"></div>
+			<div class="flex-item"></div>
+			<div class="flex-item flex-grow caja-red">flex-grow:1</div>
+			<div class="flex-item flex-grow caja-green">flex-grow:1</div>
+		</div>
+		<p>
+			<small>En este caso hay 2 items con valor 1 de la propiedad flex-grow. Por lo tanto hay que hacer la operación y cada item se lleva la mitad de espacio disponible para su contenido.</small>
+		</p>
+		<p>
+			Si deseamos darle más de una "parte" a una caja hay que indicarlo en la propiedad y tomando como ejemplo los valores de el caso hipotetico planteado anteriormente, si en total hay 3 cajas con flex-grow y una tiene como valor 2; entonces hay que hacer la operación de la siguiente manera: 4 "partes" = 10px por parte. Entonces la caja que contiene el valor 2 tendra 20px adicionales 
+		</p>
+		<span class="destacado-verde">Caja roja con valor 3 y caja verde con valor 1 de flex-grow</span>
+		<div class="flex-container wrap">
+			<div class="flex-item"></div>
+			<div class="flex-item"></div>
+			<div class="flex-item flex-grow-3 caja-red">flex-grow:3</div>
+			<div class="flex-item flex-grow caja-green">flex-grow:1</div>
+		</div>
+		<p>
+			<small>En el ejemplo anterior podemos observar como la caja roja es mas grande que la caja verde. Esto se debe a que como la caja roja tiene 3 "partes" de contenido sobrante, esta tiene por consecuencia mayores dimensiones que la caja que solo contiene una sola parte</small>
+		</p>
+		<h3>Propiedad flex-basis</h3>
+		<p>
+			Esta propiedad tiene un comportamiento similar al de la propiedad width. La principal diferencia es que flex basis tiene más prioridad que width a la hora de modificar el ancho de las cajas a las que se le implementa.
+		</p>
+		<span class="destacado-verde">Cajas con width, flex-basis y con ambas prioridades.</span>
+		<div class="flex-container ">
+			<div class="flex-item">Caja con propiedad width:85px</div>
+			<div class="flex-item caja-red flex-basis">Caja con propiedad flex-basis: 220px</div>
+			<div class="flex-item caja-green flex-basis"> Caja con width: 85px y flex-basis: 220px </div>
+		</div>
+		<p>
+			<small>Como se puede ver en la caja verde que contiene las propiedades width y flex-basis. Se puede ver que tiene el mismo tamaño que la caja roja que contiene la propiedad flex-basis: 220px toma como valor la segunda opción ya que tiene mayor prioridad. </small>
+		</p>
+		<h3>Propiedad flex-shrink</h3>
+		<p>
+			Con esta propiedad se decide que tanto espacio van a ceder las cajas que contengan esta propiedad con respecto al resto de cajas que compartan espacio en el flex-container. A mayor sea el valor, más espacio va a ceder.
+		</p>
+		<span class="destacado-verde">Propiedad flex-shrink aplicada a la primera caja. (Ampliar la ventana del navegador para poder observar el comportamiento de esta propiedad)</span>
+		<div class="flex-container">
+			<div class="flex-item width-300 flex-shrink2 caja-red"></div>
+			<div class="flex-item width-300"></div>
+			<div class="flex-item width-300"></div>
+		</div>
+		<h4>Valores de la propiedad flex-shrink</h4>
+		<p>
+			Este valor se rige principalmente por la propiedad width. El elemento al cual le hayamos aplicado la propiedad flex-shrink va a ceder más espacio al resto de elementos con los que comparta espacio en el flex-container (Siempre y cuando el contenedor no tenga la propiedad flex-wrap). Pero, si tenemos un width definido, al momento de que se expanda el viewport la caja va a tener el mismo width que sus hermanos a la vez (el width de la caja que contenga la propiedad siempre va a ser menor que el de las cajas de los hermanos. Pero si ampliamos el viewport todas las cajas van a llegar a la vez al mismo tamaño definido en el width).
+		</p>
+		<p>
+			El valor dado a la propiedad indica en cuantes "partes" la caja con el flex-shrink va a cederle el espacio a sus hermanos. Por ende si dejamos como valor 1, este va a ceder el mismo espacio que sus hermanos y a mayor sea este número mayor va a ser el espacio que va a ceder la caja que contenga el flex-shrink
+		</p>
+		<span class="destacado-verde">Propiedad flex-shrink aplicada a la primera caja. (Ampliar la ventana del navegador para poder observar el comportamiento de esta propiedad)</span>
+		<div class="flex-container" style="height: 150px !important;">
+			<div class="flex-item width-300 flex-shrink caja-red">Caja con flex-shrink: 1</div>
+			<div class="flex-item width-300"></div>
+			<div class="flex-item width-300"></div>
+		</div>
+		<div class="flex-container" style="height: 150px !important;">
+			<div class="flex-item width-300 flex-shrink2 caja-red">Caja con flex-shrink: 2</div>
+			<div class="flex-item width-300"></div>
+			<div class="flex-item width-300"></div>
+		</div>
+		<div class="flex-container" style="height: 150px !important;">
+			<div class="flex-item width-300 flex-shrink3 caja-red">Caja con flex-shrink: 3</div>
+			<div class="flex-item width-300"></div>
+			<div class="flex-item width-300"></div>
+		</div>
+		<p>
+			<small>Como se puede ver en el ejemplo anterior la caja resaltada de color rojo muestra en las tres filas como se comporta el flex-shrink, observandose la comparación de las mismas cajas con las mismas propiedades (width: 300px;) pero con 3 valores diferentes de flex-shrink. Se puede observar como a mayor valor de dicha propiedad La caja sede mas espacio a las cajas hermanas.</small>
+		</p>
+		<h4>Uso de flex-basis</h4>
+		<p>
+			El uso de flex-basis se recomienda usar en vez de la propiedad width para las cajas de los flex-box, debido a que estas tienen primero mayor prioridad que la propiedad width y que esta propiedad se utiliza en conjunto con otras propiedades que conforman las flex-box.
+		</p>
+		<h3>Propiedad shorthand flex: flex-grow, flex-shrink, flex-basis.</h3>
+		<p>
+			La propiedad shorthand flex: se utiliza para declarar en una sola linea las propiedades flex-grow, flex-shrink y flex basis para hacerlo de manera más comoda. Esta propiedad necesita por lo menos 1 parámetro, de otra forma no va a funcionar.
+		</p>
+		<h3>Propiedad order</h3>
+		<p>
+			La propiedad order funciona parecido a la propiedad z-index, con la diferencia, de que esta indica la prioridad de el elemento en el eje al que apunta el main axis. El flex-container posicionara los items de mayor a menor valor de dicha propiedad. 
+		</p>
+		<h4>Horizontal</h4>
+		<span class="destacado-verde">1.) Cajas sin la propiedad order</span>
+		<div class="flex-container width-300" style="height: 150px !important;">
+			<div class="flex-item width-150">Item 1</div>
+			<div class="flex-item width-150">Item 2</div>
+			<div class="flex-item width-150">Item 3</div>
+		</div>
+		<span class="destacado-verde">2.)Cajas con propiedad order</span>
+		<div class="flex-container width-300" style="height: 150px !important;">
+			<div class="flex-item width-150 order3">Item 1<br> <b>(order: 3)</b></div>
+			<div class="flex-item width-150 order1">Item 2<br> <b>(order: 1)</b></div>
+			<div class="flex-item width-150 order2">Item 3<br> <b>(order: 2)</b></div>
+		</div>
+		<span class="destacado-verde">3.)Cajas con propiedad order y row-reverse</span>
+		<div class="flex-container width-300 row-reverse" style="height: 150px !important;">
+			<div class="flex-item width-150 order3">Item 1<br> <b>(order: 3)</b></div>
+			<div class="flex-item width-150 order1">Item 2<br> <b>(order: 1)</b></div>
+			<div class="flex-item width-150 order2">Item 3<br> <b>(order: 2)</b></div>
+		</div>
+		<p>
+			<small>En el ejemplo anterior, todos los containers contenian las mismas propiedades, Excepto, los Items del container 2.),  que contenian la propiedad order. Como el main axis esta de manera estandar (flujo de izquierda a derecha) el elemento con el order más bajo se posiciona en primer lugar y asi sucesivamente hasta llegar al elemento más alto.<br>
+			En el container 3.), tiene el mismo codigo que el container 2.) con la unica diferencia de que este tiene la propiedad flex-direction: row-reverse</small>
+		</p>
+		<h4>Vertical</h4>
+		<div class="flex-container height-auto">
+			<div >
+				<span class="destacado-verde">Cajas estandar</span>
+				<div class="flex-container width-150 height-auto column">
+					<div class="flex-item ">Item 1</div>
+					<div class="flex-item ">Item 2</div>
+					<div class="flex-item ">Item 3</div>
+				</div>
+			</div>
+			<div >
+				<span class="destacado-verde">Cajas order</span>
+				<div class="flex-container width-150 height-auto column">
+					<div class="flex-item  order2">Item 1<br><b>(order:2)</b></div>
+					<div class="flex-item  order1">Item 2<br><b>(order:1)</b></div>
+					<div class="flex-item  order3">Item 3<br><b>(order:3)</b></div>
+				</div>
+			</div>
+			<div > 
+				<span class="destacado-verde">Cajas order y column-reverse </span>
+				<div class="flex-container width-150 height-auto column-reverse">
+					<div class="flex-item  order2">Item 1<br><b>(order:2)</b></div>
+					<div class="flex-item  order1">Item 2<br><b>(order:1)</b></div>
+					<div class="flex-item  order3">Item 3<br><b>(order:3)</b></div>
+				</div>
+			</div>
+		</div>
+		<p>
+			<small>En el ejemplo anterior podemos observar como las cajas estan alineadas de la misma manera que en los ejemplos de las cajas horizontales pero de manear vertical.</small>
+		</p>
+	</body>
+</html>

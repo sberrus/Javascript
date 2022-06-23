@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Metodología BEM</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+	</head>
+	<body>
+		<h1>Metodología BEM</h1>
+		<h2>Introducción</h2>
+		<p>
+			La metodología BEM consta de unas prácticas las cuales nos permite establecer de manera eficaz el uso de las clases(&#34;class&#34;) de HTML para mejorar la implementación de las hojas de estilo y asi evitar conflictos. Ejemplo:
+		</p>
+		<div class="contac-form" id="primer-ejemplo">
+			<form>
+				<input type="text" class="contact-form__input" value="ejemplo">
+				<input type="password" class="contact-form__input" value="ejemplo" maxlength="7">
+			</form>
+		</div>
+		<p>
+			El uso de la metodología BEM consta de utilizar clases en los elementos que vayamos a utilizar pero de la siguiente manera. En el bloque de texto anterior con el borde "rojo" vemos que hay un contenedor &#60;div&#62; y dentro de este hay un formulario &#60;form&#62; con 2 elementos &#60;input&#62;. Para aplicar la Metodología BEM hay que darle una clase al contenedor por ejemplo "contact-form" y como los inputs que queremos modificar estan dentro del contenedor &#60;div&#62; de clase "contact-form" pues a los inputs se les asigna una clase empezando con el primer contenedor "contact-form" dos guiones bajos "__" y la clase del elemento "input" en este caso y daria como resultado lo siguiente "contact-form__input" de esta manera le asignamos una clase mas precisa a los elementos que queremos modificar.
+		</p>
+		<p>
+			En el caso anterior funciona correctamente porque tenemos una misma clase para todos los elementos "input" dentro del elemento "contact-form" pero, ¿que pasa si por ejemplo tenemos 3 elementos pero queremos modificar uno de estos?. Para esto tenemos 2 maneras para realizar dicha tarea:
+			<ol>
+				<li>
+					<h4>:first-child</h4>
+					<p>
+						Al colocar esta línea de código CSS después de la clase, este selecciona el primer hijo de los que compartan el mismo atributo "class". Ejemplo:
+						 <div class="contac-form2">
+							<form>
+								<input type="text" class="contact-form2__input" value="first child"><br>
+								<input type="text" class="contact-form2__input" value="second child"><br>
+								<input type="text" class="contact-form2__input" value="third child"><br>
+								<input type="password" class="contact-form2__input" value="ejemplo" maxlength="7">
+							</form>
+						</div>
+					</p>
+				</li>
+				<li>
+					<h4>uso de "--"</h4>
+					<p>
+						La segunda opción es agregar dos guiones "--" y luego un identificador a dicha clase para darle un aspecto diferente a la de las demás. Ejemplo:
+						<div class="contac-form2">
+							<form>
+								<input type="text" class="contact-form__input--first" value="first child"><br>
+								<input type="text" class="contact-form__input--second" value="second child"><br>
+								<input type="text" class="contact-form__input--third" value="third child"><br>
+								<input type="password" class="contact-form__input--password" value="ejemplo" maxlength="7">
+							</form>
+						</div>
+					</p>
+				</li>
+			</ol>
+		</p>
+		<p>
+			Algo que hay que recordar es que al momento de usar los "__" se utilizan para aquellos elementos que sean de bloque y los "--" para aquellos que sean en linea. Por ejemplo: que ocurre si queremos introducir un elemento h2 dentro de un elemento p que a su vez este dentro de un elemento div. El resultado seria el siguiente: Primero asignamos la clase al contenedor (bloque)"contact-form", después introducimos los "__" ya que el contenedor div es un elemento en bloque. A continuación, introducimos el elemento p de la siguiente manera "contact-form__p" indicando que el elemento p esta dentro del contenedor div. Y por último introducimos "--" y el elemento h2 resultando "contact-form__p--h2" indicando que el elemento en linea h2, esta dentro del elemento en linea p, que a su vez esta dentro del elemento en bloque div. Como se vera en el siguiente ejemplo: 
+		</p>
+		<div class="contenedor">
+			<p class="contenedor__p">
+				<h2 class="contenedor__p--h2">
+				holiwis	
+				</h2>
+			</p>
+		</div>
+		<p>
+			Ahora explicada la metodología BEM, seguiremos con la siguiente clase que son las propiedades de texto.
+		</p>
+
+<!-- Espacio para la siguiente clase -->
+		<a href="propiedadestexto.html">Propiedades de Texto</a>
+	</body>
+</html>

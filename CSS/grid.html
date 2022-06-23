@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Grid en CSS</title>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/principal.css">
+		<link rel="stylesheet" type="text/css" href="css/grid.css">
+	</head>
+	<body>
+		<h1>Grid CSS</h1>
+		<h2>Conceptos básicos</h2>
+		<div class="flex-container">
+			<div class="flex-item flex-container__img">
+				<img src="images/grid_lines.png">
+			</div>
+			<div class="flex-item flex-container__section">
+				<p>
+					Grid es un valor de layout que introducimos en la propiedad display (inline, block, inline-block, flex, grid). La manera más facil de imaginarlo es con una "cuadrilla".
+				</p>	
+				<p>
+					Esta constara de filas y columnas como con las tablas básicas en HTML.
+				</p>
+			</div>
+		</div>
+		<p>
+			<small>Ilustracion de un grid.</small>
+		</p>
+		<h3>Grid-container</h3>
+		<p>
+			Al igual que los flex-conteiners del layout flex, grid tiene su propio container llamado grid-container. Este es el encargado de "contener" al resto de items del grid.
+		</p>
+		<h3>Grid-item</h3>
+		<p>
+			Se le denomina grid-item a todo lo que esta dentro del contenedor (grid-container). Indiferentemente de lo que sea. Los grid constan de celdas, como las de una tabla básica o una de excel por ejemplo; pero dentro de estas pueden ir más de un item, o, dentro de varias celdas, pueden ir uno o pocos items (menor cantidad que las celdas del grid) aunque esto se vera más adelante.
+		</p>
+		<p>
+			Se le consideran items a aquellos elementos que sean hijos directos del grid. Por lo tanto si dentro de un grid ponemos varios elementos pero dentro de estos elementos hay otros elementos, los elementos hijos de los hijos del grid no se consideran Items. (estudiar porque no me quedo claro.)
+		</p>
+		<h3>Grid-cell</h3>
+		<p>
+			Son cada una de las celdas que contiene dentro de si el grid. El grid siempre va a ser cuadriculado.
+		</p>
+		<h3>Grid tracks(Column y Row)</h3>
+		<p>
+			Los tracks son las filas (row) y las columnas (column) que componen un grid. El total de grid tracks consta de la suma del total de filas y columnas de un grid. Si un grid tiene 2 filas y 2 columnas entonces tendria 4 tracks.
+		</p>
+		<h3>Grid-area</h3>
+		<p>
+			Los grid-areas son áreas que nosotros seleccionamos y son consecutivas. Las áreas las definimos nosotros cuando programamos el grid. Para que tenga sentido las áreas tienen que tener minimo 2 celdas.
+		</p>
+		<h3>Grid-line</h3>
+		<div class="flex-container">
+			<div class="flex-item flex-container__img">
+				<img src="images/grid_lines.png">
+				<p>
+					<small>Ilustración de un flex-container</small>
+				</p>
+			</div>
+			<div class="flex-item flex-container__section">
+				<p>
+					En esta ilustración podemos observar como las lineas del eje vertical parten desde el borde superior y van descendiendo. Las del eje horizontal, van desde el borde izquierdo hasta el derecho.
+				</p>
+			</div>
+		</div>
+		<h2>Propiedades del grid-container</h2>
+		<h3>Propiedades grid-template-rows y grid-template-columns</h3>
+		<p>
+			Con estas propiedades podemos indicarle al grid-container, cuantas filas y columas va a tener dentro de si. Para esto hay que indicar a cada una de las propiedades en valores de medida la cantidad de filas y columnas que va a contener cada eje del contenedor. 
+		</p>
+		<div class="grid-container">
+			<div class="grid-item">1</div>
+			<div class="grid-item">2</div>
+			<div class="grid-item">3</div>
+			<div class="grid-item">4</div>
+			<div class="grid-item">5</div>
+			<div class="grid-item">6</div>
+			<div class="grid-item">7</div>
+			<div class="grid-item">8</div>
+			<div class="grid-item">9</div>
+		</div>
+		<p>
+			<small>En el ejemplo anterior podemos observar un grid-container de 6 tracks, para que se vea de esta manera podemos ver que tiene las siguientes propiedades:<br>
+			<b>- grid-template-rows: 150px 150px 150px;</b><br>
+			<b>- grid-template-columns: 150px 150px 150px;</b><br>
+			Cada una de estas propiedades tienen 3 valores de medida indicando las cantidad de columnas y filas que va a contener el grid.</small>
+		</p>
+		<h4>Valores en grid</h4>
+		<p>
+			Al grid podemos asignarle valores de medidas para que este cambie las dimensiones del grid, pero al usar valores estáticos las dimensiones de el grid siempre van a ser los mismos, indiferentemente del tamaño del viewport.
+		</p>
+		<p>
+			Para poder darle dimensiones dinámicas al las celdas del grid tenemos que usar variables como: 
+		</p>
+		<h5>Valor de medida fr</h5>
+		<p>
+			Usando este valor en uno de los campos del grid-template-rows o el grid-template-columns indicamos al grid que la fila o la columna que contenga dicho valor, le de el resto del espacio sobrante del viewport. 
+		</p>
+		<p>
+			Como el valor flex-grow de los flex-containers, este valor funciona dandole espacio a aquellos elementos que contengan dicho valor, mientras más alto el valor más espacio se le asignara a la fila o columna que lo contenga debido a que tendra más "partes" de contenido que le asignara a dicho elemento. 
+		</p>
+		<span class="destacado-verde">Valor "fr" en una columna (Ampliar ventana para poder observar el comportamiento del valor)</span>
+		<div class="grid-container template-2">
+			<div class="grid-item">1</div>
+			<div class="grid-item">2</div>
+			<div class="grid-item">3 <br> (valor fr en column)</div>
+			<div class="grid-item">4</div>
+			<div class="grid-item">5</div>
+			<div class="grid-item">6 <br> (valor fr en column)</div>
+			<div class="grid-item">7</div>
+			<div class="grid-item">8</div>
+			<div class="grid-item">9 <br> (valor fr en column)</div>
+		</div>
+		<span class="destacado-verde">Valor "fr" en dos columnas (Ampliar ventana para poder observar el comportamiento del valor)</span>
+		<div class="grid-container template-3">
+			<div class="grid-item">1</div>
+			<div class="grid-item">2 <br> (valor fr en column)</div>
+			<div class="grid-item">3 <br> (valor fr en column)</div>
+			<div class="grid-item">4</div>
+			<div class="grid-item">5 <br> (valor fr en column)</div>
+			<div class="grid-item">6 <br> (valor fr en column)</div>
+			<div class="grid-item">7</div>
+			<div class="grid-item">8 <br> (valor fr en column)</div>
+			<div class="grid-item">9 <br> (valor fr en column)</div>
+		</div>
+		<p>
+			<small>Como se puede observar al momento de ajustar el tamaño de la ventana la tercera columna va ampliando su tamaño para ocupar todo el espacio que sobra del elemento que la contiene.</small>
+		</p>
+		<h4>Valor repeat</h4>
+		<p>
+			El valor repeat sirve para indicar tanto en el grid-template-rows y el grid-template-columns la cantidad de filas o columnas que va a tener dentro de si seguido de la medida de cada una de estas columnas EJ: ...template-rows/columns: repeat(3 , 150px). Con el anterior valor indicamos dentro del grid-template-rows o en el grid-template-columns, en el primer valor la cantidad de filas o columnas y en el segundo el tamaño de cada una de estas.
+		</p>
+		<p>
+			Tambien existe la posibilidad de que puedas poner más de un solo valor en el campo de la medida. Si por ejemplo quisieramos poner "repeat(3, 100px 100px)" lo que va a hacer dicho valor es multiplicar lo que tenga en el campo de medida, dando como resultado 6 columnas de 100px.
+		</p>
+		<span class="destacado-verde">Uso del valor repeat()</span>
+		<div class="grid-container grid-template-repeat">
+			<div class="grid-item">1</div>
+			<div class="grid-item">2</div>
+			<div class="grid-item">3</div>
+			<div class="grid-item">4</div>
+			<div class="grid-item">5</div>
+			<div class="grid-item">6</div>
+			<div class="grid-item">7</div>
+			<div class="grid-item">8</div>
+			<div class="grid-item">9</div>
+		</div>
+		<p>
+			<small>En el cuadro anterior podemos observar como se organiza de igual manera el grid pero utilizando el valor repeat() en lugar de declarar uno por uno los elementos del grid.</small>
+		</p>
+		<h4>Valores para definir lineas en column y grid</h4>
+		<p>
+			Al definir las lineas en los templates, podemos darle nombre a cada una de las lineas que componen el grid por el eje en cuestión. Por ende podemos modificar el nombre de la linea y ponerle el valor que nosotros queramos. 
+		</p>
+		<p>
+			Para usar este tipo de valor, primero tenemos que poner el nombre que le vamos a asignar a la linea entre corchetes "[]", luego, el tamaño en pixeles que va a contener esta como ya hemos hecho en anteriores ocaciones. EJ: grid-template-row: [primera-linea] 150px [segunda-linea] 150px ....... [n-linea] 150px;. Se recomienda indentar esta propiedad en pila de manera que se pueda observar primero la linea y luego las dimensiones para que se pueda leer con mayor facilidad. EJ:
+		</p>
+		<div style="width: 150px; height: 150px; margin: auto; font-weight: 900; margin-bottom: 50px;">
+			grid-template-row:<br>
+			[primera-linea]<br>
+			150px<br>
+			[segunda-linea]<br>
+			150px<br>
+			[tercera-linea]<br>
+			150px<br>
+			[n-linea]<br>
+			150px<br>
+		</div>
+		<span class="destacado-verde">Valores de las lineas modificadas.</span>
+		<div class="grid-container-line modificador-lineas">
+			<div class="grid-item linea1"></div>
+			<div class="grid-item"></div>
+			<div class="grid-item"></div>
+			<div class="grid-item"></div>
+			<div class="grid-item"></div>
+			<div class="grid-item"></div>
+			<div class="grid-item"></div>
+			<div class="grid-item"></div>
+			<div class="grid-item"></div>
+		</div>
+		<p>
+			<small>En este ejemplo podemos ver en el codigo CSS que las lineas del row y de los column estan definidas como cadenas pudiendo especificar a nuestro antojo el uso de las mismas.</small>
+		</p>
+		<h3>Propiedad shorthand grid-template</h3>
+		<p>
+			Con esta propiedad estamos abreviando tres instrucciones en una sola: Grid-template-rows, grid-template-columns y grid-template-areas. Aunque es un shorthand interesante no se recomienda usar porque puede llegar a marear un poco al usarla.
+		</p>
+		<h3>Propiedad grid-row-gap</h3>
+		<p>
+			La propiedad grid-row-gap establece la separación que tendran todas las filas entre si. Funciona parecido a la propiedad margin, con la diferencia de que esta no va a dejar un espacio vacio entre el borde del contenedor y las celdas. 
+		</p>
+		<span class="destacado-verde">Separación de las filas mediante propiedad grid-row-gap</span>
+		<div class="grid-container grid-row-gap">
+			<div class="grid-item">1</div>
+			<div class="grid-item">2</div>
+			<div class="grid-item">3</div>
+			<div class="grid-item">4</div>
+			<div class="grid-item">5</div>
+			<div class="grid-item">6</div>
+			<div class="grid-item">7</div>
+			<div class="grid-item">8</div>
+			<div class="grid-item">9</div>
+		</div>
+		<p>
+			<small>En la caja anterior se puede observar la separación que hay entre las celdas al contenedor al que se le aplico dicha propiedad.</small>
+		</p>
+		<h3>Propiedad grid-column-gap</h3>
+		<p>
+			Con esta propiedad podemos indicar la separación que van a tener las columnas una de la otra. Tiene el mismo comportamiento respecto a los bordes del contenedor que la propiedad grid-row-gap.
+		</p>
+		<span class="destacado-verde">Separación entre columnas mediante propiedad grid-column-gap</span>
+		<div class="grid-container grid-column-gap">
+			<div class="grid-item">1</div>
+			<div class="grid-item">2</div>
+			<div class="grid-item">3</div>
+			<div class="grid-item">4</div>
+			<div class="grid-item">5</div>
+			<div class="grid-item">6</div>
+			<div class="grid-item">7</div>
+			<div class="grid-item">8</div>
+			<div class="grid-item">9</div>
+		</div>
+		<p>
+			<small>En la caja anterior podemos observar también la separación que tienen cada una de las columnas entre si. </small>
+		</p>
+		<h3>shorthand grid-gap</h3>
+		<p>
+			Este shorthand funciona de manera similar a como lo hacen los shorthand margin y padding. Peor este indica la separación que van a tener los items dentro del grid-container. Mediante el valor de medida establecemos la separación que tendran las celdas tanto de columna en columna como de fila en fila.
+		</p>
+		<span class="destacado-verde">Shorthand grid-gap</span>
+		<div class="grid-container grid-gap">
+			<div class="grid-item">1</div>
+			<div class="grid-item">2</div>
+			<div class="grid-item">3</div>
+			<div class="grid-item">4</div>
+			<div class="grid-item">5</div>
+			<div class="grid-item">6</div>
+			<div class="grid-item">7</div>
+			<div class="grid-item">8</div>
+			<div class="grid-item">9</div>
+		</div>
+		<p>
+			<small>En el cuadro anterior podemos observar como los items dentro del grid-container estan separados 15px uno del otro mediante el shorthand grid-gap</small>
+		</p>
+		<h3>Propiedad shorthand grid-row y grid-column</h3>
+		<p>
+			Estas propiedades sirven para seleccionar varias celdas de una fila y/o de una columna usando como inicio y fin las lineas del grid que ya hemos comentado anteriormente en esta clase.  
+		</p>
+		<h4>Valores de las propiedades grid-row y grid-column</h4>
+		<p>
+			Los valores de estas propiedades constan de dos valores númericos separados por una barra inclinada a la derecha. Cada uno de estos valores indica la lina donde empieza (el valor de la izquierda) y la linea donde finaliza (el valor de la derecha.) Ej: grid-column: 1/3 (La celda ocupara de alto desde la primera linea de la columna y acabara en la tercera.); grid-row: 1/5 (la celda ocupara de ancho desde la primera linea de la fila y acabará en la quinta.);
+		</p>
+		<p>
+			Al asignarle las dimensiones dentro del grid mediante estas propiedades hacemos que la celda en cuestión ocupe dicho espacio pero haciendo que el resto de celdas se vayan desplazando para dejarle el espacio a la celda con las propiedades grid-row y grid-column.
+		</p>
+		<span class="destacado-verde">Propiedad grid-row y grid-column</span>
+		<div class="grid-container template-2 grid-gap">
+			<div class="grid-item-row-column"><b>1)<br><br><br><br>Caja con grid-column 1/3 y grid-row 1/5</b></div>
+			<div class="grid2-item-row-column"><b>2)<br><br><br><br>Caja con grid-column 3/4 y grid-row 1/5 <br><br> Dimensiones fr </b></div>
+			<div class="grid3-item-row-column"><b>3)<br><br><br><br>Caja con grid-column 1/4 y grid-row 5/6 </b></div>
+		</div>
+		<p>
+			<small>En el ejemplo anterior podemos observar como la celda 1) ha modificado sus dimensiones y ha desplazado al resto de celdas que la acompañan.<br>
+			La celda 1) ocupa 2 columnas (de la linea 1 a la linea 3) y 4 filas (de la linea 1 a la linea 5). La celda 2 ocupa una sola columna (de la linea 3 a la linea 4) y 4 filas (de la linea 1 a la linea 5)</small>
+		</p>
+		<h4>Valor span</h4>
+		<p>
+			El valor span se utiliza para que a partir de la linea que indicamos en el valor de la izquierda, ocupe todos las lineas como valores tengamos seguidos del span. Siempre va a ser el valor de la izquierda el que indique en que linea va a empezar y el de la derecha donde acabará.
+		</p>
+		<div class="grid-container template-2 grid-gap">
+			<div class="grid-item-row-column-span"><b>1)<br><br><br><br>Caja con grid-column: 1 /span 2 y grid-row: 1 / span 4</b></div>
+			<div class="grid2-item-row-column-span"><b>2)<br><br><br><br>Caja con grid-column: 3 / span 3 y grid-row: 1 / span 4 <br><br> Dimensiones fr </b></div>
+			<div class="grid3-item-row-column-span"><b>3)<br><br><br><br>Caja con grid-column: 1 / span 3 y grid-row: 5 / span 1 </b></div>
+		</div>
+		<p>
+			<small>Ejemplo de grid con propiedades grid-row y grid-column con valores span.</small>
+		</p>
+		<h2>Grid implícito y Grid explícito</h2>
+		<p>
+			Cuando declaramos las celdas que va a tener el grid mediante las propiedades template, el grid lo que hace es darle los parametros que hayamos definido en dichos valores a las cajas que esten dentro del grid-container, pero puede suceder que tengamos más cajas que no entren dentro de los parametros del grid-container, ej: supongamos que declaramos un container de 5 tracks, pero tenemos 9 cajas. Al haber 5 tracks, significa que puede darle valores a las 9 cajas sin problema, pero ahora supongamos que agrupamos 4 celdas para volverlas 1, esto hara que 3 celdas se corran y salgan del grid. Estas 3 celdas que salen del grid se les denomina Grid implícito ya que forman parte del mismo pero no les define ningun valor por lo tanto se agrupan en la zona inferior con unas propiedades minimas estandar. Existen métodos para trabajar con estos grids.
+		</p>
+		<span class="destacado-verde">Grid con celdas explícitas e implícitas</span>
+		<div class="grid-container-tracks3">
+			<div class="grid-item">grid-explícito</div>
+			<div class="grid-item">grid-explícito</div>
+			<div class="grid-item">grid-explícito</div>
+			<div class="grid-item">grid-explícito</div>
+			<div class="grid-item fondo-rojo">grid-implícito</div>
+			<div class="grid-item fondo-rojo">grid-implícito</div>
+		</div>
+		<p>
+			<small>Ilustración de comportamiento de grid implícitos y explícitos</small>
+		</p>
+		<h3>Propiedad grid-auto-flow</h3>
+		<p>
+			Con la esta propiedad podemos modificar el flujo de los contenidos y como estos se van a mostrar dentro de el grid.
+		</p>
+		<h4>Valor row y column</h4>
+		<p>
+			Con estos valores podemos modificar hacia donde se iran posicionando las celdas del grid-container.
+		</p>
+		<span class="destacado-verde">grid con propiedad grid-auto-flow:row</span>
+		<div class="grid-container font2em">
+			<div class="grid-item">1</div>
+			<div class="grid-item">2</div>
+			<div class="grid-item">3</div>
+			<div class="grid-item">4</div>
+			<div class="grid-item">5</div>
+			<div class="grid-item">6</div>
+			<div class="grid-item">7</div>
+			<div class="grid-item">8</div>
+			<div class="grid-item">9</div>
+		</div>
+		<p>
+			<small>En esta caja podemos observar como las celdas se van posicionando por primero filas de izquierda a derecha y luego las columnas de arriba hacia abajo</small>
+		</p>
+		<span class="destacado-verde">grid con propiedad grid-auto-flow:column</span>
+		<div class="grid-container auto-column font2em">
+			<div class="grid-item">1</div>
+			<div class="grid-item">2</div>
+			<div class="grid-item">3</div>
+			<div class="grid-item">4</div>
+			<div class="grid-item">5</div>
+			<div class="grid-item">6</div>
+			<div class="grid-item">7</div>
+			<div class="grid-item">8</div>
+			<div class="grid-item">9</div>
+		</div>
+		<p>
+			<small>Con estos valores podemos ver como las celdas se van posicionando primero por columnas de arriba hacia abajo y después por filas de izquierda a derecha.</small>
+		</p>
+		<h3>Valor dense</h3>
+		<p>
+			Con la propiedad dense podemos indicarle al grid que al momento de que encuentre espacios vacios dentro del mismo, dejamos que automáticamente el grid se rellene con las celdas de manera automática. 
+		</p>
+		<span class="destacado-rojo">grid con espacios en blanco y sin propiedad grid-auto-flow</span>
+		<div class="grid-container auto-column">
+			<div class="grid-item">1</div>
+			<div class="grid-item">2</div>
+			<div class="grid-item grid-item-dense">3</div>
+			<div class="grid-item">4</div>
+			<div class="grid-item">5</div>
+			<div class="grid-item">6</div>
+			<div class="grid-item grid-item-dense2">7</div>
+			<div class="grid-item grid-item-dense">8</div>
+			<div class="grid-item">9</div>
+		</div>
+		<span class="destacado-verde">Grid con propiedad grid-auto-flow:dense</span>
+		<div class="grid-container auto-rows dense">
+			<div class="grid-item">1</div>
+			<div class="grid-item">2</div>
+			<div class="grid-item grid-item-dense">3</div>
+			<div class="grid-item">4</div>
+			<div class="grid-item">5</div>
+			<div class="grid-item">6</div>
+			<div class="grid-item grid-item-dense2">7</div>
+			<div class="grid-item grid-item-dense">8</div>
+			<div class="grid-item">9</div>
+		</div>
+		<p>
+			<small>Con esta propiedad podemos declarar que el grid se ajuste automáticamente para que este no deje espacios vacios.</small>
+		</p>
+		<p>
+			<small>En el cuadro anterior podemos ver como las celdas tienen dentro de si estan separadas porque hay celdas seleccionadas y desorganizadas</small>
+		</p>
+		<h3>Propiedades grid-auto-row y grid-auto-column</h3>
+		<p>
+			Con estas propiedades podemos declarar como se van a comportar los grids implicitos. Por defecto el flujo de los grid hara que las celdas implicitas se desplazen hacia abajo creando nuevas filas y ocupando tantas columnas como aquellas hayamos declarado en la propiedad grid-template-column. 
+		</p>
+		<p>
+			La propiedad grid-auto-rows, se emplea cuando el flujo del grid es row. En este tipo de flujo la propiedad grid-auto-column no tiene efecto a menos que cambiemos el flujo a column. Lo mismo pasa con la propiedad grid-auto-rows al momento de declararlo en aquellos grids que esten con flujo column.
+		</p>
+		<span class="destacado-verde">Grid con propiedad grid-auto-rows y flujo estandar(row)</span>
+		<div class="grid-container-tracks3 auto-rows">
+			<div class="grid-item">grid-explícito</div>
+			<div class="grid-item">grid-explícito</div>
+			<div class="grid-item">grid-explícito</div>
+			<div class="grid-item">grid-explícito</div>
+			<div class="grid-item fondo-rojo">grid-implícito</div>
+			<div class="grid-item fondo-rojo">grid-implícito</div>
+		</div>
+		<p>
+			<small>En la caja anterior podemos observar como las cajas implicitas aparecen como una nueva fila.</small>
+		</p>
+		<span class="destacado-verde">Grid con propiedad grid-auto-column y flujo column</span>
+		<div class="grid-container-tracks3 auto-column">
+			<div class="grid-item">grid-explícito</div>
+			<div class="grid-item">grid-explícito</div>
+			<div class="grid-item">grid-explícito</div>
+			<div class="grid-item">grid-explícito</div>
+			<div class="grid-item fondo-rojo">grid-implícito</div>
+			<div class="grid-item fondo-rojo">grid-implícito</div>
+		</div>
+		<p>
+			<small>Después de modificar el flujo de el grid y usar la propiedad grid-auto-column podemos observar como aparecen las cajas implícitas como nuevas columnas dentro del grid.</small>
+		</p>
+					<!------------------------------------------>
+					<!-- Final de pagina link siguiente clase -->
+		<p style="border: 2px solid black; background-color: rgba(0,0,0,0.5);">
+			Visto esto podemos entender un poco como se comportan los grids en CSS a continuación seguiremos con la clase de los grids dinámicos con CSS <a href="grid2.html">Grid Dinámicos</a>
+		</p>
+	</body>
+</html>
